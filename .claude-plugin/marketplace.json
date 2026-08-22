@@ -1,0 +1,25 @@
+{
+  "name": "cowork-skills",
+  "owner": {
+    "name": "theAnirudhKumar",
+    "url": "https://github.com/theAnirudhKumar"
+  },
+  "metadata": {
+    "description": "Workflow skills for Claude, built for real day-to-day knowledge work",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "workflow-skills",
+      "description": "Four skills for customer-facing work and long sessions: post-call follow-up drafting from any meeting recorder, email critique, chat handoffs, and token efficiency",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/call-recap-follow-up",
+        "./skills/chat-context",
+        "./skills/email-critic",
+        "./skills/optimize-tokens"
+      ]
+    }
+  ]
+}
