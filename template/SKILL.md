@@ -13,6 +13,20 @@ One or two sentences on what this skill is for and what it produces.
 
 ---
 
+## What this needs
+
+State the floor first: the least a user can have and still get value. Then what
+improves it, and what each missing piece costs.
+
+Write this section even when the answer is "nothing". A reader deciding whether
+to install should not have to infer their setup from Step 3.
+
+The rule underneath it: nothing in a published skill may be a prerequisite.
+Workspace files, connectors and file access are all upgrades. A skill that
+errors because a `CLAUDE.md` is missing gets uninstalled.
+
+---
+
 ## When this runs
 
 The trigger conditions in plain language. Include the cases where it should

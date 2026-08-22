@@ -13,7 +13,18 @@ A skill is a folder with a `SKILL.md` in it. Claude reads the description, decid
 | [`chat-context`](skills/chat-context) | Carries context between chats. Handoff mode writes a structured context file when a session ends; resume mode reads it back and states what was loaded before doing any work. |
 | [`optimize-tokens`](skills/optimize-tokens) | Spots token-heavy requests before they run and proposes a cheaper approach that gets the same answer. Fires on request, or on its own when a task looks expensive. |
 
-`call-recap-follow-up` and `email-critic` assume you keep some account or customer context in your workspace, and read better if you also keep a voice or style guide. Both degrade gracefully when those files are absent: they tell you what they could not check rather than guessing.
+### They work without any setup
+
+You do not need a workspace, a `CLAUDE.md`, a `MEMORY.md`, connectors or file access. Every skill states its floor in a **What this needs** section and runs from there:
+
+| | Works with nothing but | Gets better with |
+| :--- | :--- | :--- |
+| `call-recap-follow-up` | a pasted transcript | a meeting recorder, a mailbox, account notes, a voice guide |
+| `email-critic` | the draft itself | the transcript, the thread, account notes, a voice guide |
+| `chat-context` | nothing — the handoff prints in chat to paste forward | file access, which turns handoffs into a saved trail with an index |
+| `optimize-tokens` | nothing | nothing |
+
+Missing context never blocks a skill. It changes what the skill can honestly claim, and each one says which checks it could not run rather than guessing around the gap.
 
 ## Install
 

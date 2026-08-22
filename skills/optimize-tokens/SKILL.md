@@ -16,6 +16,12 @@ The goal is simple: help the user get the same quality output with less token wa
 
 ---
 
+## What this needs
+
+Nothing. No workspace, no connectors, no files. It works in any chat from the first message.
+
+---
+
 ## When this skill fires
 
 ### Case 1: Explicit request
@@ -109,8 +115,8 @@ Instead of 3 separate messages, combine: "Do X, then Y, then give me Z — all i
 Instead of: "What should I do about this customer?"
 Better: "Give me 3 options to handle a churned customer who cited pricing. Bullet format."
 
-**6. Use memory instead of re-explaining**
-If a person, project, or context has been explained before, point to the relevant memory file rather than re-describing.
+**6. Point at context instead of re-explaining**
+If a person, project, or piece of context has been explained before, point to wherever it lives — a memory file, a project doc, an earlier message in this session — rather than re-describing it.
 
 ---
 

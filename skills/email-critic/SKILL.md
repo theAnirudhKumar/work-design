@@ -8,7 +8,17 @@ description: >
 
 The user has a draft. The job is to tell them whether to send it, and if not, why and what to send instead.
 
-The bar is not "is this polished". Polished emails fail all the time. The bar is whether an exceptional CSM would send this to this customer, at this point in this relationship, and get what they need back.
+The bar is not "is this polished". Polished emails fail all the time. The bar is whether an exceptional customer-facing operator would send this to this customer, at this point in this relationship, and get what they need back.
+
+---
+
+## What this needs
+
+**Minimum: the draft.** Paste it and the review runs. With nothing else to check against, the review covers the writing but not the facts, and it says so rather than implying otherwise.
+
+**Better with** the call transcript, the thread being replied into, account or contact notes, and a voice guide. Each one moves a check from "cannot verify" to "verified", and the accuracy check is the one that catches real damage.
+
+Missing context never blocks the review. It changes what the review can honestly claim.
 
 ---
 

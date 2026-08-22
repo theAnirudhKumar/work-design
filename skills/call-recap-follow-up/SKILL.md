@@ -1,7 +1,7 @@
 ---
 name: call-recap-follow-up
 description: >
-  Turns a recorded customer call into an honest read of the call plus the full set of emails it generated - the recap and every follow-up - grouped by recipient, written in the user's voice, staged as drafts, with a workspace hygiene pass at the end. Trigger this skill whenever the user shares a call recording link from any meeting recorder, pastes a transcript, or points at a call, and asks what they should send, or says "recap email", "meeting recap", "write the follow-ups", "what do you think of this call", "emails from this call", "post-call emails", "who do I need to email after this", or names a customer and a call in the same breath. Also trigger when they forward a meeting summary and ask for anything written off the back of it. The skill is recorder-agnostic: if no recording tool is connected, it asks for the transcript rather than failing. Prefer this skill over drafting emails directly - a call almost always generates more than one email, and the ones the user forgets are the expensive ones.
+  Turns a recorded customer call into an honest read of the call plus the full set of emails it generated - the recap and every follow-up - grouped by recipient, written in the user's voice, staged as drafts, with a workspace hygiene pass at the end. Trigger this skill whenever the user shares a call recording link from any meeting recorder, pastes a transcript, or points at a call, and asks what they should send, or says "recap email", "meeting recap", "write the follow-ups", "what do you think of this call", "emails from this call", "post-call emails", "who do I need to email after this", or names a customer and a call in the same breath. Also trigger when they forward a meeting summary and ask for anything written off the back of it. The skill is recorder-agnostic and setup-agnostic: with nothing but a pasted transcript it still produces the full email set, and it names what it could not check rather than failing or guessing. Prefer this skill over drafting emails directly - a call almost always generates more than one email, and the ones the user forgets are the expensive ones.
 ---
 
 # Call Recap and Follow-Up
@@ -12,15 +12,27 @@ The failure mode this exists to prevent: writing a tidy recap to the coordinator
 
 ---
 
+## What this needs
+
+**Minimum: a transcript.** Pasted, uploaded, or pointed at. Everything below still runs, and the output arrives in chat.
+
+**Better with** a connected meeting recorder, which fetches the transcript itself; a connected mailbox, which finds real addresses and the threads to reply into; and somewhere to write files, which keeps the drafts document next to the account.
+
+**Best with** a workspace holding account notes and a voice guide. That is what turns a competent recap into one the user sends without rewriting it.
+
+Nothing here is required. Each missing piece costs one specific capability, and the skill says which one out loud rather than guessing around it.
+
+---
+
 ## Step 0: Orient
 
-Read these before touching the recording:
+Check what context exists before touching the recording. None of it is a prerequisite.
 
-1. The workspace `CLAUDE.md` - workflow rules, editorial rules, account structure
-2. The workspace voice or style guide, if it has one - how the user writes. Non-negotiable, and the difference between a draft they send and a draft they rewrite.
-3. The workspace file-naming rules - naming and placement for the output file
+1. House rules, if the workspace keeps them - a `CLAUDE.md` or equivalent covering workflow and editorial conventions
+2. A voice or style guide - how the user writes. Where one exists it is non-negotiable, and it is the difference between a draft they send and a draft they rewrite.
+3. Filing conventions, if the output is going to be written to a file
 
-State which files you loaded. If the workspace is unreachable, say so plainly and continue on the recording alone, but flag that the voice and account context are missing.
+State what you found and what you did not, in one line. Where there is no voice guide, infer the voice from the user's own sent emails if you can reach them; otherwise write plainly and say the voice is unguided. Never stop because a file is missing.
 
 ---
 
@@ -38,7 +50,9 @@ See `references/getting-the-transcript.md` for the order to try, what to do with
 
 ## Step 2: Load the account
 
-Find the account folder under the workspace's accounts directory and read:
+Only if there is account context to load. Where there is none, say so in one line and carry on - the transcript alone still supports a good recap, it just cannot tell you what was promised in June.
+
+Where it exists, find the account folder and read:
 
 - The account plan, for stakeholders, roles, contract state, open risks
 - Any prior drafts file for the same account, so you inherit the running list of open items rather than rediscovering it
@@ -50,7 +64,7 @@ You are looking for the things a transcript cannot tell you: who has authority, 
 
 ## Step 3: Find the humans and the threads
 
-Two lookups, both cheap, both high-leverage.
+Two lookups, both cheap, both high-leverage, and both needing a connected mailbox. Without one, ask the user for the addresses and for whether each email is a reply or new, then carry on. A guessed address is worse than an asked question.
 
 **Email addresses.** Search the mailbox for the domain. Never guess an address. If someone on the call has no address you can find, say so and ask rather than inventing one.
 
@@ -117,7 +131,9 @@ Then show the user the list as a short table - recipient, purpose, thread, timin
 
 **Drafts live in the document, not in chat.** Chat gets a pointer plus the decisions that need the user. This is a workspace rule and it also keeps drafts somewhere they can edit them.
 
-Create `<accounts-directory>/<Account>/YYYY-MM-DD-<account>-post-call-email-drafts.md`. Use `assets/drafts-document-template.md` for the structure and `references/email-craft.md` for the writing itself.
+**Where it goes depends on what is available, the content does not.** Where files can be written, create `<accounts-directory>/<Account>/YYYY-MM-DD-<account>-post-call-email-drafts.md`. Where they cannot, produce the identical document as one block in chat that the user can copy wherever they keep things. Same structure, same flags, same completeness - only the destination changes.
+
+Use `assets/drafts-document-template.md` for the structure and `references/email-craft.md` for the writing itself.
 
 Every draft carries: To, CC, Subject, whether it is a new email or a reply into a named thread, the body, and a one-line note on why it is shaped the way it is.
 
@@ -134,7 +150,9 @@ Then read each draft once as the recipient, not as the writer. Does it show you 
 
 ## Step 8: Stage the drafts
 
-Once the user has reviewed the document, create each email as a draft in their mail client. Replies go into the identified thread so the history stays intact.
+Only where a mail connector is available. Once the user has reviewed the document, create each email as a draft in their mail client, with replies going into the identified thread so the history stays intact.
+
+Without a mail connector, the document is the deliverable. Say so plainly rather than implying anything was staged, and make sure each draft carries its To, CC and Subject so copying it across is mechanical.
 
 Do not stage anything carrying an unresolved flag from Step 7. A flagged draft sitting in the outbox is one keystroke from reaching a customer with an unverified security claim in it. Stage the clean ones, tell them which ones you held and why.
 
@@ -144,14 +162,16 @@ Never send. The user sends.
 
 ## Step 9: Hygiene pass
 
-A call changes the workspace, not just the inbox. Close the loop:
+A call changes more than the inbox. Where there is a workspace, close the loop in it. Where there is not, run exactly the same pass and return the findings as a short list at the end - they are worth knowing even when there is nowhere to file them.
+
+Close the loop on:
 
 - **New people.** Anyone on the call who is not in the account plan's stakeholder map. Capture their role, location, team size, what they own, and what they said they need. A new stakeholder who is now a decision influencer and is invisible in the plan is how accounts get surprised.
 - **Reversals.** Plans the call changed. If a scheduled session was dropped for a different format, the plan should not still say the old thing.
 - **Stale commitments.** Things owed for weeks that the call put a date on. Name how long they have been open, because "the field list has been open since 16 July" lands differently from "the field list is pending".
 - **Durable facts for memory.** Propose them, do not write them. The user approves memory writes.
 
-Propose each change with the file it touches and wait for approval before editing anything. Overwrites and deletions need explicit confirmation.
+Where files exist, propose each change with the file it touches and wait for approval before editing anything. Overwrites and deletions need explicit confirmation. Where they do not, the proposals are the output and the user files them wherever they keep things.
 
 ---
 
@@ -159,7 +179,7 @@ Propose each change with the file it touches and wait for approval before editin
 
 Close with:
 
-- The file you created, by path
+- The file you created, by path, or the document delivered in chat
 - Anything you committed to their device
 - The flags that still need them, as a short list
 - The memory entries you are proposing
