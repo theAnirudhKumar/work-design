@@ -21,7 +21,7 @@ You do not need a workspace, a `CLAUDE.md`, a `MEMORY.md`, connectors or file ac
 | :--- | :--- | :--- |
 | `call-recap-follow-up` | a pasted transcript | a meeting recorder, a mailbox, account notes, a voice guide |
 | `email-critic` | the draft itself | the transcript, the thread, account notes, a voice guide |
-| `chat-context` | nothing — the handoff prints in chat to paste forward | file access, which turns handoffs into a saved trail with an index |
+| `chat-context` | nothing - the handoff prints in chat to paste forward | file access, which turns handoffs into a saved trail with an index |
 | `optimize-tokens` | nothing | nothing |
 
 Missing context never blocks a skill. It changes what the skill can honestly claim, and each one says which checks it could not run rather than guessing around the gap.
@@ -61,8 +61,8 @@ Anthropic's [Agent Skills spec](https://github.com/anthropics/skills/tree/main/s
 
 Two skills I use daily are other people's work and are not republished here. Go to the source:
 
-- [garrytan/gstack](https://github.com/garrytan/gstack) — `office-hours` and the rest of Garry Tan's planning stack. MIT.
-- [blader/humanizer](https://github.com/blader/humanizer) — strips AI-writing tells from text, built on Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing). MIT.
+- [garrytan/gstack](https://github.com/garrytan/gstack) - `office-hours` and the rest of Garry Tan's planning stack. MIT.
+- [blader/humanizer](https://github.com/blader/humanizer) - strips AI-writing tells from text, built on Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing). MIT.
 
 ## License
 
