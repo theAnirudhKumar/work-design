@@ -1,23 +1,22 @@
 {
-  "name": "cowork-skills",
+  "name": "work-design-marketplace",
   "owner": {
     "name": "theAnirudhKumar",
     "url": "https://github.com/theAnirudhKumar"
   },
   "metadata": {
-    "description": "Workflow skills for Claude, built for real day-to-day knowledge work",
-    "version": "1.0.0"
+    "description": "Design the work before you do it",
+    "version": "2.0.0"
   },
   "plugins": [
     {
-      "name": "workflow-skills",
-      "description": "Four skills for customer-facing work and long sessions: post-call follow-up drafting from any meeting recorder, email critique, chat handoffs, and token efficiency",
+      "name": "work-design",
+      "description": "Skills for deciding how a piece of work will run before it runs. Vet a tool before you sign up for it, carry context from one session into the next, and spot an expensive request before it costs anything. Ships checklists and templates rather than advice, and every skill runs with nothing installed.",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/call-recap-follow-up",
+        "./skills/before-you-install",
         "./skills/chat-context",
-        "./skills/email-critic",
         "./skills/optimize-tokens"
       ]
     }
