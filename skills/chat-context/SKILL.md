@@ -4,7 +4,7 @@ description: >
   Carries context from one Cowork chat into the next so the user can start a fresh chat without re-explaining anything. Runs in two directions. HANDOFF mode triggers when the user says "hand off this chat," "save chat context," "wrap this chat," "close this chat," "I'm moving to a new chat," "chat handoff," or "write the handoff." RESUME mode triggers when the user says "resume," "resume from handoff," "pick up where we left off," "load chat context," "continue from the last chat," or opens a chat referencing an earlier session. Where files can be written, handoff saves a structured context file and registers it in a master index; where they cannot, it prints the same structure as a block the user pastes into the next chat. Resume reads whichever form it finds, states what was loaded, then continues the work. Use this instead of summarising a chat back to the user in conversation.
 ---
 
-# Chat Context Skill
+# Chat Context
 
 Long chats get expensive because every new message carries the whole conversation with it. This skill lets the user close a chat and open a fresh one without losing a thing. It writes a structured context file at the end of a session and reads it back at the start of the next one.
 

@@ -1,0 +1,12 @@
+{
+  "name": "work-design",
+  "description": "Skills for deciding how a piece of work will run before it runs. Vet a tool before signup, carry context between sessions, and catch an expensive request before it costs anything. Ships checklists and templates rather than advice.",
+  "version": "2.0.0",
+  "author": {
+    "name": "theAnirudhKumar",
+    "url": "https://github.com/theAnirudhKumar"
+  },
+  "homepage": "https://hustlyst.com?ref=github",
+  "repository": "https://github.com/theAnirudhKumar/work-design",
+  "license": "MIT"
+}
