@@ -74,3 +74,13 @@ The disposition of case 14 is unchanged. Left as is, for the reasons above.
 - **Whether the description survives the listing budget.** Routing was tested with all four descriptions shown in full. In a real installation with many skills the listing is truncated, and a new skill with no invocation history loses its description first. That is a property of the installation, not of the skill, and this harness cannot see it.
 - **Output quality.** These cases test which skill fires, not whether the skill then produces a filled allocation table rather than advice. The output check belongs in the harness under issue #5.
 - **Real sessions.** Every case here is a constructed message. Nothing in this file is evidence that the skill fires in the wild.
+
+---
+
+## Run 3, 29 Aug 2026, rechecked for issues #9 and #10
+
+`optimize-tokens` and `chat-context` both had their descriptions rewritten this run, and this skill sits between them, so its cases were put through the harness again rather than assumed stable.
+
+No case here changed disposition. Cases 11 and 12 (board deck, invoice automation) still fire on all three. Case 13 (sprint retro) still declines on all three, the ritual exclusion still cited by name. Case 14 (200 customer emails) still fires delegate on all three, continuing not to reproduce the run 1 split, which run 2 already established is a property of the exact wording in play rather than a resolved question. Case 15 (pay for a tool that automates the whole task) still splits the same way it always has: two of three send it to `before-you-install`, one sends it to `delegate`. See `evals/optimize-tokens.md` for the full table.
+
+Full detail on what changed and why is in `evals/optimize-tokens.md` and `evals/chat-context.md`. Nothing in this file needed to change.
