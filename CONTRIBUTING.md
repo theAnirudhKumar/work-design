@@ -43,6 +43,14 @@ skills/<skill-name>/
 - **References are one level deep.** A reference pointing at another reference gets partially read
 - **Third person throughout.** "The user", not "you", and never a named person
 
+### Ship an eval, not just a skill
+
+A skill that never fires is indistinguishable from a skill that was never written, and routing happens on the description alone. Every new skill arrives with a file in `evals/` carrying at least three cases: prompts that should fire it, near misses that should not, and any prompt where it and an existing skill could both claim the trigger.
+
+Run them on Haiku, Sonnet and Opus. Record the disagreements rather than the average. Two of three is a finding, not a pass. `evals/README.md` has the procedure and `evals/delegate.md` is the reference.
+
+This has already earned itself. The first full pass found that one skill's proactive trigger fires on two models out of three, and that a cost-shaped complaint never reaches the skill that would actually solve it.
+
 ### Ship an asset, not just advice
 
 The difference between a skill people install and one they do not is whether it hands something over. A checklist, a template, a rubric, a filled document. A skill that returns advice is competing with the assistant's own general knowledge, and losing.
@@ -73,6 +81,7 @@ python3 validate-skills.py
 
 Then check the things a script cannot see:
 
+- [ ] There is a file in `evals/` with at least three cases, run on three models, disagreements recorded
 - [ ] The skill states the least it needs to run, and nothing is a prerequisite
 - [ ] The failure it prevents is named
 - [ ] It ships at least one asset, or there is a reason it does not
