@@ -69,6 +69,8 @@ Anthropic's [Agent Skills spec](https://github.com/anthropics/skills/tree/main/s
 
 Before opening a pull request, run `python3 validate-skills.py`. The same script runs on every pull request.
 
+Every skill also carries a file in [`evals/`](evals): the prompts that should make it fire, the near misses that should not, and what three models actually did with each. Routing happens on the description alone, so this is the only check that tests the thing most likely to be wrong.
+
 ## Credits
 
 Two skills used daily here are other people's work and are not republished. Go to the source:

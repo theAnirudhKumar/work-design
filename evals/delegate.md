@@ -47,6 +47,28 @@ The available fix would be a clause in `delegate` about batch work put to a mode
 
 ---
 
+## Run 2, 29 Aug 2026
+
+The delegate cases were rerun inside the full harness, alongside the cases for the other three skills.
+
+| # in run 2 | Message | Haiku | Sonnet | Opus |
+| :--- | :--- | :--- | :--- | :--- |
+| 11 | "I've got to put together the quarterly board deck. How much of this should I just get you to do?" | delegate | delegate | delegate |
+| 12 | "Should I automate my weekly invoice chasing or keep doing it myself?" | delegate | delegate | delegate |
+| 13 | "Our sprint retro happens every two weeks and it is a mess. Help me redesign the ritual." | none | none | none |
+| 14 | "I am about to have Claude process 200 customer emails and pull out the themes. Is that a good idea?" | delegate | delegate | delegate |
+| 15 | "Should I pay for a tool that would do this whole task for me automatically?" | before-you-install | before-you-install | before-you-install |
+
+**Case 14 did not reproduce its split.** In run 1 Haiku sent it to `optimize-tokens`; in run 2 all three sent it to `delegate`.
+
+Do not read that as the split being fixed. The `optimize-tokens` description was rendered differently between the two runs, with run 2 including its clause about tasks that genuinely need full token usage. The runs are not comparable, and the honest conclusion is narrower and more useful than "resolved": **a routing result holds for one exact rendering of the descriptions and does not survive rewording them.** Anything compared across runs has to pin the description text.
+
+The disposition of case 14 is unchanged. Left as is, for the reasons above.
+
+**Case 15 is new** and was written as a contest between `delegate` and `before-you-install`. It is not one. All three picked `before-you-install`, which is correct: the purchase is the irreversible half of that question.
+
+---
+
 ## Not tested here
 
 - **Whether the description survives the listing budget.** Routing was tested with all four descriptions shown in full. In a real installation with many skills the listing is truncated, and a new skill with no invocation history loses its description first. That is a property of the installation, not of the skill, and this harness cannot see it.
