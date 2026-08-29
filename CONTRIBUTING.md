@@ -10,7 +10,7 @@ These checks were built from reviewing tools for people who do not code. That is
 
 **1. A check is wrong, or it missed something.** Open an issue saying what you found and where the skill would have led you astray. Specific beats general. "The privacy check is thin" is hard to act on. "Under GDPR, the retention clause that matters is the one about backups, and the skill never asks for it" is a fix.
 
-**2. A skill is missing from the set.** This repository is for deciding about a tool: whether to adopt it, whether you already pay for something that does it, and what breaks when you leave. `stack-audit` and `switch-cost` are planned. If there is a fourth, describe the job, how often it recurs, and what a good output looks like.
+**2. A skill is missing from the set.** This repository is for deciding about a tool: whether to adopt it, whether you already pay for something that does it, and what breaks when you leave. `switch-cost` is planned. If there is another, describe the job, how often it recurs, and what a good output looks like.
 
 **3. You have written one.** Open a pull request. Read the rest of this first.
 

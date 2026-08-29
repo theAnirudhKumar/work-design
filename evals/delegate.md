@@ -84,3 +84,9 @@ The disposition of case 14 is unchanged. Left as is, for the reasons above.
 No case here changed disposition. Cases 11 and 12 (board deck, invoice automation) still fire on all three. Case 13 (sprint retro) still declines on all three, the ritual exclusion still cited by name. Case 14 (200 customer emails) still fires delegate on all three, continuing not to reproduce the run 1 split, which run 2 already established is a property of the exact wording in play rather than a resolved question. Case 15 (pay for a tool that automates the whole task) still splits the same way it always has: two of three send it to `before-you-install`, one sends it to `delegate`. See `evals/optimize-tokens.md` for the full table.
 
 Full detail on what changed and why is in `evals/optimize-tokens.md` and `evals/chat-context.md`. Nothing in this file needed to change.
+
+---
+
+## Note, 29 Aug 2026, stack-audit added
+
+One new case was constructed to check for interference: "Should I automate our quarterly subscription review?" Haiku declined it, Sonnet and Opus sent it to `delegate`. Recorded and left as is in `evals/stack-audit.md`, for the same reason as case 5 and case 13 here: a recurring task described in the vocabulary of automation is this skill's territory, and `stack-audit` does not claim it.
