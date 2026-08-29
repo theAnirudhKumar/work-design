@@ -4,7 +4,7 @@
 
 Work design is an old idea with a literature behind it: the study of how work is structured so it is effective and worth doing. Most of that literature is about jobs and teams. This is the same question one level down, at the scale of a single piece of work, and asked before the work starts rather than after it goes wrong.
 
-Three skills for Claude. Each one sits at a moment where a small decision made deliberately saves a large amount of rework: before you adopt a tool, before a session ends, before an expensive request runs.
+Four skills for Claude. Each one sits at a moment where a small decision made deliberately saves a large amount of rework: before you adopt a tool, before you hand work over, before a session ends, before an expensive request runs.
 
 Nothing here needs a terminal, a workspace, connectors or an API key.
 
@@ -14,6 +14,7 @@ Nothing here needs a terminal, a workspace, connectors or an API key.
 | :--- | :--- |
 | [`before-you-install`](skills/before-you-install) | Vets a tool before you sign up. Reads the privacy policy and terms for what they actually permit, finds documented complaints, checks permissions and business model, and ends on install, install with conditions, or do not install. Ships a checklist and a verdict template |
 | [`chat-context`](skills/chat-context) | Carries context between chats. Handoff mode writes a structured context file when a session ends; resume mode reads it back and states what was loaded before doing any work |
+| [`delegate`](skills/delegate) | Decides what to hand to an agent and what to keep, for one piece of work. Splits the work, allocates each part to you, another person or a model, and attaches a check and a stop condition to everything that leaves your hands. Ships an allocation table |
 | [`optimize-tokens`](skills/optimize-tokens) | Spots token-heavy requests before they run and proposes a cheaper approach that gets the same answer. Fires on request, or on its own when a task looks expensive |
 
 Two more are planned: **stack-audit**, for what you already pay for and what overlaps, and **switch-cost**, for what breaks when you leave a tool.
@@ -26,6 +27,7 @@ You do not need a workspace, a `CLAUDE.md`, a `MEMORY.md`, connectors or file ac
 | :--- | :--- | :--- |
 | `before-you-install` | the tool's name | the pricing page, policy or terms pasted in, and web access, which lets it do the research instead of handing you the searches |
 | `chat-context` | nothing, the handoff prints in chat to paste forward | file access, which turns handoffs into a saved trail with an index |
+| `delegate` | a description of the work | what the output is for and who sees it, which is what sets how hard the checks have to be |
 | `optimize-tokens` | nothing | nothing |
 
 Missing context never blocks a skill. It changes what the skill can honestly claim, and each one says which checks it could not run rather than guessing around the gap.

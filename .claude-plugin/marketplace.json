@@ -11,12 +11,13 @@
   "plugins": [
     {
       "name": "work-design",
-      "description": "Skills for deciding how a piece of work will run before it runs. Vet a tool before you sign up for it, carry context from one session into the next, and spot an expensive request before it costs anything. Ships checklists and templates rather than advice, and every skill runs with nothing installed.",
+      "description": "Skills for deciding how a piece of work will run before it runs. Vet a tool before you sign up for it, decide what to hand to an agent and what to keep, carry context from one session into the next, and spot an expensive request before it costs anything. Ships checklists and templates rather than advice, and every skill runs with nothing installed.",
       "source": "./",
       "strict": false,
       "skills": [
         "./skills/before-you-install",
         "./skills/chat-context",
+        "./skills/delegate",
         "./skills/optimize-tokens"
       ]
     }
