@@ -39,3 +39,9 @@ That is the right answer, and it is worth stating why rather than just recording
 - The researched versus guided mode split. That is behaviour after the skill fires, and it needs an output check rather than a routing case.
 - Whether the five checks actually run in order.
 - Any case where the user pastes a policy or a pricing page, since these cases are all short messages.
+
+---
+
+## Note, 29 Aug 2026, stack-audit added
+
+Rechecked with `stack-audit` added to the set, since a new skill's arrival is a listed rerun trigger and the two skills sit either side of the same line: adopted or not. Case 3 (post-install, "what did I actually agree to") and case 4 (six-figure procurement) both held on all three models. Full detail in `evals/stack-audit.md`, which treats these as its own regression check.

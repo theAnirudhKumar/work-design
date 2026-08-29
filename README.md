@@ -4,7 +4,7 @@
 
 Work design is an old idea with a literature behind it. Organisational psychology has studied it for a century and defines it as "the content and organization of one's work tasks, activities, relationships, and responsibilities" ([Parker, Morgeson and Johns, 2017](https://espace.curtin.edu.au/bitstream/handle/20.500.11937/69907/70119.pdf?sequence=2)), and the field's centre is the [Centre for Transformative Work Design](https://www.transformativeworkdesign.com/about-work-design) at Curtin University. Almost all of it is about jobs and teams. This repository asks the same question one level down, at the scale of a single piece of work, and before the work starts rather than after it goes wrong.
 
-Four skills for Claude. Each one sits at a moment where a small decision made deliberately saves a large amount of rework: before you adopt a tool, before you hand work over, before a session ends, before an expensive request runs.
+Five skills for Claude. Each one sits at a moment where a small decision made deliberately saves a large amount of rework: before you adopt a tool, before you keep paying for one, before you hand work over, before a session ends, before an expensive request runs.
 
 Nothing here needs a terminal, a workspace, connectors or an API key.
 
@@ -16,8 +16,9 @@ Nothing here needs a terminal, a workspace, connectors or an API key.
 | [`chat-context`](skills/chat-context) | Carries context between chats. Handoff mode writes a structured context file when a session ends; resume mode reads it back and states what was loaded before doing any work |
 | [`delegate`](skills/delegate) | Decides what to hand to an agent and what to keep, for one piece of work. Splits the work, allocates each part to you, another person or a model, and attaches a check and a stop condition to everything that leaves your hands. Ships an allocation table |
 | [`optimize-tokens`](skills/optimize-tokens) | Spots token-heavy requests before they run and proposes a cheaper approach that gets the same answer. Fires on request, or on its own when a task looks expensive |
+| [`stack-audit`](skills/stack-audit) | Audits the tools you already pay for. Builds an inventory with cost, last use and overlap, gives every row a verdict of keep, cancel, downgrade or consolidate, and leads with the total it would free up. Ships an inventory table |
 
-Two more are planned: **stack-audit**, for what you already pay for and what overlaps, and **switch-cost**, for what breaks when you leave a tool.
+One more is planned: **switch-cost**, for what breaks when you leave a tool.
 
 ## They work without any setup
 
@@ -29,6 +30,7 @@ You do not need a workspace, a `CLAUDE.md`, a `MEMORY.md`, connectors or file ac
 | `chat-context` | nothing, the handoff prints in chat to paste forward | file access, which turns handoffs into a saved trail with an index |
 | `delegate` | a description of the work | what the output is for and who sees it, which is what sets how hard the checks have to be |
 | `optimize-tokens` | nothing | nothing |
+| `stack-audit` | a list of tool names from memory | a card statement, bank export or subscription list pasted in, which turns last use from a guess into a fact |
 
 Missing context never blocks a skill. It changes what the skill can honestly claim, and each one says which checks it could not run rather than guessing around the gap.
 
