@@ -1,11 +1,18 @@
 ---
 name: optimize-tokens
 description: >
-  Token optimization advisor for the user. Triggers in two situations:
-  (1) When the user explicitly says "optimize tokens", "reduce tokens", "token efficient", or asks how to prompt better for efficiency.
-  (2) When a request is detectably token-heavy - e.g., involves processing many files, large rewrites, multi-step research, full document generation, long context dumps - and a lighter approach could achieve the same result.
-  Always prioritize quality over reduction. This skill is about eliminating waste, not restricting output.
-  Use this skill proactively when you sense the request could be restructured to save significant tokens without quality loss.
+  Token optimization advisor for the user. Trigger in two situations. (1)
+  When the user explicitly says "optimize tokens", "reduce tokens", "token
+  efficient", or asks how to prompt better for efficiency. (2) When the
+  request has one of these shapes: pasting or pointing to a long document
+  and asking for feedback, review or edits on all of it; asking for the same
+  treatment applied across many files; asking for a full rewrite where a
+  targeted edit would do; or repeating context already established earlier
+  in this session. Always prioritize quality over reduction: this skill
+  eliminates waste, not output. Does not fire for a task that is expensive
+  because the output itself has to be long, such as writing a new article or
+  report from scratch, since that cost is real and this skill says so
+  rather than trying to cut it.
 ---
 
 # Optimize Tokens

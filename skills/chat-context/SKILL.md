@@ -1,7 +1,20 @@
 ---
 name: chat-context
 description: >
-  Carries context from one Cowork chat into the next so the user can start a fresh chat without re-explaining anything. Runs in two directions. HANDOFF mode triggers when the user says "hand off this chat," "save chat context," "wrap this chat," "close this chat," "I'm moving to a new chat," "chat handoff," or "write the handoff." RESUME mode triggers when the user says "resume," "resume from handoff," "pick up where we left off," "load chat context," "continue from the last chat," or opens a chat referencing an earlier session. Where files can be written, handoff saves a structured context file and registers it in a master index; where they cannot, it prints the same structure as a block the user pastes into the next chat. Resume reads whichever form it finds, states what was loaded, then continues the work. Use this instead of summarising a chat back to the user in conversation.
+  Carries context from one Cowork chat into the next so the user can start a
+  fresh chat without re-explaining anything. Runs in two directions. HANDOFF
+  mode triggers when the user says "hand off this chat," "save chat
+  context," "wrap this chat," "close this chat," "I'm moving to a new
+  chat," "chat handoff," or "write the handoff," and also when the user says
+  the chat has gotten too long or too big to keep working in. RESUME mode
+  triggers when the user says "resume," "resume from handoff," "pick up
+  where we left off," "load chat context," "continue from the last chat," or
+  opens a chat referencing an earlier session. Where files can be written,
+  handoff saves a structured context file and registers it in a master
+  index; otherwise it prints the same structure as a block the user pastes
+  forward. Resume reads whichever form it finds, states what was loaded,
+  then continues the work. Never fires for a request to summarise the chat
+  back to the user in conversation; that gets a summary, not a handoff.
 ---
 
 # Chat Context
