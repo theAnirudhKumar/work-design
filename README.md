@@ -2,7 +2,7 @@
 
 **Design the work before you do it.**
 
-Work design is an old idea with a literature behind it: the study of how work is structured so it is effective and worth doing. Most of that literature is about jobs and teams. This is the same question one level down, at the scale of a single piece of work, and asked before the work starts rather than after it goes wrong.
+Work design is an old idea with a literature behind it. Organisational psychology has studied it for a century and defines it as "the content and organization of one's work tasks, activities, relationships, and responsibilities" ([Parker, Morgeson and Johns, 2017](https://espace.curtin.edu.au/bitstream/handle/20.500.11937/69907/70119.pdf?sequence=2)), and the field's centre is the [Centre for Transformative Work Design](https://www.transformativeworkdesign.com/about-work-design) at Curtin University. Almost all of it is about jobs and teams. This repository asks the same question one level down, at the scale of a single piece of work, and before the work starts rather than after it goes wrong.
 
 Four skills for Claude. Each one sits at a moment where a small decision made deliberately saves a large amount of rework: before you adopt a tool, before you hand work over, before a session ends, before an expensive request runs.
 
