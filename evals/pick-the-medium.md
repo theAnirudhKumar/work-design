@@ -50,3 +50,9 @@ Whether `optimize-tokens` competes with `pick-the-medium`. Neither skill's trigg
 **Output behaviour.** Whether the skill actually weighs reversibility over habit in a live session, whether the runner-up and its cost get named rather than skipped, and whether the hand-off line reads as a genuine stop rather than a soft suggestion. All output checks, not routing.
 
 **Real sessions.** Every case here is constructed, same limitation as every other file in this directory.
+
+---
+
+## Field test, 2026-08-31
+
+Two real cases, not constructed, both checked against `meeting-design`'s own Step 0 independently, answering the "actual hand-off" gap this file names above. A single factual policy question that had blocked a customer-facing deliverable for over a week resolved to a written message with a deadline, no hand-off, and `meeting-design`'s Step 0 agreed a document/message was right without being told the other skill's answer. A separate case, eight open decisions on a reporting rebuild owed by two internal stakeholders, resolved to a meeting, handed off cleanly, and `meeting-design`'s agenda step mapped directly onto the eight named decisions. Both directions held. Not a live `Skill` tool run, neither skill is installed in this account. Case detail is internal and not reproduced here.

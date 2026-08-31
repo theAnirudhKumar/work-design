@@ -48,3 +48,9 @@ Whether `optimize-tokens`, `chat-context` or `switch-cost` compete with `scope-t
 **Output behaviour.** Whether the out list actually gets specific rather than generic, whether the done condition holds up as genuinely checkable by a third party, and whether "who moves the line" gets a named person rather than a group. All output checks, not routing.
 
 **Real sessions.** Every case here is constructed, same limitation as every other file in this directory.
+
+---
+
+## Field test, 2026-08-31
+
+One real case, not constructed: closing two blank entries in a professional profile document that had been bundled under one open-ended active-project note alongside three unrelated follow-ups. Result: pass, both failure modes checked clean (out list had three named items, done condition was third-party checkable). Not a live `Skill` tool run, the skill is not installed in this account; the shipped `SKILL.md` was applied by hand against the real case instead. Case detail is internal and not reproduced here.

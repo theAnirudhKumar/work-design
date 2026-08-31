@@ -51,3 +51,9 @@ Whether `chat-context`, `optimize-tokens` or `pick-the-medium` compete with `est
 **Output behaviour.** Whether the reference class actually gets checked for best-case bias, whether the adjusted estimate stays a range rather than false precision, and whether a forced or single-case reference class gets flagged rather than accepted. All output checks, not routing.
 
 **Real sessions.** Every case here is constructed, same limitation as every other file in this directory.
+
+---
+
+## Field test, 2026-08-31
+
+One real case, not constructed: estimating how long the next work-design skill would take, reference class built from this repo's own real `git log` commit timestamps rather than invented numbers. Result: pass, with a genuine finding. A naive inside-view guess (30 to 60 min) overshot the ordinary reference cases (5 to 6 min) by roughly an order of magnitude, and the correction mechanism worked as designed. Also surfaced that reference-class cases split into two real kinds, repeats of an established pattern versus first-in-category cases needing outside research, which Step 2 does not currently distinguish; logged as a refinement candidate, not acted on from one field test. Not a live `Skill` tool run, the skill is not installed in this account.
