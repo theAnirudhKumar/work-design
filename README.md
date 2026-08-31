@@ -2,11 +2,11 @@
 
 **Design the work before you do it.**
 
-Work design is an old idea with a literature behind it. Organisational psychology has studied it for a century and defines it as "the content and organization of one's work tasks, activities, relationships, and responsibilities" ([Parker, Morgeson and Johns, 2017](https://espace.curtin.edu.au/bitstream/handle/20.500.11937/69907/70119.pdf?sequence=2)), and the field's centre is the [Centre for Transformative Work Design](https://www.transformativeworkdesign.com/about-work-design) at Curtin University. Almost all of it is about jobs and teams. This repository asks the same question one level down, at the scale of a single piece of work, and before the work starts rather than after it goes wrong.
+work-design is a small set of Claude skills that make a decision about how a piece of work will run before the work starts, not after it goes wrong: whether to install a tool, whether to keep paying for one, what to hand to an agent and what to keep, how to carry context from one session into the next, and when a request is about to cost more than it needs to.
 
-Five skills for Claude. Each one sits at a moment where a small decision made deliberately saves a large amount of rework: before you adopt a tool, before you keep paying for one, before you hand work over, before a session ends, before an expensive request runs.
+Five skills, each built around one moment where a small decision made deliberately saves a large amount of rework later. Every skill ends on something to act on: a verdict, a filled table, a template, never just advice. Nothing here needs a terminal, a workspace, connectors or an API key.
 
-Nothing here needs a terminal, a workspace, connectors or an API key.
+*The name borrows from a real field. Organisational psychology has studied work design for a century; this repository asks the same question one level down, at the scale of a single piece of work rather than a job or a team. The literature behind that framing is under [Research](#research) at the bottom.*
 
 ## The skills
 
@@ -72,6 +72,10 @@ Anthropic's [Agent Skills spec](https://github.com/anthropics/skills/tree/main/s
 Before opening a pull request, run `python3 validate-skills.py`. The same script runs on every pull request.
 
 Every skill also carries a file in [`evals/`](evals): the prompts that should make it fire, the near misses that should not, and what three models actually did with each. Routing happens on the description alone, so this is the only check that tests the thing most likely to be wrong.
+
+## Research
+
+Work design is a real field with a century of research behind it, defined by [Parker, Morgeson and Johns (2017)](https://espace.curtin.edu.au/bitstream/handle/20.500.11937/69907/70119.pdf?sequence=2) as "the content and organization of one's work tasks, activities, relationships, and responsibilities." Its academic centre is the [Centre for Transformative Work Design](https://www.transformativeworkdesign.com/about-work-design) at Curtin University. Both study jobs and teams; `work-design` asks the same question at the scale of a single piece of work, which is where the name comes from.
 
 ## Credits
 
