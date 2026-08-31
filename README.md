@@ -4,7 +4,7 @@
 
 work-design is a small set of Claude skills that make a decision about how a piece of work will run before the work starts, not after it goes wrong: whether to install a tool, whether to keep paying for one, what to hand to an agent and what to keep, how to carry context from one session into the next, and when a request is about to cost more than it needs to.
 
-Seven skills, each built around one moment where a small decision made deliberately saves a large amount of rework later. Every skill ends on something to act on: a verdict, a filled table, a template, never just advice. Nothing here needs a terminal, a workspace, connectors or an API key.
+Eight skills, each built around one moment where a small decision made deliberately saves a large amount of rework later. Every skill ends on something to act on: a verdict, a filled table, a template, never just advice. Nothing here needs a terminal, a workspace, connectors or an API key.
 
 *The name borrows from a real field. Organisational psychology has studied work design for a century; this repository asks the same question one level down, at the scale of a single piece of work rather than a job or a team. The literature behind that framing is under [Research](#research) at the bottom.*
 
@@ -25,6 +25,7 @@ Three categories. A skill belongs to a category once it ships; a category with n
 | Skill | What it does |
 | :--- | :--- |
 | [`pick-the-medium`](skills/pick-the-medium) | Picks the channel for one piece of communication before it happens: a message, a call, a document, or a meeting. Weighs reversibility and who needs to be live, and hands off to a meeting-design skill the moment the answer is a meeting. Ships a one-page medium call |
+| [`scope-the-work`](skills/scope-the-work) | Draws the boundary of one piece of work before it starts. Writes the in list, the out list, a checkable done condition, and who can move the line if something has to change. Ships a boundary note |
 
 **Working with agents:** what to hand over, what to keep, and what a session carries forward.
 
@@ -45,6 +46,7 @@ You do not need a workspace, a `CLAUDE.md`, a `MEMORY.md`, connectors or file ac
 | `delegate` | a description of the work | what the output is for and who sees it, which is what sets how hard the checks have to be |
 | `optimize-tokens` | nothing | nothing |
 | `pick-the-medium` | what needs to get decided or conveyed | how reversible the decision is and whether this will come up again in this shape, which is what tells a one-off from a pattern worth fixing |
+| `scope-the-work` | what the work is and roughly what finished looks like | who asked for it and what they actually need it for, and a case where this same work grew before, which is what makes the out list specific instead of generic |
 | `stack-audit` | a list of tool names from memory | a card statement, bank export or subscription list pasted in, which turns last use from a guess into a fact |
 | `switch-cost` | the tool's name | what is actually stored in it, and the destination tool named, which turns the estimate from a category guess into an answer about this account |
 
