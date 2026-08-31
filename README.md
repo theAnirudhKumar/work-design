@@ -4,7 +4,7 @@
 
 work-design is a small set of Claude skills that make a decision about how a piece of work will run before the work starts, not after it goes wrong: whether to install a tool, whether to keep paying for one, what to hand to an agent and what to keep, how to carry context from one session into the next, and when a request is about to cost more than it needs to.
 
-Eight skills, each built around one moment where a small decision made deliberately saves a large amount of rework later. Every skill ends on something to act on: a verdict, a filled table, a template, never just advice. Nothing here needs a terminal, a workspace, connectors or an API key.
+Nine skills, each built around one moment where a small decision made deliberately saves a large amount of rework later. Every skill ends on something to act on: a verdict, a filled table, a template, never just advice. Nothing here needs a terminal, a workspace, connectors or an API key.
 
 *The name borrows from a real field. Organisational psychology has studied work design for a century; this repository asks the same question one level down, at the scale of a single piece of work rather than a job or a team. The literature behind that framing is under [Research](#research) at the bottom.*
 
@@ -24,6 +24,7 @@ Three categories. A skill belongs to a category once it ships; a category with n
 
 | Skill | What it does |
 | :--- | :--- |
+| [`estimate-from-precedent`](skills/estimate-from-precedent) | Corrects a time estimate by checking it against how long similar work actually took last time, not how it feels like it should take. Pulls a reference class of ordinary past cases and adjusts toward it, naming the gap. Ships a precedent worksheet |
 | [`pick-the-medium`](skills/pick-the-medium) | Picks the channel for one piece of communication before it happens: a message, a call, a document, or a meeting. Weighs reversibility and who needs to be live, and hands off to a meeting-design skill the moment the answer is a meeting. Ships a one-page medium call |
 | [`scope-the-work`](skills/scope-the-work) | Draws the boundary of one piece of work before it starts. Writes the in list, the out list, a checkable done condition, and who can move the line if something has to change. Ships a boundary note |
 
@@ -44,6 +45,7 @@ You do not need a workspace, a `CLAUDE.md`, a `MEMORY.md`, connectors or file ac
 | `before-you-install` | the tool's name | the pricing page, policy or terms pasted in, and web access, which lets it do the research instead of handing you the searches |
 | `chat-context` | nothing, the handoff prints in chat to paste forward | file access, which turns handoffs into a saved trail with an index |
 | `delegate` | a description of the work | what the output is for and who sees it, which is what sets how hard the checks have to be |
+| `estimate-from-precedent` | an inside-view estimate and what the work is | two or three ordinary past cases and their actual duration, which is what turns the correction from a guess into a measured gap |
 | `optimize-tokens` | nothing | nothing |
 | `pick-the-medium` | what needs to get decided or conveyed | how reversible the decision is and whether this will come up again in this shape, which is what tells a one-off from a pattern worth fixing |
 | `scope-the-work` | what the work is and roughly what finished looks like | who asked for it and what they actually need it for, and a case where this same work grew before, which is what makes the out list specific instead of generic |

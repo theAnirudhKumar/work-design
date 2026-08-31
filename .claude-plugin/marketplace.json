@@ -22,7 +22,8 @@
         "./skills/stack-audit",
         "./skills/switch-cost",
         "./skills/pick-the-medium",
-        "./skills/scope-the-work"
+        "./skills/scope-the-work",
+        "./skills/estimate-from-precedent"
       ]
     }
   ]
