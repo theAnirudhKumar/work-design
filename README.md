@@ -4,7 +4,7 @@
 
 work-design is a small set of Claude skills that make a decision about how a piece of work will run before the work starts, not after it goes wrong: whether to install a tool, whether to keep paying for one, what to hand to an agent and what to keep, how to carry context from one session into the next, and when a request is about to cost more than it needs to.
 
-Five skills, each built around one moment where a small decision made deliberately saves a large amount of rework later. Every skill ends on something to act on: a verdict, a filled table, a template, never just advice. Nothing here needs a terminal, a workspace, connectors or an API key.
+Six skills, each built around one moment where a small decision made deliberately saves a large amount of rework later. Every skill ends on something to act on: a verdict, a filled table, a template, never just advice. Nothing here needs a terminal, a workspace, connectors or an API key.
 
 *The name borrows from a real field. Organisational psychology has studied work design for a century; this repository asks the same question one level down, at the scale of a single piece of work rather than a job or a team. The literature behind that framing is under [Research](#research) at the bottom.*
 
@@ -18,8 +18,7 @@ Three categories. A skill belongs to a category once it ships; a category with n
 | :--- | :--- |
 | [`before-you-install`](skills/before-you-install) | Vets a tool before you sign up. Reads the privacy policy and terms for what they actually permit, finds documented complaints, checks permissions and business model, and ends on install, install with conditions, or do not install. Ships a checklist and a verdict template |
 | [`stack-audit`](skills/stack-audit) | Audits the tools you already pay for. Builds an inventory with cost, last use and overlap, gives every row a verdict of keep, cancel, downgrade or consolidate, and leads with the total it would free up. Ships an inventory table |
-
-One more is planned in this category: **switch-cost**, for what breaks when you leave a tool.
+| [`switch-cost`](skills/switch-cost) | Checks what breaks before you leave a tool. What exports and in what format, what is lost outright, and what the move costs in hours. Ends on low, conditional, or high switching cost. Ships an exit checklist |
 
 **Working with agents:** what to hand over, what to keep, and what a session carries forward.
 
@@ -40,6 +39,7 @@ You do not need a workspace, a `CLAUDE.md`, a `MEMORY.md`, connectors or file ac
 | `delegate` | a description of the work | what the output is for and who sees it, which is what sets how hard the checks have to be |
 | `optimize-tokens` | nothing | nothing |
 | `stack-audit` | a list of tool names from memory | a card statement, bank export or subscription list pasted in, which turns last use from a guess into a fact |
+| `switch-cost` | the tool's name | what is actually stored in it, and the destination tool named, which turns the estimate from a category guess into an answer about this account |
 
 Missing context never blocks a skill. It changes what the skill can honestly claim, and each one says which checks it could not run rather than guessing around the gap.
 
