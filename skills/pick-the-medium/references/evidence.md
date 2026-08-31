@@ -1,0 +1,7 @@
+# Evidence: pick-the-medium
+
+This skill's core move, reversibility and simultaneity setting the medium rather than habit or urgency, draws on media richness theory (Daft, R.L. & Lengel, R.H., "Organizational Information Requirements, Media Richness and Structural Design," *Management Science*, 1986): the finding that different media carry different capacity for fast feedback, multiple cues and shared context, and that mismatching a message's need for richness to the medium carrying it is a distinct, nameable failure rather than a vague complaint about "too many meetings."
+
+This is cited as conceptual grounding for the shape of the skill, not as a fresh dataset. It is decades-old, foundational organizational-communication theory, not a statistic that needed a live search to confirm, and no claim in this skill rests on a specific number from it. No search was run for newer work revisiting or contesting the theory; a reader wanting the current state of that literature should not treat this citation as a survey of it, only as the origin of the reversibility-and-simultaneity framing used here.
+
+The Step 5 table (what points toward which medium) is this skill's own synthesis, built for the single-decision, single-piece-of-communication case this repository scopes to. It is not itself sourced from the 1986 paper, which addresses organizational structure rather than a step-by-step call.
