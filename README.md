@@ -10,15 +10,24 @@ Five skills, each built around one moment where a small decision made deliberate
 
 ## The skills
 
+Three categories. A skill belongs to a category once it ships; a category with nothing shipped in it yet does not appear here.
+
+**Tool lifecycle:** deciding whether to bring a tool in, and what it costs to keep or leave.
+
 | Skill | What it does |
 | :--- | :--- |
 | [`before-you-install`](skills/before-you-install) | Vets a tool before you sign up. Reads the privacy policy and terms for what they actually permit, finds documented complaints, checks permissions and business model, and ends on install, install with conditions, or do not install. Ships a checklist and a verdict template |
+| [`stack-audit`](skills/stack-audit) | Audits the tools you already pay for. Builds an inventory with cost, last use and overlap, gives every row a verdict of keep, cancel, downgrade or consolidate, and leads with the total it would free up. Ships an inventory table |
+
+One more is planned in this category: **switch-cost**, for what breaks when you leave a tool.
+
+**Working with agents:** what to hand over, what to keep, and what a session carries forward.
+
+| Skill | What it does |
+| :--- | :--- |
 | [`chat-context`](skills/chat-context) | Carries context between chats. Handoff mode writes a structured context file when a session ends; resume mode reads it back and states what was loaded before doing any work |
 | [`delegate`](skills/delegate) | Decides what to hand to an agent and what to keep, for one piece of work. Splits the work, allocates each part to you, another person or a model, and attaches a check and a stop condition to everything that leaves your hands. Ships an allocation table |
 | [`optimize-tokens`](skills/optimize-tokens) | Spots token-heavy requests before they run and proposes a cheaper approach that gets the same answer. Fires on request, or on its own when a task looks expensive |
-| [`stack-audit`](skills/stack-audit) | Audits the tools you already pay for. Builds an inventory with cost, last use and overlap, gives every row a verdict of keep, cancel, downgrade or consolidate, and leads with the total it would free up. Ships an inventory table |
-
-One more is planned: **switch-cost**, for what breaks when you leave a tool.
 
 ## They work without any setup
 
