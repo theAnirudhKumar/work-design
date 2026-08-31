@@ -4,7 +4,7 @@
 
 work-design is a small set of Claude skills that make a decision about how a piece of work will run before the work starts, not after it goes wrong: whether to install a tool, whether to keep paying for one, what to hand to an agent and what to keep, how to carry context from one session into the next, and when a request is about to cost more than it needs to.
 
-Six skills, each built around one moment where a small decision made deliberately saves a large amount of rework later. Every skill ends on something to act on: a verdict, a filled table, a template, never just advice. Nothing here needs a terminal, a workspace, connectors or an API key.
+Seven skills, each built around one moment where a small decision made deliberately saves a large amount of rework later. Every skill ends on something to act on: a verdict, a filled table, a template, never just advice. Nothing here needs a terminal, a workspace, connectors or an API key.
 
 *The name borrows from a real field. Organisational psychology has studied work design for a century; this repository asks the same question one level down, at the scale of a single piece of work rather than a job or a team. The literature behind that framing is under [Research](#research) at the bottom.*
 
@@ -19,6 +19,12 @@ Three categories. A skill belongs to a category once it ships; a category with n
 | [`before-you-install`](skills/before-you-install) | Vets a tool before you sign up. Reads the privacy policy and terms for what they actually permit, finds documented complaints, checks permissions and business model, and ends on install, install with conditions, or do not install. Ships a checklist and a verdict template |
 | [`stack-audit`](skills/stack-audit) | Audits the tools you already pay for. Builds an inventory with cost, last use and overlap, gives every row a verdict of keep, cancel, downgrade or consolidate, and leads with the total it would free up. Ships an inventory table |
 | [`switch-cost`](skills/switch-cost) | Checks what breaks before you leave a tool. What exports and in what format, what is lost outright, and what the move costs in hours. Ends on low, conditional, or high switching cost. Ships an exit checklist |
+
+**Deciding how work runs:** the shape of a piece of work itself, before you decide who does it or how.
+
+| Skill | What it does |
+| :--- | :--- |
+| [`pick-the-medium`](skills/pick-the-medium) | Picks the channel for one piece of communication before it happens: a message, a call, a document, or a meeting. Weighs reversibility and who needs to be live, and hands off to a meeting-design skill the moment the answer is a meeting. Ships a one-page medium call |
 
 **Working with agents:** what to hand over, what to keep, and what a session carries forward.
 
@@ -38,6 +44,7 @@ You do not need a workspace, a `CLAUDE.md`, a `MEMORY.md`, connectors or file ac
 | `chat-context` | nothing, the handoff prints in chat to paste forward | file access, which turns handoffs into a saved trail with an index |
 | `delegate` | a description of the work | what the output is for and who sees it, which is what sets how hard the checks have to be |
 | `optimize-tokens` | nothing | nothing |
+| `pick-the-medium` | what needs to get decided or conveyed | how reversible the decision is and whether this will come up again in this shape, which is what tells a one-off from a pattern worth fixing |
 | `stack-audit` | a list of tool names from memory | a card statement, bank export or subscription list pasted in, which turns last use from a guess into a fact |
 | `switch-cost` | the tool's name | what is actually stored in it, and the destination tool named, which turns the estimate from a category guess into an answer about this account |
 

@@ -20,7 +20,8 @@
         "./skills/delegate",
         "./skills/optimize-tokens",
         "./skills/stack-audit",
-        "./skills/switch-cost"
+        "./skills/switch-cost",
+        "./skills/pick-the-medium"
       ]
     }
   ]
