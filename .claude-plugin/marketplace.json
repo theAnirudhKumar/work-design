@@ -21,7 +21,8 @@
         "./skills/optimize-tokens",
         "./skills/stack-audit",
         "./skills/switch-cost",
-        "./skills/pick-the-medium"
+        "./skills/pick-the-medium",
+        "./skills/scope-the-work"
       ]
     }
   ]
