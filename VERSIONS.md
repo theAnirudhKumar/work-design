@@ -2,6 +2,18 @@
 
 What changed, and when.
 
+## 3.0.0
+
+**Added three skills to Tool lifecycle and Working with agents.** `delegate` (#3), splitting a single piece of work into an allocation table across you, another person or a model, each part carrying a check and a stop condition. `stack-audit` (#13), auditing tools already paid for into a keep, cancel, downgrade or consolidate verdict. `switch-cost` (#19), checking what breaks on the way out of a tool already in use, closing the Tool lifecycle category as scoped.
+
+**Opened a third category, Deciding how work runs.** `pick-the-medium` (#21) picks the channel for one piece of communication before it happens and hands off to a meeting-design skill the moment a meeting is the answer; its boundary against `meeting-design` was resolved by reading that skill's actual shipped description in the sibling `theAnirudhKumar/meeting-design` repository rather than assuming one. `scope-the-work` (#23) draws the in/out/done boundary of a piece of work before it starts. `estimate-from-precedent` (#25) corrects a time estimate against a reference class of ordinary past cases, built on the planning fallacy (Buehler, Griffin & Ross, 1994) and reference class forecasting (Flyvbjerg, 2006), and closes the duration-estimate gap `scope-the-work`'s own eval named.
+
+**Added the evaluations harness and backfilled it across every skill.** `evals/README.md` plus one file per skill, each run against Haiku, Sonnet and Opus with results recorded honestly, including disagreements (#5). Every skill added since carries its own eval from the day it shipped.
+
+**Fixed two routing bugs.** `optimize-tokens`'s proactive trigger fired inconsistently across models; rewritten to name request shapes instead of asking the model for a judgement call. A cost-shaped complaint was falling through every skill instead of reaching `chat-context` (#11).
+
+**Rewrote the README.** Replaced the three-paragraph, citation-heavy opening with plain what/why/how text, moved the academic citation into its own Research section at the bottom (#15). Regrouped the flat skills table into the three category tables that now structure the whole document (#17), and kept them in sync as each new skill shipped.
+
 ## 2.0.0
 
 **Renamed from `skills` to `work-design`.** The old name said nothing about what was inside, and what was inside was two unrelated groups of skills. GitHub keeps a permanent redirect, so the old repository URL still resolves.
