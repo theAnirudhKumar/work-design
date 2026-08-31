@@ -19,7 +19,8 @@
         "./skills/chat-context",
         "./skills/delegate",
         "./skills/optimize-tokens",
-        "./skills/stack-audit"
+        "./skills/stack-audit",
+        "./skills/switch-cost"
       ]
     }
   ]
