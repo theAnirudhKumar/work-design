@@ -20,7 +20,9 @@ Missing context never blocks this skill. It changes what the skill can honestly 
 
 **In the Claude app, no terminal needed.** Paste this into Claude:
 
-> Download the `stack-audit` skill from https://github.com/theAnirudhKumar/work-design/tree/main/skills/stack-audit, zip the `stack-audit` folder on its own, then upload it as a skill in Claude.
+```
+Download the stack-audit skill from https://github.com/theAnirudhKumar/work-design/tree/main/skills/stack-audit, zip the stack-audit folder on its own, then upload it as a skill in Claude.
+```
 
 Or do it by hand: download this repository as a ZIP (or clone it), zip this folder (`skills/stack-audit`) on its own, then in Claude go to **Customize > Skills > Create skill > Upload a skill**. The folder name inside the ZIP has to match the `name` in `SKILL.md`.
 

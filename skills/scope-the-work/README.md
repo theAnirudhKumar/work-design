@@ -20,7 +20,9 @@ Missing context never blocks this skill. It changes what the skill can honestly 
 
 **In the Claude app, no terminal needed.** Paste this into Claude:
 
-> Download the `scope-the-work` skill from https://github.com/theAnirudhKumar/work-design/tree/main/skills/scope-the-work, zip the `scope-the-work` folder on its own, then upload it as a skill in Claude.
+```
+Download the scope-the-work skill from https://github.com/theAnirudhKumar/work-design/tree/main/skills/scope-the-work, zip the scope-the-work folder on its own, then upload it as a skill in Claude.
+```
 
 Or do it by hand: download this repository as a ZIP (or clone it), zip this folder (`skills/scope-the-work`) on its own, then in Claude go to **Customize > Skills > Create skill > Upload a skill**. The folder name inside the ZIP has to match the `name` in `SKILL.md`.
 
