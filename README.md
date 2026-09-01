@@ -56,6 +56,14 @@ Missing context never blocks a skill. It changes what the skill can honestly cla
 
 ## Install
 
+### The easy way: one paste
+
+If your AI tool can read and write files on your computer (Claude Cowork, Claude Code, or similar), paste this in and let it do the rest:
+
+> I want to install skills from https://github.com/theAnirudhKumar/work-design. Download or clone the repository, then copy the skill folders I want into `~/.claude/skills/` (or `.claude/skills/` if this is for one project only), one folder per skill, keeping each folder's own name. Ask me which skills I want if I have not said, and tell me the exact folder path each one landed in when you are done.
+
+If you only want one or two skills, name them. If your AI tool cannot read or write files on its own, which is most web chat, use one of the manual methods below instead.
+
 ### Claude Code and Cowork
 
 ```
@@ -77,7 +85,7 @@ Copy any skill folder into `~/.claude/skills/<skill-name>/` for all your project
 
 ## Looking for customer success skills?
 
-`call-recap-follow-up` and `email-critic` used to live here. They are maintained in one place now, at [CSPulse/customer-success-skills](https://github.com/CSPulse/customer-success-skills), alongside fourteen others for reading an account, running the set-piece moments and handling the conversations.
+`call-recap-follow-up` and `email-critic` used to live here. They are maintained in one place now, at [CSPulse/customer-success-skills](https://github.com/CSPulse/customer-success-skills), alongside thirty others for reading an account, running the set-piece moments and handling the conversations.
 
 ## Writing your own
 
@@ -96,13 +104,6 @@ Every skill also carries a file in [`evals/`](evals): the prompts that should ma
 ## Research
 
 Work design is a real field with a century of research behind it, defined by [Parker, Morgeson and Johns (2017)](https://espace.curtin.edu.au/bitstream/handle/20.500.11937/69907/70119.pdf?sequence=2) as "the content and organization of one's work tasks, activities, relationships, and responsibilities." Its academic centre is the [Centre for Transformative Work Design](https://www.transformativeworkdesign.com/about-work-design) at Curtin University. Both study jobs and teams; `work-design` asks the same question at the scale of a single piece of work, which is where the name comes from.
-
-## Credits
-
-Two skills used daily here are other people's work and are not republished. Go to the source:
-
-- [garrytan/gstack](https://github.com/garrytan/gstack), `office-hours` and the rest of Garry Tan's planning stack. MIT
-- [blader/humanizer](https://github.com/blader/humanizer), strips AI-writing tells from text, built on Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing). MIT
 
 ## License
 
