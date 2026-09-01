@@ -1,40 +1,87 @@
 # chat context
 
-**Part of [work-design](../../#readme): a set of skills, in three categories, for deciding how a piece of work will run before it starts.**
+**Close a chat without losing what it knows.**
 
-Closes a long chat and opens a fresh one without losing anything. Long conversations get expensive because every new message carries the whole history with it - this skill writes a structured handoff when a session ends and reads it back, out loud, at the start of the next one, before doing any work.
+Long conversations get expensive because every message drags the whole history behind it. The fix is a fresh chat - but re-explaining from memory is where it goes wrong: the new chat re-decides something already settled, or re-tries an approach the last session already killed, because the only record was a scrollback nobody reread.
 
-The handoff isn't a summary. It captures what a summary drops: decisions made and why, approaches already tried and rejected (so the next chat doesn't re-propose something already killed), open blockers, exact file paths, and any wording that was explicitly approved, quoted verbatim. Where file access exists, it becomes a saved file with a master index so handoffs accumulate into a trail; where it doesn't, the same structure prints as one block to paste forward. Either way, resuming means reading the handoff in full and stating what was loaded and what's next, in three lines or fewer, before touching the actual work.
+This skill writes the record instead. Ending a chat produces a structured handoff, not a summary: decisions and their reasoning, approaches already tried and killed, open blockers, exact file paths, and any wording explicitly signed off on, quoted verbatim. With file access it's saved with a master index, building a trail; without it, the same structure prints as one copyable block. Resuming means reading the handoff in full before touching the work, then stating in three lines or fewer what loaded and what's next.
 
-The failure this exists to prevent: a chat that ends, gets summarized in someone's head, and starts over - re-deciding things already decided, and re-trying an approach the last session already ruled out for a reason nobody now remembers.
+The failure this exists to prevent: **a chat that ends, gets summarized in someone's head, and starts over - re-deciding things already decided, and re-trying an approach the last session already ruled out for a reason nobody now remembers.**
 
-Part of the **Working with agents** group in this repository.
+Part of the **Working with agents** group in [work-design](../../#readme).
+
+---
+
+## What it actually does
+
+| Step | What you get |
+| :--- | :--- |
+| Identify the project area | The right place for this handoff to live, or a short topic label when there's no workspace to route into |
+| Write the handoff | A fixed structure - goal, current state, decisions made, open blockers, files touched, rejected approaches, approved wording, next action - filled in even where the honest answer is "none" |
+| Register it | A master index row (file route only), so a later "resume" can find the right handoff without you carrying it |
+| The paste-ready opener | One line to drop into the new chat, or the handoff block itself when there's no file route |
+| Resume: find it | The named topic, the most recent active handoff, or a question rather than a guess if two could plausibly match |
+| Resume: state what loaded | Which handoff was read, which files came with it, and the recorded next action - three lines, before any work starts |
+
+---
 
 ## Who this is for
 
-For anyone working alongside an AI agent day to day: deciding what to hand off, carrying context between sessions, and catching an expensive request before it runs.
+Anyone working alongside an AI agent day to day, across more than one session - closing a chat that's gotten long or expensive, and picking the next one up without re-litigating what the last one already settled.
+
+You don't need a workspace, a `CLAUDE.md`, or file access for this to work. In a plain chat with nothing connected, the handoff just prints as a block you copy forward - that's the whole loop, and it's a complete answer, not a fallback.
+
+---
 
 ## What this needs
 
-Works with nothing but nothing, the handoff prints in chat to paste forward. Gets better with file access, which turns handoffs into a saved trail with an index.
+**Minimum:** nothing. The handoff prints in chat as a block to paste into the next one.
 
-Missing context never blocks this skill. It changes what the skill can honestly claim, and it says which checks it could not run rather than guessing around the gap.
+**Better with:** somewhere to write files. The handoff becomes a saved file with a master index, so handoffs accumulate into a trail and resume can find the right one on its own.
 
-## Install just this skill
+Missing context never blocks this skill - the handoff's structure is identical either way, only where it lands changes.
 
-**In the Claude app, no terminal needed.** Paste this into Claude:
+---
+
+## Install
+
+**The easy way: one paste**
 
 ```
-Download the chat-context skill from
-https://github.com/theAnirudhKumar/work-design/tree/main/skills/chat-context,
-zip the chat-context folder on its own, then upload it as a skill in Claude.
+I want to install the chat-context skill from
+https://github.com/theAnirudhKumar/work-design. Download or clone the
+repository, then copy the skills/chat-context folder into
+~/.claude/skills/ (or .claude/skills/ if this is for one project only),
+keeping its own folder name. Tell me the exact folder path it landed in
+when you are done.
 ```
 
-Or do it by hand: download this repository as a ZIP (or clone it), zip this folder (`skills/chat-context`) on its own, then in Claude go to **Customize > Skills > Create skill > Upload a skill**. The folder name inside the ZIP has to match the `name` in `SKILL.md`.
+**In the Claude app (no terminal needed)**
 
-## Want the whole set?
+1. Download this repository as a ZIP, or clone it
+2. Zip the `skills/chat-context` folder on its own
+3. In Claude, go to Customize, then Skills, then Create skill, then Upload skill
+4. Upload the ZIP
 
-The [main README's Install section](../../#install) has the one-line plugin command that installs the whole set at once, plus the API and by-hand routes.
+**As a plugin, in Claude Code or Cowork**
+
+```
+/plugin marketplace add theAnirudhKumar/work-design
+/plugin install work-design@work-design-marketplace
+```
+
+**Want the whole set?** The [main README's install section](../../#readme) installs all 9 skills at once.
+
+**Or just read it.** `SKILL.md` is the whole method - it's plain markdown, no other files needed.
+
+---
+
+## What this does not do
+
+- **Not a substitute for `MEMORY.md`.** A handoff is session state, not durable memory. Anything that outlives this one thread of work gets proposed as a memory entry separately, not folded into the handoff.
+- **Not for a short chat where nothing was decided.** Say so and skip the file rather than writing a handoff with nothing in it.
+- **Not a transcript.** No dialogue, no blow-by-blow, no reasoning that led nowhere. Just what the next chat actually needs to act.
+- **Not a conversational recap.** A request to summarize the chat back to the user gets a summary, not a handoff - the two are different jobs.
 
 ---
 
