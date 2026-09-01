@@ -20,7 +20,9 @@ Missing context never blocks this skill. It changes what the skill can honestly 
 
 **In the Claude app, no terminal needed.** Paste this into Claude:
 
-> Download the `pick-the-medium` skill from https://github.com/theAnirudhKumar/work-design/tree/main/skills/pick-the-medium, zip the `pick-the-medium` folder on its own, then upload it as a skill in Claude.
+```
+Download the pick-the-medium skill from https://github.com/theAnirudhKumar/work-design/tree/main/skills/pick-the-medium, zip the pick-the-medium folder on its own, then upload it as a skill in Claude.
+```
 
 Or do it by hand: download this repository as a ZIP (or clone it), zip this folder (`skills/pick-the-medium`) on its own, then in Claude go to **Customize > Skills > Create skill > Upload a skill**. The folder name inside the ZIP has to match the `name` in `SKILL.md`.
 
