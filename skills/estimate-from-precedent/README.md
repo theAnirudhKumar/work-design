@@ -1,8 +1,10 @@
 # estimate from precedent
 
-**Part of [work-design](../../#readme): nine skills, in three categories, for deciding how a piece of work will run before it starts.**
+**Part of [work-design](../../#readme): a set of skills, in three categories, for deciding how a piece of work will run before it starts.**
 
-Corrects a time estimate by checking it against how long similar work actually took last time, not how it feels like it should take. Pulls a reference class of ordinary past cases and adjusts toward it, naming the gap. Ships a precedent worksheet.
+Ask someone how long a piece of work will take and they picture it going well - no interruptions, no rework, nobody waiting on someone else - which is the planning fallacy, not a discipline problem, and it gets corrected by changing what the estimate is built from. This skill writes down that inside-view number first, then pulls two or three ordinary past cases of similar work - not the smoothest one, not the outlier - and asks what they actually took, not what they were estimated to take at the time, since memory of past duration compresses optimistically in the same direction as a fresh guess. It names the gap between the two, states what the inside-view number left out (a review cycle, a dependency, a revision after feedback), and adjusts toward the reference class in proportion to how many comparable cases there were and how consistent they were - landing on a range where the cases varied, not a single number dressed up as more certain than the evidence supports. If nothing comparable exists, it says so and stops rather than inventing a reference class to correct against.
+
+The failure this exists to prevent: **an estimate built entirely from imagining this specific instance going well, when a look at similar past instances would have caught the gap first.**
 
 Part of the **Deciding how work runs** group in this repository.
 
@@ -21,14 +23,16 @@ Missing context never blocks this skill. It changes what the skill can honestly 
 **In the Claude app, no terminal needed.** Paste this into Claude:
 
 ```
-Download the estimate-from-precedent skill from https://github.com/theAnirudhKumar/work-design/tree/main/skills/estimate-from-precedent, zip the estimate-from-precedent folder on its own, then upload it as a skill in Claude.
+Download the estimate-from-precedent skill from
+https://github.com/theAnirudhKumar/work-design/tree/main/skills/estimate-from-precedent,
+zip the estimate-from-precedent folder on its own, then upload it as a skill in Claude.
 ```
 
 Or do it by hand: download this repository as a ZIP (or clone it), zip this folder (`skills/estimate-from-precedent`) on its own, then in Claude go to **Customize > Skills > Create skill > Upload a skill**. The folder name inside the ZIP has to match the `name` in `SKILL.md`.
 
 ## Want the whole set?
 
-The [main README's Install section](../../#install) has the one-line plugin command that installs all nine skills at once, plus the API and by-hand routes.
+The [main README's Install section](../../#install) has the one-line plugin command that installs the whole set at once, plus the API and by-hand routes.
 
 ---
 
