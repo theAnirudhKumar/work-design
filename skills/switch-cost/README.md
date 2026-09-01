@@ -1,38 +1,95 @@
 # switch cost
 
-**Part of [work-design](../../#readme): a set of skills, in three categories, for deciding how a piece of work will run before it starts.**
+**Find out what breaks before you're already gone.**
 
-The decision to leave a tool gets made on the reasons to leave; the cost of actually leaving shows up afterward, when the export turns out to be a PDF nobody can reuse or an integration nobody remembers building stops firing silently. This skill inventories what's actually stored in the tool - content, configuration, integrations, history, other people's access - then checks each item against three separate questions: does it export at all, and in a shape the destination can use (a CSV of contacts is usable, a PDF of a board isn't, and configuration frequently doesn't export at all and has to be rebuilt by hand); what's lost outright with no export path (other people's notification history, the tool's own analytics and audit logs, URLs and embeds that break even after a clean migration); and what the exit terms actually say (notice period, contract minimum, what happens to the data after cancellation). It converts all of that into an hours estimate rather than a dollar figure, since no credible cross-tool cost data exists, and ends on low, conditional, or high switching cost - where, exactly as in before-you-install, a condition has to be a named action, never an attitude.
+The decision to leave a tool gets made on the reasons to leave. The cost of leaving shows up afterward - the export turns out to be a PDF nobody can reuse, or an integration nobody remembers building stops firing silently weeks after cancellation. By then the decision is final and the discovery is just damage.
 
-The failure this exists to prevent: **finding out what you lose on the way out, after you've already committed to leaving.**
+This skill checks that cost first. It names what's actually stored - content, configuration, integrations, history, other people's access - then checks whether each item exports in a format the destination can use (a CSV of contacts works, a PDF of a project board doesn't), names what's lost outright, estimates the move in hours rather than money since no credible switching-cost dataset exists, and checks the exit terms: notice period, contract minimum, data retention after cancellation. It runs in researched or guided mode, the same distinction `before-you-install` makes, and ends on one of three calls.
 
-Part of the **Tool lifecycle** group in this repository.
+The failure this exists to prevent: **finding out what you lose on the way out, after you have already committed to leaving.**
+
+Part of the **Tool lifecycle** group in [work-design](../../#readme).
+
+---
+
+## What it actually does
+
+| Step | What you get |
+| :--- | :--- |
+| Name what's actually stored | Content, configuration, integrations, history, and other people's access - the inventory everything else checks against |
+| Check what exports, and in what shape | Whether each item exports at all, in a usable format, and whether the named destination can actually import it |
+| Name what's lost outright | A plain list of what has no export path under any format - separate from what merely takes work to move |
+| Estimate the move in hours | Built from the specific inventory found, or from the reader's own past migration, never from a category-wide guess |
+| Check the exit terms | Contract minimum, cancellation notice, and what happens to the data after cancellation |
+| The call | Low switching cost, switching cost with conditions, or high switching cost - with conditions written as actions |
+
+---
 
 ## Who this is for
 
-For anyone deciding whether to bring a tool in, keep paying for one, or leave it, without redoing the research from scratch every time.
+Anyone weighing a move between two tools, or checking the exit cost on a tool a `stack-audit` already marked for cancellation, before anyone acts on that verdict. It's for what happens on the way out - not whether to leave (`stack-audit`) and not whether to adopt something new in the first place (`before-you-install`).
+
+You don't need to be technical. The tool's name is enough to start, and it works from a chat window with or without web access.
+
+---
 
 ## What this needs
 
-Works with nothing but the tool's name. Gets better with what is actually stored in it, and the destination tool named, which turns the estimate from a category guess into an answer about this account.
+**Minimum:** the tool's name. Nothing else - it tells you what to go check and marks every gap it couldn't fill.
 
-Missing context never blocks this skill. It changes what the skill can honestly claim, and it says which checks it could not run rather than guessing around the gap.
+**Better with:** what's actually stored in it - content, configuration, integrations, history, other people's access. A general answer about a category of tool isn't the same as an answer about this one, in this state.
 
-## Install just this skill
+**Best with:** the destination named. Switching cost isn't a property of the tool being left - it's a property of the gap between the tool being left and the tool being moved to. "What breaks if I leave Notion" is a weaker question than "what breaks if I move from Notion to Obsidian," and only the second one has a real answer.
 
-**In the Claude app, no terminal needed.** Paste this into Claude:
+Missing context never blocks this skill. Without web access it runs in guided mode - handing you the exact export page, cancellation terms and account settings to check - and names every check it couldn't run.
+
+---
+
+## Install
+
+**The easy way: one paste**
 
 ```
-Download the switch-cost skill from
-https://github.com/theAnirudhKumar/work-design/tree/main/skills/switch-cost,
-zip the switch-cost folder on its own, then upload it as a skill in Claude.
+I want to install the switch-cost skill from
+https://github.com/theAnirudhKumar/work-design. Download or clone the
+repository, then copy the skills/switch-cost folder into
+~/.claude/skills/ (or .claude/skills/ if this is for one project only),
+keeping its own folder name. Tell me the exact folder path it landed in
+when you are done.
 ```
 
-Or do it by hand: download this repository as a ZIP (or clone it), zip this folder (`skills/switch-cost`) on its own, then in Claude go to **Customize > Skills > Create skill > Upload a skill**. The folder name inside the ZIP has to match the `name` in `SKILL.md`.
+**In the Claude app (no terminal needed)**
 
-## Want the whole set?
+1. Download this repository as a ZIP, or clone it
+2. Zip the `skills/switch-cost` folder on its own
+3. In Claude, go to Customize, then Skills, then Create skill, then Upload skill
+4. Upload the ZIP
 
-The [main README's Install section](../../#install) has the one-line plugin command that installs the whole set at once, plus the API and by-hand routes.
+**As a plugin, in Claude Code or Cowork**
+
+```
+/plugin marketplace add theAnirudhKumar/work-design
+/plugin install work-design@work-design-marketplace
+```
+
+**Want the whole set?** The [main README's install section](../../#readme) installs all 9 skills at once.
+
+**Or just read it.** `SKILL.md` is the method, `references/evidence.md` explains why the skill argues from mechanism rather than a statistic, and `assets/exit-checklist.md` is the checklist it fills in and hands over.
+
+---
+
+## Where this comes from
+
+This skill deliberately does not cite a switching-cost statistic, and `references/evidence.md` documents why: two sources were checked directly while writing it - Zylo's own SaaS statistics roundup, which contains no figures on lock-in or migration time, and an industry piece claiming specific migration-hour figures with no disclosed source or methodology, read as opinion rather than measurement and not used. No credible, sourced dataset on SaaS switching cost was found anywhere in that pass. So Step 4 builds its hours estimate from the specific inventory the skill itself gathers, or from the reader's own past migrations, instead of a borrowed industry number - a weaker-sounding claim, and the only one that survives being checked.
+
+---
+
+## What this does not do
+
+- **Not a migration guide.** It names what breaks and what it costs. It doesn't walk through the mechanics of the move itself.
+- **Not a renegotiation skill.** Whether to leave, or what to pay to stay, is `stack-audit`'s job or a direct conversation with the vendor.
+- **Not legal advice.** Data-retention and contract-term findings are reported from what the terms say. Anything contractual or regulated goes to someone qualified.
+- **Not a guarantee.** A low-switching-cost call means nothing found in this check makes leaving expensive. It doesn't mean nothing will go wrong in the move itself.
 
 ---
 
