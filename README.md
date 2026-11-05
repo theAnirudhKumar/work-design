@@ -220,6 +220,10 @@ The methods behind individual skills are established and named where they are us
 
 An honest limit: this support comes mostly from practice and from related research on planning and behaviour change. There is little direct evidence that any one of these raises the quality of knowledge work, and this repository does not claim a measured improvement.
 
+## Data and privacy
+
+These skills are plain markdown instructions. They contain no code, make no network calls, collect nothing and have no telemetry. They run inside your AI tool and see only what you type or paste, plus whatever your tool already has in context. The consultant, `work-design`, may offer to look at a connected calendar or task list: it asks first, reads one week read-only, and says what it read. Nothing is written, sent or saved unless you approve it. Anything you paste is handled by your AI tool under that tool's own terms.
+
 ## License
 
 [MIT](LICENSE).
