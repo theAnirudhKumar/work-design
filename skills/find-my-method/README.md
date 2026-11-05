@@ -28,14 +28,15 @@ Method Fit Card: you
    Work: rotating shifts, no control over hours (assumed: off days vary)
    Tried: to-do lists. Stopped when the shift pattern changed. (assumed)
 
-2. Primary: Single Inbox
-   Fit: you said lists die when shifts change. One capture place works
+2. Primary: Brain dump
+   Fit: you said lists die when shifts change. Getting everything out of your head works
    at any hour, and needs no schedule.
-   Evidence: Practice only (library card). Widely used, little direct testing.
-   Watch for: it fails if you never look at it. Pair with a weekly look.
+   Evidence: Some (library card). Studies on writing down open tasks
+   suggest it can ease intrusive thoughts; effects vary by person.
+   Watch for: the list is useless if you never look at it.
 
-3. Backup: Two-Minute Rule (replaces, does not join)
-4. Avoid for now: Time Blocking
+3. Backup: Two-minute rule (replaces, does not join)
+4. Avoid for now: Time blocking
    Your hours change weekly, so blocks would break by Thursday.
 
 5. 7-day trial: capture only, nothing else new. Set your own reminder.

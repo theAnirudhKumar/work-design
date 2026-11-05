@@ -54,7 +54,7 @@ Do similar small tasks in one window (messages, forms, calls).
 Do the hardest or most dreaded task first.
 - **Use it to**: place the must-do at the start of the peak window when the dread item is also the important one.
 - **Backfires when**: the hardest task is not the most important, or the person is not sharp early. Then it burns the best hour on the wrong thing.
-- **Evidence**: Practice only. Often attributed to a writer who attributed it to Mark Twain; the attribution is disputed.
+- **Evidence**: Practice only. Often attributed to Mark Twain; the attribution is disputed.
 
 ## Minimum viable day
 Three small wins, finishable on a bad day, plus the commitments that cannot move.
