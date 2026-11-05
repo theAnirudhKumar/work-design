@@ -10,7 +10,7 @@ What changed, and when.
 
 **Added ten management methods.** One-on-ones, weekly team planning, team retrospective, WIP limits, team Kanban board, situational leadership, radical candor, skip-level meetings, written weekly updates and team pre-mortem. The library is now 137 methods. All ten are rated Practice only, and the cards say where a model is popular but weakly tested.
 
-**Caveats.** Making a skill broad risks stealing routing from the specific ones, so the full suite was rerun against the new description; the result is in `evals/README.md`. Evidence labels and attributions on the new cards were written from memory.
+**Caveats.** Making a skill broad risks stealing routing from the specific ones, so the full suite (551 cases) was rerun on Haiku, Sonnet and Opus against the new description. All 9 open-ended cases went to the consultant, all 16 near misses stayed with their specific skills, and 1 of 1,563 earlier picks moved to it. Matches on the 504 single-answer cases were 97.0%, 97.2% and 97.2%; about 6% of picks differ between two runs of the same case, so single flips are noise. Details are in `evals/README.md`. Evidence labels and attributions on the new cards were written from memory.
 
 ## 4.1.0
 
