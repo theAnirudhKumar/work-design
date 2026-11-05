@@ -28,4 +28,4 @@ If a reply lands hours from now, does it block anything: [ ]
 **Runner-up:** [ ]
 **What the runner-up would have cost:** [ ]
 
-If the call is a meeting, stop here and hand off to a meeting-design skill for the agenda, decision rule and attendee list.
+If the call is a meeting, stop here and hand off to `meeting-design` for the agenda, decision rule and attendee list (install: `/plugin marketplace add theAnirudhKumar/meeting-design`, then `/plugin install meeting-design@meeting-design-marketplace`).

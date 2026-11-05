@@ -18,9 +18,9 @@ description: >
 
 # Switch Cost
 
-The decision to leave a tool gets made on the reasons to leave. The cost of actually leaving shows up afterward, when the export turns out to be a PDF nobody can reuse, or the integration nobody remembers building stops firing silently.
+The decision to leave a tool gets made on the reasons to leave. The cost shows up afterward, when the export turns out to be a PDF nobody can reuse, or an integration nobody remembers building stops firing silently.
 
-The failure this exists to prevent: **finding out what you lose on the way out, after you have already committed to leaving.** Not whether to leave. What leaving actually costs, named before the decision is final rather than discovered during the move.
+The failure this exists to prevent: **finding out what you lose on the way out, after you have already committed to leaving.** Not whether to leave: what leaving costs, named before the decision is final.
 
 ---
 
@@ -107,7 +107,7 @@ Above the checklist, no more than three lines: which mode ran, the total hour es
 ## What this does not do
 
 - **Not a migration guide.** It names what breaks and what it costs. It does not walk through the mechanics of the move itself.
-- **Not a renegotiation skill.** Whether to leave, or what to pay to stay, is `stack-audit`'s or a direct conversation with the vendor, not this skill's job.
+- **Not a renegotiation skill.** Whether to leave is `stack-audit`'s question, and what to pay to stay is a conversation with the vendor.
 - **Not legal advice.** Data-retention and contract-term findings are reported from what the terms say. Anything contractual or regulated goes to someone qualified.
 - **Not a guarantee.** A low-switching-cost call means nothing found in this check makes leaving expensive. It does not mean nothing will go wrong in the move itself.
 

@@ -56,7 +56,7 @@ Async is cheaper than sync by default, but only when the wait is affordable. If 
 | :--- | :--- |
 | Reversible, one direction, nobody blocked | Written message |
 | Reversible, needs a quick reaction, nobody blocked | Written message with a short reply window |
-| Irreversible or high-stakes, needs live pushback from more than one person | Meeting, hand off to meeting-design |
+| Irreversible or high-stakes, needs live pushback from more than one person | Meeting, hand off to `meeting-design` |
 | Needs live back-and-forth but only between two people | A call, not a meeting |
 | Needs a durable record more than a live discussion | A shared document with comments, not a call |
 | Recurring and always resolves in ten minutes with the same two people | A standing short call, not a recurring meeting |
@@ -65,13 +65,22 @@ Name the medium, name the runner-up, and say in one sentence what the runner-up 
 
 ## Step 6: Hand off if the answer is a meeting
 
-If Step 5 lands on a meeting, this skill's job is done. Say so plainly and point to a meeting-design skill for the agenda, the decision rule and who actually needs to be in the room; this skill does not build any of that, it only established that a meeting is the right container.
+If Step 5 lands on a meeting, this skill's job is done. Say so in one line and name the skill that takes over: `meeting-design`, which builds the agenda, the decision rule and the attendee list. Do not draft any of those here. This step established only that a meeting is the right container.
+
+If `meeting-design` is not installed, give the user the install commands:
+
+```
+/plugin marketplace add theAnirudhKumar/meeting-design
+/plugin install meeting-design@meeting-design-marketplace
+```
+
+The meeting-design repository (github.com/theAnirudhKumar/meeting-design) has three skills: `meeting-design` before a meeting, `meeting-close` after it, and `meeting-audit` for recurring meetings. The last two arrive with its v2.0.0 release, so if they are missing from the install, only `meeting-design` is there yet. Name the one that fits the user's next step.
 
 ---
 
 ## Output
 
-One medium, one runner-up named, one sentence on what the runner-up would have cost. Where a meeting is the call, an explicit hand-off line rather than an agenda.
+One medium, one runner-up named, one sentence on what the runner-up would have cost. Where a meeting is the call, a hand-off line naming `meeting-design` (with the install commands if it is missing) rather than an agenda.
 
 ## Failure modes to watch for
 
@@ -83,7 +92,7 @@ One medium, one runner-up named, one sentence on what the runner-up would have c
 
 ## What this does not do
 
-Build the agenda, pick the decision rule, or decide who is in the room once a meeting is the call; that is a meeting-design skill's job, and this skill hands off to it rather than duplicating it. Does not decide whether a standing meeting that already exists should keep happening; that is the same meeting-design skill's own first step, applied to a meeting already on the calendar rather than a new piece of communication.
+Build the agenda, pick the decision rule, or decide who is in the room once a meeting is the call; `meeting-design` does that, and this skill hands off to it rather than duplicating it. Does not decide whether a standing meeting that already exists should keep happening; that is `meeting-audit`'s job (or `meeting-design`'s first step, applied to a meeting already on the calendar).
 
 ## Supporting files
 

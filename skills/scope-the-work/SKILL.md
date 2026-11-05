@@ -75,7 +75,7 @@ A filled boundary note: in, out, done, who decides changes. Not a project plan, 
 
 ## What this does not do
 
-Decide who performs the work once it is scoped; that is delegate's job, working from this skill's own in list. Does not produce a formal statement of work, a contract, pricing, or legal terms; this is a working boundary for the person actually doing or overseeing the work, not a client-facing document. Does not estimate how long the work will take; a skill built for that is a separate concern from what the work covers.
+Decide who performs the work once it is scoped; that is delegate's job, working from this skill's own in list. Does not produce a formal statement of work, a contract, pricing, or legal terms; this is a working boundary for the person actually doing or overseeing the work, not a client-facing document. Does not estimate how long the work will take; `estimate-from-precedent` does that.
 
 ## Supporting files
 

@@ -19,9 +19,11 @@ description: >
 
 # Chat Context
 
-Long chats get expensive because every new message carries the whole conversation with it. This skill lets the user close a chat and open a fresh one without losing a thing. It writes a structured context file at the end of a session and reads it back at the start of the next one.
+Long chats get expensive because every new message carries the whole conversation with it. This skill lets the user close a chat and open a fresh one without losing what it knew. It writes a structured handoff at the end of a session and reads it back at the start of the next.
 
-This skill owns the handoff procedure only. It does not restate rules that live elsewhere. Where a workspace exists, its root `CLAUDE.md` owns routing and preferences, its file-naming rules own placement, and its voice or style guide owns tone. Read those where the steps below point to them, and skip the pointer where the file does not exist.
+The failure this exists to prevent: **a fresh chat that re-decides something already settled, or re-tries an approach the last session already killed.**
+
+This skill owns the handoff procedure only. Where a workspace exists, its root `CLAUDE.md` owns routing and its file-naming rules own placement; read them where the steps below point to them, and skip the pointer where the file does not exist.
 
 ---
 
@@ -37,7 +39,7 @@ The structure of a handoff is identical either way. Only where it lands changes.
 
 ## Mode A: Handoff
 
-Triggered when the user signals the chat is ending. Do not wait to be asked twice, and do not offer a conversational summary instead.
+Triggered when the user signals the chat is ending. Write the handoff the first time they ask, and do not offer a conversational summary instead.
 
 **Two routes.** With file access, the handoff becomes a file and gets an index row: run A1 through A7. Without it, print the Step A3 structure as one markdown block in chat and stop there: run A1, A3 and A6 only, and say plainly that it lives in the chat rather than in a file, so the user knows to keep it.
 
@@ -130,7 +132,7 @@ Append a row to the master index at `<Ops Area>/Chat Context/chat-context-index.
 
 **Refreshing an existing handoff updates its row rather than adding one.** When Step A3 updated an existing file instead of creating a new one, edit that file's row in place: new date, topic suffixed `(refreshed)`, status unchanged. Append a new row only for a genuinely new topic. Two rows pointing at the same file recreates the exact ambiguity Step A3 exists to prevent, since a later "resume" then has to pick between them.
 
-The index is a rolling register, so it carries no date prefix and is never re-dated. Re-dating a row on refresh is the one exception, and it applies to that row only, not the file. This follows the same logic as any rolling register in the workspace's file-naming rules.
+The index file is a rolling register: it carries no date prefix and is never renamed. Re-dating a row on refresh is the one exception, and it applies to that row only.
 
 ### Step A5: Index structure
 
@@ -202,7 +204,7 @@ This is the only acceptable place to spend words on recap. Keep it short.
 ### What stays out
 
 - Transcript, dialogue, or blow-by-blow of the conversation.
-- Anything already recorded in root `MEMORY.md` or the project area's `MEMORY.md`. Point to it instead. Duplication breaks MECE.
+- Anything already recorded in a `MEMORY.md` or similar durable notes file. Point to it instead of copying it.
 - Reasoning that led nowhere and changed nothing.
 
 ### Size
@@ -211,9 +213,9 @@ Keep a handoff under 120 lines. If it runs longer, the detail belongs in a proje
 
 ### Relationship to MEMORY.md
 
-A handoff is session state, not memory. It does not need approval to write, and it does not go in `MEMORY.md`.
+A handoff is session state, not memory. It needs no approval to write, and it does not go in `MEMORY.md`.
 
-If something in the session is durable rather than session-scoped, a decision that outlives this thread of work or a new working convention, propose it as a `MEMORY.md` entry separately and wait for approval. Where there is no `MEMORY.md`, propose the same items in chat under a clear heading so the user can file them wherever they keep durable notes. Handoff and memory are different jobs. Do both when both apply.
+If something in the session outlasts this thread of work, such as a decision or a new working convention, propose it as a `MEMORY.md` entry separately and wait for approval. Where there is no `MEMORY.md`, list those items in chat under a clear heading so the user can file them wherever they keep durable notes. Do both when both apply.
 
 ### When not to use this skill
 

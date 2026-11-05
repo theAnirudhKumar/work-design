@@ -17,7 +17,7 @@ description: >
 
 The failure this exists to prevent: **paying every month for a decision made once, on a tool nobody has opened since, because nobody put a date on revisiting it.**
 
-Subscriptions are the easiest spend in a business or a personal budget to lose track of, because the bill is the only thing that recurs. The decision to keep paying does not recur unless something forces it to. This skill forces it.
+The bill recurs; the decision to keep paying does not, unless something forces it. This skill forces it.
 
 ---
 
@@ -49,7 +49,7 @@ Runs when the user wants to review, clean up or account for the tools already in
 
 List every tool being paid for, personally or through the organization. Where a statement, export or subscription list is available, use it as the source list rather than asking the user to recall from memory. Memory reliably omits the tools nobody opens, which are exactly the ones this audit exists to find.
 
-Where nothing is available, ask for a list from memory and say plainly, in the output, that the audit only covers what was listed.
+Where nothing is available, ask for a list from memory and say in the output that the audit only covers what was listed.
 
 ## Step 2: Fill cost and last use
 
@@ -110,8 +110,6 @@ Above the table, no longer than three lines: the total recoverable amount, how m
 
 ## What this does not do
 
-- **Not a procurement or negotiation skill.** It decides keep or cancel. What to pay for a kept tool is a separate conversation.
-- **Not a vetting skill for a tool not yet adopted.** That is `before-you-install`.
 - **Does not cancel anything itself.** It hands over a table with a verdict per row. Acting on it is the user's call.
 - **Not proof that unused means unnecessary.** Some tools are correctly paid for and rarely opened by design, such as a disaster-recovery or compliance tool. Note this as an exception on its row rather than defaulting it to cancel.
 
