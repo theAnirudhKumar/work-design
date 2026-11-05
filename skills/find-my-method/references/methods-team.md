@@ -43,7 +43,7 @@ These methods change how a team or a pair coordinates: when people talk, who dec
 4. Have one person note blockers and who owns the follow-up.
 **7-day trial:** Run it daily for five working days. Track: how many blockers surfaced that would otherwise have waited, and whether it ran over its cap.
 **Pairs well with:** Working agreements; Decision log; Async-first
-**Comes from:** Associated with Scrum and agile software teams; no single originator.
+**Comes from:** Associated with Scrum and agile software teams; no single originator. The Scrum Guide caps the Daily Scrum at 15 minutes but does not prescribe a format, so the three prompts below are one common choice.
 **Evidence:** Practice only. Widely used in software, with little direct testing of its effect.
 **Effort to set up:** Low.   **Works for:** Team
 
@@ -59,7 +59,7 @@ These methods change how a team or a pair coordinates: when people talk, who dec
 5. Share it with those named and ask for corrections.
 **7-day trial:** Use it for one project only. Track: how many times someone asked "who owns this?" during the week, and any row people disagreed on.
 **Pairs well with:** Directly responsible individual; Decision log; Delegation levels
-**Comes from:** Folk practice, no single origin.
+**Comes from:** Folk practice; it descends from responsibility assignment matrices (also called linear responsibility charts), and accounts of its origin conflict, so there is no single verified originator.
 **Evidence:** Practice only. Common in project management, with little direct testing of its effect on outcomes.
 **Effort to set up:** Medium.   **Works for:** Team
 
@@ -89,7 +89,7 @@ These methods change how a team or a pair coordinates: when people talk, who dec
 4. Write the name next to the item where everyone sees it.
 **7-day trial:** Assign one owner to every item on a shared list for the week. Track: items with no owner at start versus end, and how many stalled items moved once owned.
 **Pairs well with:** RACI; Delegation levels; Decision log
-**Comes from:** Often associated with Apple; the origin is unclear.
+**Comes from:** Often associated with Apple, where Adam Lashinsky described it in Inside Apple (2012); the exact origin is unclear.
 **Evidence:** Practice only. Popular in product teams, with little direct testing.
 **Effort to set up:** Low.   **Works for:** Team
 
@@ -109,16 +109,16 @@ These methods change how a team or a pair coordinates: when people talk, who dec
 **Effort to set up:** Low.   **Works for:** Team
 
 ## Delegation levels
-**One line:** Choose how much authority to hand over, from "do as I say" up to "decide and just tell me later", and name the level out loud.
+**One line:** Choose how much authority to hand over, from "do as I say" up to full delegation, and name the level out loud.
 **Best for:** Managers, team leads, and parents or founders who either micromanage or hand things off vaguely and get burned.
 **Skip it when:** The person is new and needs close support, or the task is high-risk and irreversible; start at a lower level and move up.
 **Start in 10 minutes:**
-1. Pick one task you are about to hand off.
-2. Choose a level: tell them what to do; sell them on it; consult first; agree together; advise then decide; inquire after; or full delegation.
+1. Pick one decision you are about to hand off. Appelo applies the levels to decision areas, not to every small task.
+2. Choose a level: tell them the decision; sell them on it; consult them first; agree together; advise (they decide); inquire after (they decide and you ask afterwards); or full delegation.
 3. Tell them the level in plain words, such as "decide, then tell me afterwards".
 4. Agree a check-in date and what a good outcome looks like.
 **7-day trial:** Use a named level on two handoffs this week. Track: how often you stepped in uninvited, and whether the person said the level was clear.
 **Pairs well with:** Directly responsible individual; RACI; Working agreements
-**Comes from:** The seven-level version comes from Jurgen Appelo's Management 3.0.
+**Comes from:** The seven-level version (tell, sell, consult, agree, advise, inquire, delegate) comes from Jurgen Appelo's Management 3.0, where it underpins the Delegation Poker exercise.
 **Evidence:** Practice only. Plausible and widely taught, with little direct testing of the levels.
 **Effort to set up:** Low.   **Works for:** Team

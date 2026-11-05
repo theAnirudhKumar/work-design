@@ -35,7 +35,7 @@ Rules for using this table: match a signal only on evidence from the context, su
 
 | Signal | Seen in | Suggest | Run it with |
 | :--- | :--- | :--- | :--- |
-| Starts several habits at once and drops them | Conversation | Habit stacking (Some); Minimum viable habit (Practice only) | `build-a-habit` |
+| Starts several habits at once and drops them | Conversation | Habit stacking (Practice only); Minimum viable habit (Practice only) | `build-a-habit` |
 | Works late most evenings; no stopping point | Conversation, calendar | Work stop time (Some); Shutdown ritual (Some) | `balance-my-life` |
 | Work crowds out health, family or friends | Conversation | Wheel of Life (Practice only); Weekly time together (Practice only) | `balance-my-life` |
 | Personal admin piling up | Conversation | Life admin hour (Practice only); Errand batching (Practice only) | `build-a-habit` |

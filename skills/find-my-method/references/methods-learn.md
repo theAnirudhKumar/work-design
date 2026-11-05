@@ -13,7 +13,7 @@ These methods are for taking in material and keeping it: exams, certifications, 
 4. Write the next review dates on a sticky note or in your calendar.
 **7-day trial:** Add 5 to 10 new cards a day and review whatever is due, moving correct cards to longer gaps and wrong ones back to tomorrow. Track: minutes spent per day, and the share of due cards you answered correctly on day 7 versus day 2.
 **Pairs well with:** Active recall; Deliberate practice; Interleaving
-**Comes from:** Research on the spacing effect goes back to Hermann Ebbinghaus's memory experiments; the Leitner box system is a later practical scheme.
+**Comes from:** Research on the spacing effect goes back to Hermann Ebbinghaus's 1885 memory experiments; the Leitner box system is a later practical scheme from Sebastian Leitner's 1972 book So lernt man lernen.
 **Evidence:** Strong. Spacing out review beats massed study for long-term retention in many controlled studies across subjects and ages.
 **Effort to set up:** Low.   **Works for:** Solo
 
@@ -43,7 +43,7 @@ These methods are for taking in material and keeping it: exams, certifications, 
 4. Go back to the source for only those gaps, then rewrite the explanation.
 **7-day trial:** Do one topic a day, 15 to 20 minutes. Say the final version aloud to a person, a pet, or a voice memo. Track: number of gaps found per topic, and whether you could explain it again two days later.
 **Pairs well with:** Active recall; Learning in public; Cornell notes
-**Comes from:** Named after the physicist Richard Feynman; the attribution of this exact method to him is popular but disputed.
+**Comes from:** Named after the physicist Richard Feynman, but the four-step routine appears to be a later popularisation; I found no source in which he set it out as a method, so the attribution is disputed.
 **Evidence:** Some. Explaining material to yourself or others has supportive research (self-explanation, teaching effects), but the named routine has not been tested as a package.
 **Effort to set up:** Low.   **Works for:** Solo
 
@@ -74,7 +74,7 @@ These methods are for taking in material and keeping it: exams, certifications, 
 5. Review at the end of the chapter by recalling all your questions again.
 **7-day trial:** Use it on one chapter or article per day. Track: minutes per section, and how many of your own questions you can answer from memory the next morning.
 **Pairs well with:** Active recall; Cornell notes; Spaced repetition
-**Comes from:** Francis P. Robinson, in his 1946 book Effective Study.
+**Comes from:** Francis P. Robinson, in his book Effective Study (first published 1941; the 1946 edition is also often cited).
 **Evidence:** Some. Its parts (previewing, self-questioning, recall) have support, but the full routine has little rigorous head-to-head testing.
 **Effort to set up:** Low.   **Works for:** Solo
 
@@ -90,7 +90,7 @@ These methods are for taking in material and keeping it: exams, certifications, 
 5. Cover the right column and answer from the cues.
 **7-day trial:** Use the layout for every lecture or meeting this week and spend 10 minutes after each filling the cue column and summary. Track: whether you actually did the cover-and-quiz step, and how much you recalled on day 7.
 **Pairs well with:** Active recall; SQ3R; Spaced repetition
-**Comes from:** Walter Pauk, at Cornell University.
+**Comes from:** Walter Pauk, an education professor at Cornell University, who set it out in his book How to Study in College; Cornell sources place its development in the 1950s.
 **Evidence:** Practice only. Widely taught, but the layout itself has little direct testing; the benefit most likely comes from the recall step.
 **Effort to set up:** Low.   **Works for:** Solo
 
@@ -106,7 +106,7 @@ These methods are for taking in material and keeping it: exams, certifications, 
 **7-day trial:** One focused 20 to 30 minute block a day on a single sub-skill, with feedback each time. Track: the one measurable thing (errors per attempt, tempo reached, score) and your own rating of how hard it felt.
 **Pairs well with:** Interleaving; Spaced repetition; Learning in public
 **Comes from:** Associated with the psychologist Anders Ericsson and colleagues' studies of expert performers.
-**Evidence:** Mixed. Structured, feedback-rich practice helps in fields like music and sport, but how widely the idea applies, and how much it explains expertise, is contested.
+**Evidence:** Mixed. Structured, feedback-rich practice is linked to better performance in fields like music and sport, but a later meta-analysis found it explained less of the differences between performers than first claimed (least in professions), and how widely the idea applies is still contested.
 **Effort to set up:** Medium.   **Works for:** Solo
 
 ## Learning in public
