@@ -2,7 +2,7 @@
 
 Routing cases for `sort-my-tasks`, written alongside the skill.
 
-**Run on:** 5 Nov 2026, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 34. All three models matched on 30; Haiku 32, Sonnet 32, Opus 33. The protect-my-focus description was reworded after this run; see the targeted rerun in `evals/README.md`.
+**Run on:** 5 Nov 2026, second run with the 4.2.0 descriptions, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `731601fe12b6`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 34. All three models matched on 31; Haiku 31, Sonnet 32, Opus 32.
 
 **Method.** Follow the procedure in `evals/README.md`: show a model the verbatim descriptions of every skill in the repository, with no skill bodies, and ask for one skill name or `none`. Pin the description text used, since results do not survive rewording. The near misses are only meaningful if the full description set is present, including `plan-my-day`, `plan-my-week`, `sort-my-tasks` and the other skills built alongside them: `find-my-method`, `explain-a-method`, `start-a-focus-session`, `protect-my-focus`, `build-a-habit`, `balance-my-life` and `build-my-system`.
 
@@ -16,7 +16,7 @@ Routing cases for `sort-my-tasks`, written alongside the skill.
 | 2 | "Brain dump incoming: invoices, call the school, fix the gutter, update CV, gym?, order labels, taxes, that email to Priya, the Priya invoice thing. What first?" | Should fire | sort-my-tasks | sort-my-tasks | sort-my-tasks | sort-my-tasks |
 | 3 | "Everything feels urgent. Help me work out which of these actually matter." | Should fire | sort-my-tasks | sort-my-tasks | sort-my-tasks | sort-my-tasks |
 | 4 | "I've got five possible projects for next quarter and I can only do two. Rank them." | Should fire | sort-my-tasks | sort-my-tasks | sort-my-tasks | sort-my-tasks |
-| 5 | "Give me my top 6 for tomorrow from this list, Ivy Lee style." | Should fire | sort-my-tasks | sort-my-tasks | sort-my-tasks | **plan-my-day** |
+| 5 | "Give me my top 6 for tomorrow from this list, Ivy Lee style." | Should fire | sort-my-tasks | sort-my-tasks | sort-my-tasks | sort-my-tasks |
 | 6 | "Build my schedule for today. I've got meetings at 10 and 2." | Near miss | plan-my-day | plan-my-day | plan-my-day | plan-my-day |
 | 7 | "What should this week look like? I want three outcomes and focus blocks." | Near miss | plan-my-week | plan-my-week | plan-my-week | plan-my-week |
 | 8 | "I need to focus for an hour on one of these. Set me up." | Near miss | start-a-focus-session | start-a-focus-session | start-a-focus-session | start-a-focus-session |
@@ -42,10 +42,10 @@ Routing cases for `sort-my-tasks`, written alongside the skill.
 | 28 | "What do I lose if I leave Todoist?" | Near miss | before-you-switch | before-you-switch | before-you-switch | before-you-switch |
 | 29 | "How do I reduce the tokens in my prompts?" | Near miss | cut-token-cost | cut-token-cost | cut-token-cost | cut-token-cost |
 | 30 | "Which work-design skill should I start with?" | Near miss | work-design | work-design | work-design | work-design |
-| 31 | "Here's my list. Rank it and then lay out tomorrow around my meetings." | Ambiguous | sort-my-tasks first, then plan-my-day | sort-my-tasks | sort-my-tasks | plan-my-day |
-| 32 | "My list is huge and the deadline is Friday. What do I do?" | Ambiguous | sort-my-tasks or fit-to-deadline | fit-to-deadline | fit-to-deadline | fit-to-deadline |
-| 33 | "Should I say yes to these four invitations?" | Ambiguous | sort-my-tasks (Hell yeah or no) or meeting-or-message | **none** | **none** | sort-my-tasks |
-| 34 | "I'm so overwhelmed I can't even look at the list. Not just this list, everything." | Ambiguous, boundary | sort-my-tasks, with the one-time referral | sort-my-tasks | **build-my-system** | sort-my-tasks |
+| 31 | "Here's my list. Rank it and then lay out tomorrow around my meetings." | Ambiguous | sort-my-tasks first, then plan-my-day | sort-my-tasks | sort-my-tasks | sort-my-tasks |
+| 32 | "My list is huge and the deadline is Friday. What do I do?" | Ambiguous | sort-my-tasks or fit-to-deadline | sort-my-tasks | sort-my-tasks | fit-to-deadline |
+| 33 | "Should I say yes to these four invitations?" | Ambiguous | sort-my-tasks (Hell yeah or no) or meeting-or-message | **none** | **none** | **none** |
+| 34 | "I'm so overwhelmed I can't even look at the list. Not just this list, everything." | Ambiguous, boundary | sort-my-tasks, with the one-time referral | **balance-my-life** | **build-my-system** | **get-unstuck** |
 
 ---
 
@@ -132,7 +132,6 @@ Two cases to be checked by hand once a model is available.
 
 | Case | Message | Expected | Haiku | Sonnet | Opus | Reading |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| sort-my-tasks#33 | "Should I say yes to these four invitations?" | sort-my-tasks (Hell yeah or no) or meeti | **none** | **none** | sort-my-tasks | Acceptable. A yes/no on invitations needs no skill, or either planning skill. |
+| sort-my-tasks#34 | "I'm so overwhelmed I can't even look at the list. Not just this list, everything" | sort-my-tasks, with the one-time referra | **balance-my-life** | **build-my-system** | **get-unstuck** | Overwhelm boundary case. The models chose balance-my-life, build-my-system and get-unstuck; all defensible. |
 | sort-my-tasks#10 | "Which prioritisation method should I be using in general?" | find-my-method | **sort-my-tasks** | find-my-method | find-my-method | Acceptable overlap. A general "which method" question belongs to find-my-method; Haiku chose sort-my-tasks. |
-| sort-my-tasks#5 | "Give me my top 6 for tomorrow from this list, Ivy Lee style." | sort-my-tasks | sort-my-tasks | sort-my-tasks | **plan-my-day** | Opus chose plan-my-day for "top 6 for tomorrow". Overlap; sort-my-tasks (an Ivy Lee list) is the intended owner. |
-| sort-my-tasks#34 | "I'm so overwhelmed I can't even look at the list. Not just this list, everything" | sort-my-tasks, with the one-time referra | sort-my-tasks | **build-my-system** | sort-my-tasks | Overwhelm boundary case; Sonnet chose build-my-system. Defensible. |
+| sort-my-tasks#33 | "Should I say yes to these four invitations?" | sort-my-tasks (Hell yeah or no) or meeti | **none** | **none** | **none** | Acceptable. A yes/no on invitations needs no skill, or either planning skill. |

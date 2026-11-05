@@ -144,18 +144,23 @@ The productivity skills also read a `my-system.md` profile if you paste one in, 
 
 ### Claude Code and Cowork
 
+One line each, on Claude Code 2.1.275 or later:
+
+```
+/plugin install work-design --marketplace theAnirudhKumar/work-design
+/plugin install get-more-done --marketplace theAnirudhKumar/work-design
+/plugin install work-design-starter --marketplace theAnirudhKumar/work-design
+```
+
+`work-design` is the quality-of-work half (plus the consultant), `get-more-done` is the productivity half and the method library, and `work-design-starter` is just the three in [Start here](#start-here). Install one, or both of the first two.
+
+On an older version, add the marketplace first, then install by name:
+
 ```
 /plugin marketplace add theAnirudhKumar/work-design
 /plugin install work-design@work-design-marketplace
-```
-
-That installs the sixteen quality-of-work skills. For the productivity half and the method library:
-
-```
 /plugin install get-more-done@work-design-marketplace
 ```
-
-For just the three in [Start here](#start-here), install `work-design-starter@work-design-marketplace` instead.
 
 ### One skill
 

@@ -65,9 +65,9 @@ Case 9 fires on all three. Case 10 still declines on all three, and every model 
 
 Both acceptance criteria this issue set are met: condition 2 names shapes, the description is 821 characters, case 9 fires on all three, case 10 declines on all three, `evals/delegate.md` and `evals/continue-in-new-chat.md` were rerun.
 
-## Rerun on the 4.1.0 descriptions (5 Nov 2026)
+## Rerun on the 4.2.0 descriptions (5 Nov 2026)
 
-The results above were recorded under earlier descriptions and skill names. This rerun puts the same cases to Haiku, Sonnet and Opus with all 29 descriptions shown together (snapshot `c4b8a8cfab44`). **Bold** means the pick differs from the expected answer.
+The results above were recorded under earlier descriptions and skill names. This rerun puts the same cases to Haiku, Sonnet and Opus with all 29 descriptions shown together (snapshot `731601fe12b6`), one sample per case. **Bold** means the pick differs from the expected answer.
 
 | # | Message | Expected | Haiku | Sonnet | Opus |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -77,7 +77,6 @@ The results above were recorded under earlier descriptions and skill names. This
 | 9 | "Here is my entire 80 page employee handbook. Give me feedback on all of it." | fire, proactive | cut-token-cost | cut-token-cost | cut-token-cost |
 | 10 | "Write me a 2000 word article on warehouse automation." | none | none | none | none |
 | 10 | "Write me a 2000 word article on warehouse automation." | none | none | none | none |
-| 16 | "This chat has got huge and it is costing me a fortune. What do I do?" | conflict with `continue-in-new-chat` | cut-token-cost | continue-in-new-chat | continue-in-new-chat |
+| 16 | "This chat has got huge and it is costing me a fortune. What do I do?" | conflict with `continue-in-new-chat` | continue-in-new-chat | continue-in-new-chat | continue-in-new-chat |
 
-Run on 5 Nov 2026 with Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Single-answer cases: see counts below.
 Cases with one expected answer: 2. All three models matched on 2.

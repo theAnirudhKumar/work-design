@@ -55,9 +55,9 @@ Whether `cut-token-cost`, `continue-in-new-chat` or `before-you-switch` compete 
 
 One real case, not constructed: closing two blank entries in a professional profile document that had been bundled under one open-ended active-project note alongside three unrelated follow-ups. Result: pass, both failure modes checked clean (out list had three named items, done condition was third-party checkable). Not a live `Skill` tool run, the skill is not installed in this account; the shipped `SKILL.md` was applied by hand against the real case instead. Case detail is internal and not reproduced here.
 
-## Rerun on the 4.1.0 descriptions (5 Nov 2026)
+## Rerun on the 4.2.0 descriptions (5 Nov 2026)
 
-The results above were recorded under earlier descriptions and skill names. This rerun puts the same cases to Haiku, Sonnet and Opus with all 29 descriptions shown together (snapshot `c4b8a8cfab44`). **Bold** means the pick differs from the expected answer.
+The results above were recorded under earlier descriptions and skill names. This rerun puts the same cases to Haiku, Sonnet and Opus with all 29 descriptions shown together (snapshot `731601fe12b6`), one sample per case. **Bold** means the pick differs from the expected answer.
 
 | # | Message | Expected | Haiku | Sonnet | Opus |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -70,7 +70,6 @@ The results above were recorded under earlier descriptions and skill names. This
 | 7 | "How long will this project realistically take based on similar work we've done before?" | none | **how-long-will-it-take** | **how-long-will-it-take** | **how-long-will-it-take** |
 | 8 | "We are evaluating a document platform for the whole company, six figures, and procurement " | none | none | none | none |
 
-Run on 5 Nov 2026 with Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Single-answer cases: see counts below.
 Cases with one expected answer: 5. All three models matched on 4.
 
 Misses:

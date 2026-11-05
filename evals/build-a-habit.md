@@ -2,7 +2,7 @@
 
 Routing cases for `build-a-habit`, written alongside the skill.
 
-**Run on:** 5 Nov 2026, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 41. All three models matched on 41; Haiku 41, Sonnet 41, Opus 41. The protect-my-focus description was reworded after this run; see the targeted rerun in `evals/README.md`.
+**Run on:** 5 Nov 2026, second run with the 4.2.0 descriptions, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `731601fe12b6`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 41. All three models matched on 40; Haiku 41, Sonnet 40, Opus 41.
 
 **Method.** Follow the procedure in `evals/README.md`: show a model the verbatim descriptions of every skill in the repository, with no skill bodies, and ask for one skill name or `none`. Pin the description text used, since results do not survive rewording. The set must include the skills built alongside this one (`find-my-method`, `explain-a-method`, `plan-my-day`, `plan-my-week`, `sort-my-tasks`, `balance-my-life`, `build-my-system`, `start-a-focus-session`, `protect-my-focus`, `build-a-habit`) and, for the meeting cases, `meeting-audit` from the sibling meeting-design repository, or the near misses are not meaningful. `meeting-design` is the set that contains `meeting-audit`. An Expected value written as A or B means either routing is defensible.
 
@@ -38,9 +38,9 @@ Routing cases for `build-a-habit`, written alongside the skill.
 | 24 | "The report is due Friday and I only have two days. Cut it down." | Near miss | fit-to-deadline | fit-to-deadline | fit-to-deadline | fit-to-deadline |
 | 25 | "What is in scope for this project and what is not?" | Near miss | scope-the-work | scope-the-work | scope-the-work | scope-the-work |
 | 26 | "I have to write a business plan. Where do I begin?" | Near miss | plan-the-work | plan-the-work | plan-the-work | plan-the-work |
-| 27 | "How long will it take to learn Spanish to a conversational level?" | Near miss | how-long-will-it-take | how-long-will-it-take | how-long-will-it-take | how-long-will-it-take |
+| 27 | "How long will it take to learn Spanish to a conversational level?" | Near miss | how-long-will-it-take | how-long-will-it-take | **none** | how-long-will-it-take |
 | 28 | "Should we have a meeting or send an email about the habit tracker rollout?" | Near miss | meeting-or-message | meeting-or-message | meeting-or-message | meeting-or-message |
-| 29 | "Our weekly all-hands is a waste of time. Fix it." | Near miss | meeting-audit (meeting-design set) | meeting-audit | meeting-audit | meeting-audit |
+| 29 | "Our weekly all-hands is a waste of time. Fix it." | Near miss | meeting-audit (meeting-design set) | meeting-audit | meeting-design | meeting-design |
 | 30 | "What could go wrong with my plan to wake up at 5am?" | Near miss | what-could-go-wrong | what-could-go-wrong | what-could-go-wrong | what-could-go-wrong |
 | 31 | "Review my habit plan and tell me if it's any good." | Near miss | review-my-work | review-my-work | review-my-work | review-my-work |
 | 32 | "That experiment is over. What did I learn about my morning routine?" | Near miss | lessons-learned | lessons-learned | lessons-learned | lessons-learned |
@@ -163,4 +163,6 @@ Three cases to be checked by hand once a model is available.
 
 ## Misses and how to read them
 
-No misses on cases with a single expected answer.
+| Case | Message | Expected | Haiku | Sonnet | Opus | Reading |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| build-a-habit#27 | "How long will it take to learn Spanish to a conversational level?" | how-long-will-it-take | how-long-will-it-take | **none** | how-long-will-it-take | Sonnet answered none for "how long to learn Spanish"; how-long-will-it-take is intended. Borderline. |

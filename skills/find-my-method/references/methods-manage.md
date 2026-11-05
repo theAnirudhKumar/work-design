@@ -14,7 +14,7 @@ These methods are for people who lead others: managers, team leads, founders, pr
 5. The meeting invite and agenda for a 1:1 can be designed with the separate meeting-design skill.
 **7-day trial:** Hold one 1:1 this week. Track: how much of the time the other person spoke, and how many follow-ups you wrote down and later did.
 **Pairs well with:** Radical candor; Situational leadership; Skip-level meetings
-**Comes from:** Associated with Andy Grove's book High Output Management as a popular source; the practice is older and widespread.
+**Comes from:** Associated with Andy Grove's book High Output Management (1983), which describes the one-on-one as the subordinate's meeting; the practice itself is widespread and its origin is unclear.
 **Evidence:** Practice only. Near-universal advice among managers, with little direct testing of its effect.
 **Effort to set up:** Low.   **Works for:** Team
 
@@ -46,7 +46,7 @@ These methods are for people who lead others: managers, team leads, founders, pr
 5. Open the next retro by checking those changes first.
 **7-day trial:** Run one retro this week. Track: how many people spoke, and whether each agreed change has an owner and a date. Check a week later whether they happened.
 **Pairs well with:** Start-stop-continue; Working agreements; Decision log
-**Comes from:** Associated with the agile software community; Derby and Larsen's book on agile retrospectives is a well-known source.
+**Comes from:** Associated with the agile software community; Esther Derby and Diana Larsen's book Agile Retrospectives (2006) is a well-known source, and it sets out five phases: set the stage, gather data, generate insights, decide what to do, close the retrospective.
 **Evidence:** Practice only. Widely used, with little direct testing; the idea of learning from experience is sound, but the format is not proven better than alternatives.
 **Effort to set up:** Low.   **Works for:** Team
 
@@ -78,7 +78,7 @@ These methods are for people who lead others: managers, team leads, founders, pr
 5. Add a WIP limit to the Doing column once the board is in use.
 **7-day trial:** Use the board as the only list for a week. Track: how many cards were out of date when you looked, and how many times someone asked for status that the board already answered.
 **Pairs well with:** WIP limits; Daily standup; Directly responsible individual
-**Comes from:** Kanban for knowledge work is associated with David Anderson; Jim Benson adapted it for individuals and small teams. The card idea comes from Toyota's production practice.
+**Comes from:** Kanban for knowledge work is associated with David Anderson, whose book Kanban (2010) popularised it in technology work; Jim Benson and Tonianne DeMaria Barry adapted it for individuals in Personal Kanban (2011). The card idea comes from Toyota's production practice.
 **Evidence:** Practice only. Widely used, with little direct testing outside case reports.
 **Effort to set up:** Low.   **Works for:** Team
 
@@ -93,14 +93,14 @@ These methods are for people who lead others: managers, team leads, founders, pr
 4. Say what you will do out loud, and ask whether it fits what they need.
 **7-day trial:** Adjust your style for two tasks this week. Track: how many times you were more or less hands-on than you first would have been, and what the person said when you asked if the support was right.
 **Pairs well with:** Delegation levels; One-on-ones; Radical candor
-**Comes from:** Paul Hersey and Ken Blanchard's situational leadership model.
+**Comes from:** Paul Hersey and Ken Blanchard, who introduced it around 1969 as the Life Cycle Theory of Leadership; the two later developed separate versions (Hersey's Situational Leadership and Blanchard's SLII).
 **Evidence:** Practice only. Popular in management training, but the model itself has been tested weakly; treat it as a prompt for thought, not a rule.
 **Effort to set up:** Low.   **Works for:** Team
 
 ## Radical candor
 **One line:** Give feedback that is both direct and caring, so people hear it and act on it.
 **Best for:** Leads who either soften feedback until it disappears or deliver it bluntly and lose trust.
-**Skip it when:** You have not built any relationship with the person, or the "candor" part is a licence to be harsh. Radical candor without care is just criticism. Also use caution where culture or power differences make bluntness land very differently.
+**Skip it when:** You have not built any relationship with the person, or the "candor" part is a licence to be harsh. Candor without care is what Scott calls obnoxious aggression. Also use caution where culture or power differences make bluntness land very differently.
 **Start in 10 minutes:**
 1. Think of one piece of feedback you have been avoiding, about a specific action and not about the person.
 2. Write what happened, its effect, and what you would like to see instead, in three short sentences.
@@ -109,7 +109,7 @@ These methods are for people who lead others: managers, team leads, founders, pr
 5. Listen to their side before you finish.
 **7-day trial:** Give one piece of direct, caring feedback and ask for one piece back. Track: how the conversation went and whether the behaviour changed in the following days.
 **Pairs well with:** One-on-ones; Situational leadership; Skip-level meetings
-**Comes from:** Kim Scott's Radical Candor framework.
+**Comes from:** Kim Scott's book Radical Candor (2017), which frames it as caring personally while challenging directly.
 **Evidence:** Practice only. Widely read and plausible, but the framework itself has had little direct testing.
 **Effort to set up:** Low.   **Works for:** Team
 
@@ -156,6 +156,6 @@ These methods are for people who lead others: managers, team leads, founders, pr
 5. The what-could-go-wrong skill can run this with you.
 **7-day trial:** Run one pre-mortem on a real upcoming project this week. Track: how many risks were new to you, and whether each top risk got an owner and a first action within the week.
 **Pairs well with:** Working backwards; Decision log; Directly responsible individual
-**Comes from:** Associated with psychologist Gary Klein, who described the technique.
-**Evidence:** Practice only. Plausible and popular, with little direct testing in team settings.
+**Comes from:** Associated with psychologist Gary Klein, who described the technique in "Performing a Project Premortem" (Harvard Business Review, September 2007).
+**Evidence:** Practice only. Plausible and popular, and it builds on lab work on imagining an event as already having happened, but the team premortem has had little direct testing.
 **Effort to set up:** Low.   **Works for:** Team

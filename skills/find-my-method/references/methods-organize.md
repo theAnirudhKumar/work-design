@@ -57,7 +57,7 @@ These twelve methods answer one question: where does a task, idea or commitment 
 3. Take the remaining messages one at a time and apply one of: delete, reply now if under 2 minutes, move to Action, move to Waiting, archive.
 **7-day trial:** Process the inbox to empty twice a day at fixed times, not continuously. Track: messages left in the inbox at day end, and the number of times you opened email outside the two slots.
 **Pairs well with:** Email batching; Waiting-for list; Notification batching
-**Comes from:** Merlin Mann, who coined the phrase and wrote about the approach.
+**Comes from:** Merlin Mann, who developed and popularised the approach through his 43 Folders writing and a 2007 Google talk.
 **Evidence:** Practice only. Studies of email habits are mixed and none test this approach directly.
 **Effort to set up:** Low.   **Works for:** Solo
 
@@ -87,7 +87,7 @@ These twelve methods answer one question: where does a task, idea or commitment 
 4. Move your top items into Doing up to the limit; start only from Doing.
 **7-day trial:** Pull a new card into Doing only when one moves to Done. Track: how many cards you finished, and how many days a card sat in Doing.
 **Pairs well with:** Monotasking; Getting Things Done; Personal Scrum
-**Comes from:** Jim Benson, adapting Kanban boards from manufacturing.
+**Comes from:** Jim Benson (with Tonianne DeMaria Barry, in their 2011 book Personal Kanban), adapting kanban boards from lean manufacturing.
 **Evidence:** Practice only. Limiting work in progress is common in team settings, but personal use is not directly tested.
 **Effort to set up:** Low.   **Works for:** Either
 

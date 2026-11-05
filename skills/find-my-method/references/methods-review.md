@@ -74,7 +74,7 @@ A method only improves if you look back at how it went. These practices are the 
 **7-day trial:** Run a retrospective on one recent project on Day 1. Act on your chosen change in the following week. On Day 7, note whether it was the right change. Track: the change you chose, and whether you applied it.
 **Pairs well with:** Start-stop-continue; Wins log; Monthly review.
 **Comes from:** Folk practice, no single origin; retrospectives are standard in software teams.
-**Evidence:** Some. Team retrospectives and reflection after action have some research support in workplace settings, though results depend on how they are run and personal use is less studied.
+**Evidence:** Some. A meta-analysis of structured team and individual debriefs found performance gains, though results depend on how they are run, and personal retrospectives like this one have been studied much less.
 **Effort to set up:** Low.   **Works for:** Either.
 
 ## Start-stop-continue
@@ -104,7 +104,7 @@ A method only improves if you look back at how it went. These practices are the 
 **7-day trial:** Add one to three entries daily for seven days. On Day 7, read them all and notice patterns: what energised you, what you underrate. Track: days you wrote entries, and one pattern you spotted.
 **Pairs well with:** Daily review; Annual review; Weekly review.
 **Comes from:** Folk practice, no single origin.
-**Evidence:** Some. Related research on noting positive events and on tracking progress suggests some wellbeing and motivation benefits, though studies are small and not specific to work wins logs.
+**Evidence:** Some. Related research on writing down positive events, such as gratitude exercises, suggests small wellbeing benefits, but the wins log itself has not been directly tested.
 **Effort to set up:** Low.   **Works for:** Solo.
 
 ## Time audit
@@ -133,6 +133,6 @@ A method only improves if you look back at how it went. These practices are the 
 4. Close the notebook. Do not review it today.
 **7-day trial:** Write a set length each morning before checking your phone, building up to three pages if you like. Each day, rate your mind's clutter on waking and after writing, from 1 to 5. Track: days you wrote, and your before and after clutter ratings.
 **Pairs well with:** Daily review; Wins log; Consistent wake time.
-**Comes from:** Julia Cameron, in her book The Artist's Way.
+**Comes from:** Julia Cameron, in her book The Artist's Way (1992).
 **Evidence:** Practice only. Expressive and reflective writing has been studied in other forms, but I know of no direct tests of morning pages as described.
 **Effort to set up:** Low.   **Works for:** Solo.

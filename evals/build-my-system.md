@@ -2,7 +2,7 @@
 
 Routing cases for `build-my-system`, written alongside the skill.
 
-**Run on:** 5 Nov 2026, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 23. All three models matched on 23; Haiku 23, Sonnet 23, Opus 23. The protect-my-focus description was reworded after this run; see the targeted rerun in `evals/README.md`.
+**Run on:** 5 Nov 2026, second run with the 4.2.0 descriptions, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `731601fe12b6`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 23. All three models matched on 23; Haiku 23, Sonnet 23, Opus 23.
 
 **Method.** Follow the procedure in `evals/README.md`: show a model the verbatim descriptions of every skill in the repository, with no skill bodies, and ask for one skill name or `none`. Pin the description text used. Skills named below that are not in the repository must be present in the description set. Near misses name skills that are being added alongside this one (`find-my-method`, `explain-a-method`, `plan-my-day`, `plan-my-week`, `sort-my-tasks`, `start-a-focus-session`, `protect-my-focus`, `build-a-habit`); their descriptions must be in the set.
 
@@ -33,7 +33,7 @@ Routing cases for `build-my-system`, written alongside the skill.
 | 19 | "Which of my subscriptions overlap? I pay for four task apps." | Near miss | audit-my-tools | audit-my-tools | audit-my-tools | audit-my-tools |
 | 20 | "Summarise this chat so I can continue it tomorrow." | Near miss | continue-in-new-chat | continue-in-new-chat | continue-in-new-chat | continue-in-new-chat |
 | 21 | "I'm drowning, I need a system for work and home." | Ambiguous | build-my-system or balance-my-life | build-my-system | build-my-system | build-my-system |
-| 22 | "I use GTD and it's not working. What should I change?" | Ambiguous | build-my-system or find-my-method | build-my-system | find-my-method | find-my-method |
+| 22 | "I use GTD and it's not working. What should I change?" | Ambiguous | build-my-system or find-my-method | build-my-system | build-my-system | build-my-system |
 | 23 | "Help me get organised for the new semester." | Ambiguous | build-my-system or plan-my-week | build-my-system | build-my-system | build-my-system |
 
 ---

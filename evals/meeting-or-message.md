@@ -57,9 +57,9 @@ Whether `cut-token-cost` competes with `meeting-or-message`. Neither skill's tri
 
 Two real cases, not constructed, both checked against `meeting-design`'s own Step 0 independently, answering the "actual hand-off" gap this file names above. A single factual policy question that had blocked a customer-facing deliverable for over a week resolved to a written message with a deadline, no hand-off, and `meeting-design`'s Step 0 agreed a document/message was right without being told the other skill's answer. A separate case, eight open decisions on a reporting rebuild owed by two internal stakeholders, resolved to a meeting, handed off cleanly, and `meeting-design`'s agenda step mapped directly onto the eight named decisions. Both directions held. Not a live `Skill` tool run, neither skill is installed in this account. Case detail is internal and not reproduced here.
 
-## Rerun on the 4.1.0 descriptions (5 Nov 2026)
+## Rerun on the 4.2.0 descriptions (5 Nov 2026)
 
-The results above were recorded under earlier descriptions and skill names. This rerun puts the same cases to Haiku, Sonnet and Opus with all 29 descriptions shown together (snapshot `c4b8a8cfab44`). **Bold** means the pick differs from the expected answer.
+The results above were recorded under earlier descriptions and skill names. This rerun puts the same cases to Haiku, Sonnet and Opus with all 29 descriptions shown together (snapshot `731601fe12b6`), one sample per case. **Bold** means the pick differs from the expected answer.
 
 | # | Message | Expected | Haiku | Sonnet | Opus |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -70,12 +70,11 @@ The results above were recorded under earlier descriptions and skill names. This
 | 5 | "We've been going back and forth over email for three days on this decision. Should we just" | fire | meeting-or-message | meeting-or-message | meeting-or-message |
 | 6 | "Build me an agenda for tomorrow's kickoff meeting." | none | **meeting-design** | **meeting-design** | **meeting-design** |
 | 7 | "Can you summarize what we talked about in this chat before I close it?" | none | none | none | none |
-| 8 | "How long will this migration realistically take before I decide whether to switch?" | before-you-switch | **how-long-will-it-take** | **how-long-will-it-take** | before-you-switch |
+| 8 | "How long will this migration realistically take before I decide whether to switch?" | before-you-switch | **how-long-will-it-take** | **how-long-will-it-take** | **how-long-will-it-take** |
 
-Run on 5 Nov 2026 with Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Single-answer cases: see counts below.
 Cases with one expected answer: 5. All three models matched on 3.
 
 Misses:
 
-- Case 6: Stale expectation. Written before meeting-design was installed alongside; meeting-design is the right answer.
 - Case 8: Reasonable alternative: how-long-will-it-take. The expectation was too narrow.
+- Case 6: Stale expectation. Written before meeting-design was installed alongside; meeting-design is the right answer.

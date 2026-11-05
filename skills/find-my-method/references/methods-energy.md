@@ -29,7 +29,7 @@ These are general wellbeing practices for managing your energy across a workday 
 **7-day trial:** Use the timer on your work days. Each evening, rate how you felt at the end of the day from 1 to 5. On Day 7, compare with a day you skipped the breaks. Track: number of breaks taken, and your end-of-day rating.
 **Pairs well with:** Walking breaks; 20-20-20 rule; Energy audit.
 **Comes from:** Folk practice, no single origin.
-**Evidence:** Some. Several small studies of short work breaks report benefits for fatigue or mood, but effects are modest, depend on what the break is, and studies vary in quality.
+**Evidence:** Some. One pooled review of short work breaks (10 minutes or less) linked them to small gains in energy and less fatigue, with no clear overall gain in task performance; effects depend on what the break is, and studies vary in quality.
 **Effort to set up:** Low.   **Works for:** Either.
 
 ## Walking breaks
@@ -58,8 +58,8 @@ These are general wellbeing practices for managing your energy across a workday 
 4. Optionally, use the pause to drop your shoulders and take one slow breath.
 **7-day trial:** Run the timer during screen work on your work days. Each evening, rate how your eyes feel from 1 to 5. On Day 7, decide if it helps enough to keep, or switch to a longer interval. Track: days you used it, and the evening eye comfort rating.
 **Pairs well with:** Micro-breaks; Walking breaks; Digital sunset.
-**Comes from:** Folk practice, no single origin.
-**Evidence:** Mixed. It is widely recommended and short breaks may ease reported discomfort, but the exact 20-20-20 timing has little direct testing.
+**Comes from:** Popularised by the optometrist Jeffrey Anshel, who dates the idea to about 1991 and wrote about it in his 1998 book Visual Ergonomics in the Workplace.
+**Evidence:** Mixed. It is widely recommended and short breaks may ease reported discomfort, but the exact 20-20-20 timing has been tested in only a few small studies, with mixed results.
 **Effort to set up:** Low.   **Works for:** Solo.
 
 ## Consistent wake time
@@ -118,6 +118,6 @@ These are general wellbeing practices for managing your energy across a workday 
 4. End with a closing sentence you say or write, such as "done for today".
 **7-day trial:** Run the shutdown at your stop time each work day. Note each day whether you stopped within 15 minutes of the target. On Day 7, adjust the time or the workload that is pushing past it. Track: days you stopped on time, and what caused overruns.
 **Pairs well with:** Daily review; Digital sunset; Anti-goals.
-**Comes from:** Folk practice, no single origin.
+**Comes from:** Folk practice, no single origin; a closing shutdown routine was popularised by Cal Newport in his 2016 book Deep Work.
 **Evidence:** Some. Research on detaching from work after hours and on planning unfinished tasks suggests it may ease intrusive thoughts, but studies are small and mixed in design.
 **Effort to set up:** Low.   **Works for:** Either.

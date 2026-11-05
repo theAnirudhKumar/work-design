@@ -14,7 +14,7 @@ These methods help when a decision is stuck, repeated or too heavy: what job to 
 5. Choose, or name the one fact you still need.
 **7-day trial:** Use it on one real decision per day, small or medium, for at least three days. Track: whether the answer changed your first instinct, and later, whether you were glad of the choice.
 **Pairs well with:** Regret minimization, Sleep-on-it rule, Weighted decision matrix
-**Comes from:** Suzy Welch, who described it in her writing and in a 2009 book on the method.
+**Comes from:** Suzy Welch, who described it in her column in O, The Oprah Magazine and in her 2009 book 10-10-10.
 **Evidence:** Practice only. Intuitively useful and widely quoted, with little direct testing.
 **Effort to set up:** Low.   **Works for:** Solo
 
@@ -31,7 +31,7 @@ These methods help when a decision is stuck, repeated or too heavy: what job to 
 **7-day trial:** Spend 10 minutes a day for a week on one big decision, repeating the 80-year-old view and adding to the safer-leap list. Track: how your answer shifts across the week, and the first action you would take.
 **Pairs well with:** 10-10-10 rule, Two-way door decisions, Inversion
 **Comes from:** Jeff Bezos described using this framework for his decision to start Amazon.
-**Evidence:** Practice only. Research on regret shows people often regret inaction more over long periods, but the framework itself has not been tested as a decision method.
+**Evidence:** Practice only. Research on regret finds that people often report more regret over inaction than action when looking back over the long term, though the pattern is not universal, and the framework itself has not been tested as a decision method.
 **Effort to set up:** Low.   **Works for:** Solo
 
 ## Weighted decision matrix
@@ -110,7 +110,7 @@ These methods help when a decision is stuck, repeated or too heavy: what job to 
 5. Keep the top three rules where you can see them.
 **7-day trial:** Invert one decision or goal per day, with a different one each day. Track: the number of avoid rules you made, and the one you acted on that day.
 **Pairs well with:** Decision journal, Regret minimization, Weighted decision matrix
-**Comes from:** Charlie Munger popularised it, citing the mathematician Carl Jacobi's advice to invert.
+**Comes from:** Charlie Munger popularised it, citing the mathematician Carl Jacobi's advice to invert; the Jacobi link rests mainly on Munger's account.
 **Evidence:** Practice only. Related to premortem-style thinking, but this specific method has not been tested directly.
 **Effort to set up:** Low.   **Works for:** Either
 
