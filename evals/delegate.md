@@ -91,9 +91,9 @@ Full detail on what changed and why is in `evals/cut-token-cost.md` and `evals/c
 
 One new case was constructed to check for interference: "Should I automate our quarterly subscription review?" Haiku declined it, Sonnet and Opus sent it to `delegate`. Recorded and left as is in `evals/audit-my-tools.md`, for the same reason as case 5 and case 13 here: a recurring task described in the vocabulary of automation is this skill's territory, and `audit-my-tools` does not claim it.
 
-## Rerun on the 4.1.0 descriptions (5 Nov 2026)
+## Rerun on the 4.2.0 descriptions (5 Nov 2026)
 
-The results above were recorded under earlier descriptions and skill names. This rerun puts the same cases to Haiku, Sonnet and Opus with all 29 descriptions shown together (snapshot `c4b8a8cfab44`). **Bold** means the pick differs from the expected answer.
+The results above were recorded under earlier descriptions and skill names. This rerun puts the same cases to Haiku, Sonnet and Opus with all 29 descriptions shown together (snapshot `731601fe12b6`), one sample per case. **Bold** means the pick differs from the expected answer.
 
 | # | Message | Expected | Haiku | Sonnet | Opus |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -111,14 +111,13 @@ The results above were recorded under earlier descriptions and skill names. This
 | 12 | "Should I automate my weekly invoice chasing or keep doing it myself?" | delegate | delegate | delegate | delegate |
 | 13 | "Our sprint retro happens every two weeks and it is a mess. Help me redesign the ritual." | none | **meeting-design** | **meeting-design** | **meeting-design** |
 | 14 | "I am about to have Claude process 200 customer emails and pull out the themes. Is that a g" | delegate | delegate | delegate | delegate |
-| 15 | "Should I pay for a tool that would do this whole task for me automatically?" | before-you-install | **delegate** | **delegate** | before-you-install |
+| 15 | "Should I pay for a tool that would do this whole task for me automatically?" | before-you-install | before-you-install | **delegate** | before-you-install |
 
-Run on 5 Nov 2026 with Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Single-answer cases: see counts below.
 Cases with one expected answer: 14. All three models matched on 10.
 
 Misses:
 
-- Case 13: Stale expectation. meeting-design is installed alongside now and is the right answer.
-- Case 15: Real overlap: "pay for a tool that does the task" is delegate vs before-you-install. Haiku and Sonnet chose delegate.
-- Case 5: Stale expectation. meeting-design is installed alongside now and is the right answer.
+- Case 15: Real overlap: "pay for a tool that does the task" is delegate vs before-you-install. Sonnet chose delegate.
 - Case 8: Haiku chose delegate for "40 PDFs"; Sonnet and Opus chose cut-token-cost. A known split.
+- Case 5: Stale expectation. meeting-design is installed alongside now and is the right answer.
+- Case 13: Stale expectation. meeting-design is installed alongside now and is the right answer.

@@ -2,7 +2,7 @@
 
 Routing cases for `plan-my-week`, written alongside the skill.
 
-**Run on:** 5 Nov 2026, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 33. All three models matched on 32; Haiku 33, Sonnet 32, Opus 32. The protect-my-focus description was reworded after this run; see the targeted rerun in `evals/README.md`.
+**Run on:** 5 Nov 2026, second run with the 4.2.0 descriptions, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `731601fe12b6`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 33. All three models matched on 33; Haiku 33, Sonnet 33, Opus 33.
 
 **Method.** Follow the procedure in `evals/README.md`: show a model the verbatim descriptions of every skill in the repository, with no skill bodies, and ask for one skill name or `none`. Pin the description text used, since results do not survive rewording. The near misses are only meaningful if the full description set is present, including `plan-my-day`, `plan-my-week`, `sort-my-tasks` and the other skills built alongside them: `find-my-method`, `explain-a-method`, `start-a-focus-session`, `protect-my-focus`, `build-a-habit`, `balance-my-life` and `build-my-system`.
 
@@ -19,7 +19,7 @@ Routing cases for `plan-my-week`, written alongside the skill.
 | 5 | "Plan today. Meeting at 10, school pick-up at 3, and a list of 12 things." | Near miss | plan-my-day | plan-my-day | plan-my-day | plan-my-day |
 | 6 | "Here's everything I need to do this quarter, all 60 items. What first?" | Near miss | sort-my-tasks | sort-my-tasks | sort-my-tasks | sort-my-tasks |
 | 7 | "Help me stay focused for the next 90 minutes." | Near miss | start-a-focus-session | start-a-focus-session | start-a-focus-session | start-a-focus-session |
-| 8 | "My calendar is full of meetings that eat my focus time. What do I do?" | Near miss | protect-my-focus | protect-my-focus | **meeting-audit** | **meeting-audit** |
+| 8 | "My calendar is full of meetings that eat my focus time. What do I do?" | Near miss | protect-my-focus | protect-my-focus | protect-my-focus | protect-my-focus |
 | 9 | "Which method suits me, weekly reviews or GTD?" | Near miss | find-my-method | find-my-method | find-my-method | find-my-method |
 | 10 | "Explain how a weekly review works and whether it's worth it." | Near miss | explain-a-method | explain-a-method | explain-a-method | explain-a-method |
 | 11 | "I want to make a Sunday planning habit stick." | Near miss | build-a-habit | build-a-habit | build-a-habit | build-a-habit |
@@ -127,6 +127,4 @@ Two cases to be checked by hand once a model is available.
 
 ## Misses and how to read them
 
-| Case | Message | Expected | Haiku | Sonnet | Opus | Reading |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| plan-my-week#8 | "My calendar is full of meetings that eat my focus time. What do I do?" | protect-my-focus | protect-my-focus | **meeting-audit** | **meeting-audit** | Real collision: meeting-audit claims "calendar full of meetings". protect-my-focus wording was changed after this run; see the targeted rerun in evals/README.md. |
+No misses on cases with a single expected answer.

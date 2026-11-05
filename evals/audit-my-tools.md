@@ -53,9 +53,9 @@ Whether `continue-in-new-chat` or `cut-token-cost` compete with `audit-my-tools`
 
 **Real sessions.** Every case here is constructed, same limitation as every other file in this directory.
 
-## Rerun on the 4.1.0 descriptions (5 Nov 2026)
+## Rerun on the 4.2.0 descriptions (5 Nov 2026)
 
-The results above were recorded under earlier descriptions and skill names. This rerun puts the same cases to Haiku, Sonnet and Opus with all 29 descriptions shown together (snapshot `c4b8a8cfab44`). **Bold** means the pick differs from the expected answer.
+The results above were recorded under earlier descriptions and skill names. This rerun puts the same cases to Haiku, Sonnet and Opus with all 29 descriptions shown together (snapshot `731601fe12b6`), one sample per case. **Bold** means the pick differs from the expected answer.
 
 | # | Message | Expected | Haiku | Sonnet | Opus |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -68,5 +68,4 @@ The results above were recorded under earlier descriptions and skill names. This
 | 7 | "Should I automate our quarterly subscription review?" | split, see below | delegate | delegate | delegate |
 | 8 | "We are evaluating a document platform for the whole company, six figures, and procurement " | none | none | none | none |
 
-Run on 5 Nov 2026 with Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Single-answer cases: see counts below.
 Cases with one expected answer: 4. All three models matched on 4.

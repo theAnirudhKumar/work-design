@@ -45,7 +45,7 @@ These methods target the gap between knowing what to do and doing it. Most work 
 5. Keep the list where you will see it during gaps (phone note, sticky note).
 **7-day trial:** Do at least two bites a day in gaps such as queues, commutes or after a meeting. Track: bites done per day, and by day 7 whether the project feels smaller (yes/no, plus one line why).
 **Pairs well with:** Tiny first step, Five-minute rule, Don't break the chain
-**Comes from:** Often credited to Alan Lakein, in his time-management writing of the 1970s.
+**Comes from:** Often attributed to Alan Lakein, in his 1973 book How to Get Control of Your Time and Your Life.
 **Evidence:** Practice only. A sensible use of task decomposition, but this exact technique has not been tested.
 **Effort to set up:** Low.   **Works for:** Solo
 
@@ -61,7 +61,7 @@ These methods target the gap between knowing what to do and doing it. Most work 
 5. Do the first session today.
 **7-day trial:** Use the bundle for the same task on three or four of the seven days; keep the treat off-limits otherwise. Track: sessions done, and whether you actually held to the treat rule.
 **Pairs well with:** Commitment devices, Habit stacking, Implementation intentions
-**Comes from:** Katy Milkman, a behavioural scientist who named it in research on gym attendance.
+**Comes from:** Katherine Milkman, Julia Minson and Kevin Volpp, who introduced the term in a 2014 gym-attendance field study published in Management Science.
 **Evidence:** Mixed. An early study reported benefits, but results across studies are not consistent and may depend on the person and the treat.
 **Effort to set up:** Low.   **Works for:** Solo
 
@@ -78,7 +78,7 @@ These methods target the gap between knowing what to do and doing it. Most work 
 **7-day trial:** Use one if-then plan daily. Track: did the cue happen (yes/no), and did you act when it did. If the cue often does not happen, change the cue, not your effort.
 **Pairs well with:** Habit stacking, Tiny first step, Environment design
 **Comes from:** Peter Gollwitzer, in psychology research published in 1999.
-**Evidence:** Strong. Repeated studies, including reviews that pool them, support if-then planning for helping people act on goals they already hold; effects are moderate, not magic.
+**Evidence:** Strong. Repeated studies, including reviews that pool them, support if-then planning for helping people act on goals they already hold; average effects in pooled reviews are reported as medium to large, but they vary by goal and by how the plan is made, and they are not magic.
 **Effort to set up:** Low.   **Works for:** Either
 
 ## Commitment devices
@@ -141,7 +141,7 @@ These methods target the gap between knowing what to do and doing it. Most work 
 5. Write a rule for a miss now: "If I miss a day, I restart the next day, no catching up."
 **7-day trial:** Mark each day you do it. Track: the length of your chain and, if broken, how quickly you restarted. The restart matters more than the streak.
 **Pairs well with:** Habit tracking, Two-day rule, Minimum viable habit
-**Comes from:** Often attributed to the comedian Jerry Seinfeld, who is said to have used a wall calendar for writing jokes; the attribution is disputed.
+**Comes from:** Often attributed to the comedian Jerry Seinfeld, via a 2007 Lifehacker story told by the developer Brad Isaac about a wall calendar for writing jokes; the attribution is disputed and Seinfeld is not known to have confirmed it.
 **Evidence:** Practice only. Widely used, little direct testing; seeing progress helps some people, and a broken streak discourages others.
 **Effort to set up:** Low.   **Works for:** Solo
 

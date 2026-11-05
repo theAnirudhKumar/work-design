@@ -2,7 +2,7 @@
 
 Routing cases for `what-could-go-wrong`, written alongside the skill.
 
-**Run on:** 5 Nov 2026, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 15. All three models matched on 14; Haiku 14, Sonnet 15, Opus 15. The protect-my-focus description was reworded after this run; see the targeted rerun in `evals/README.md`.
+**Run on:** 5 Nov 2026, second run with the 4.2.0 descriptions, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `731601fe12b6`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 15. All three models matched on 15; Haiku 15, Sonnet 15, Opus 15.
 
 **Method (to follow).** Show each model only the skill descriptions in the repository and ask for one skill name or `none`, with a confidence and a one-line reason. Repeat on Haiku, Sonnet and Opus. Record disagreements, not averages.
 
@@ -62,6 +62,4 @@ Routing cases for `what-could-go-wrong`, written alongside the skill.
 
 ## Misses and how to read them
 
-| Case | Message | Expected | Haiku | Sonnet | Opus | Reading |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| what-could-go-wrong#8 | "Here's a new project. Help me write down what it is, who it's for and what done " | plan-the-work | **scope-the-work** | plan-the-work | plan-the-work | A real plan-the-work vs scope-the-work overlap on Haiku ("what it is, who it is for, what done means"). |
+No misses on cases with a single expected answer.

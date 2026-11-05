@@ -2,7 +2,7 @@
 
 Routing cases for `plan-my-day`, written alongside the skill.
 
-**Run on:** 5 Nov 2026, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 34. All three models matched on 34; Haiku 34, Sonnet 34, Opus 34. The protect-my-focus description was reworded after this run; see the targeted rerun in `evals/README.md`.
+**Run on:** 5 Nov 2026, second run with the 4.2.0 descriptions, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `731601fe12b6`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 34. All three models matched on 34; Haiku 34, Sonnet 34, Opus 34.
 
 **Method.** Follow the procedure in `evals/README.md`: show a model the verbatim descriptions of every skill in the repository, with no skill bodies, and ask for one skill name or `none`. Pin the description text used, since results do not survive rewording. The near misses are only meaningful if the full description set is present, including `plan-my-day`, `plan-my-week`, `sort-my-tasks` and the other skills built alongside them: `find-my-method`, `explain-a-method`, `start-a-focus-session`, `protect-my-focus`, `build-a-habit`, `balance-my-life` and `build-my-system`.
 
@@ -43,8 +43,8 @@ Routing cases for `plan-my-day`, written alongside the skill.
 | 29 | "How do I cut the token cost of this long prompt?" | Near miss | cut-token-cost | cut-token-cost | cut-token-cost | cut-token-cost |
 | 30 | "Which work-design skill should I use for my work?" | Near miss | work-design | work-design | work-design | work-design |
 | 31 | "I use Ivy Lee. Here are my six for tomorrow and my calendar. Lay out the day." | Ambiguous | plan-my-day (method named, but the job is the day) | plan-my-day | plan-my-day | plan-my-day |
-| 32 | "I have too much to do today and don't know where to start." | Ambiguous | plan-my-day or sort-my-tasks | plan-my-day | plan-my-day | plan-my-day |
-| 33 | "Plan my Monday. And honestly the whole week is a mess." | Ambiguous | plan-my-day or plan-my-week | plan-my-week | plan-my-week | plan-my-week |
+| 32 | "I have too much to do today and don't know where to start." | Ambiguous | plan-my-day or sort-my-tasks | sort-my-tasks | plan-my-day | plan-my-day |
+| 33 | "Plan my Monday. And honestly the whole week is a mess." | Ambiguous | plan-my-day or plan-my-week | plan-my-week | plan-my-week | plan-my-day |
 | 34 | "I'm exhausted and overwhelmed. Not just today, it's been months. Can you plan my day?" | Ambiguous, boundary | plan-my-day, with the one-time referral | plan-my-day | plan-my-day | plan-my-day |
 
 ---

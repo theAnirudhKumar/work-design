@@ -2,7 +2,7 @@
 
 Routing cases for `get-unstuck`, written alongside the skill.
 
-**Run on:** 5 Nov 2026, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 13. All three models matched on 12; Haiku 12, Sonnet 12, Opus 12. The protect-my-focus description was reworded after this run; see the targeted rerun in `evals/README.md`.
+**Run on:** 5 Nov 2026, second run with the 4.2.0 descriptions, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `731601fe12b6`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 13. All three models matched on 12; Haiku 12, Sonnet 12, Opus 12.
 
 **Method.** Follow the procedure in `evals/README.md`: show a model the verbatim descriptions of every skill in the repository, with no skill bodies, and ask for one skill name or `none`. Pin the description text used, since results do not survive rewording. Skills named below that are not yet in the repository (`plan-the-work`, `fit-to-deadline`, `what-could-go-wrong`, `review-my-work`) must be present in the description set for the near misses to be meaningful.
 
@@ -24,7 +24,7 @@ Routing cases for `get-unstuck`, written alongside the skill.
 | 10 | "Is my first draft any good? I keep rereading it and can't tell." | Near miss | review-my-work | review-my-work | review-my-work | review-my-work |
 | 11 | "I can't get started on the product brief because I don't really know what it's for." | Ambiguous | get-unstuck or plan-the-work | get-unstuck | get-unstuck | get-unstuck |
 | 12 | "I'm blocked until legal sends the contract. How do I chase them?" | Ambiguous | get-unstuck or meeting-or-message | get-unstuck | get-unstuck | get-unstuck |
-| 13 | "I feel overwhelmed and can't do anything lately, not just this project." | Ambiguous, boundary | get-unstuck, with the one-time referral | **balance-my-life** | **none** | **none** |
+| 13 | "I feel overwhelmed and can't do anything lately, not just this project." | Ambiguous, boundary | get-unstuck, with the one-time referral | **none** | **none** | **none** |
 
 ---
 
@@ -68,4 +68,4 @@ One case to be checked by hand once a model is available: case 3. The output sho
 
 | Case | Message | Expected | Haiku | Sonnet | Opus | Reading |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| get-unstuck#13 | "I feel overwhelmed and can't do anything lately, not just this project." | get-unstuck, with the one-time referral | **balance-my-life** | **none** | **none** | Boundary case by design (distress). No skill is an acceptable answer; Haiku chose balance-my-life, which is defensible. |
+| get-unstuck#13 | "I feel overwhelmed and can't do anything lately, not just this project." | get-unstuck, with the one-time referral | **none** | **none** | **none** | Boundary case by design (distress). All three models chose none, an acceptable answer. |

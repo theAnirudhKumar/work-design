@@ -2,7 +2,7 @@
 
 Routing cases for `plan-the-work`, written alongside the skill, per `CONTRIBUTING.md`.
 
-**Run on:** 5 Nov 2026, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 16. All three models matched on 16; Haiku 16, Sonnet 16, Opus 16. The protect-my-focus description was reworded after this run; see the targeted rerun in `evals/README.md`.
+**Run on:** 5 Nov 2026, second run with the 4.2.0 descriptions, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `731601fe12b6`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 16. All three models matched on 16; Haiku 16, Sonnet 16, Opus 16.
 
 **Siblings named below.** `fit-to-deadline` is written alongside this skill. `what-could-go-wrong`, `get-unstuck`, `review-my-work` and `lessons-learned` are planned siblings that may not exist yet when this is run. Where a sibling is not installed, the expected routing for that case is `none`, not the sibling's name. Pin the exact description text of every skill shown to the model when recording a run.
 
@@ -27,7 +27,7 @@ Routing cases for `plan-the-work`, written alongside the skill, per `CONTRIBUTIN
 | 13 | "Here's my plan for the rollout. What could go wrong with it?" | near miss | none (or `what-could-go-wrong` if installed) | what-could-go-wrong | what-could-go-wrong | what-could-go-wrong |
 | 14 | "Rename this file to match the others." | near miss | none (task under 30 minutes) | none | none | none |
 | 15 | "I have to prepare the wedding seating plan, we have 12 days, and it's already too much." | conflict | plan-the-work or fit-to-deadline | fit-to-deadline | fit-to-deadline | fit-to-deadline |
-| 16 | "I've got a proposal due Thursday for a client. Plan this out and tell me what to cut if I run short." | conflict | plan-the-work or fit-to-deadline | plan-the-work | fit-to-deadline | fit-to-deadline |
+| 16 | "I've got a proposal due Thursday for a client. Plan this out and tell me what to cut if I run short." | conflict | plan-the-work or fit-to-deadline | plan-the-work | plan-the-work | plan-the-work |
 
 ---
 

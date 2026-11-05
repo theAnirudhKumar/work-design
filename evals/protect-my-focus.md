@@ -2,7 +2,7 @@
 
 Routing cases for `protect-my-focus`, written alongside the skill.
 
-**Run on:** 5 Nov 2026, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 41. All three models matched on 41; Haiku 41, Sonnet 41, Opus 41. The protect-my-focus description was reworded after this run; see the targeted rerun in `evals/README.md`.
+**Run on:** 5 Nov 2026, second run with the 4.2.0 descriptions, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `731601fe12b6`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 41. All three models matched on 39; Haiku 41, Sonnet 40, Opus 39.
 
 **Method.** Follow the procedure in `evals/README.md`: show a model the verbatim descriptions of every skill in the repository, with no skill bodies, and ask for one skill name or `none`. Pin the description text used, since results do not survive rewording. The set must include the skills built alongside this one (`find-my-method`, `explain-a-method`, `plan-my-day`, `plan-my-week`, `sort-my-tasks`, `balance-my-life`, `build-my-system`, `start-a-focus-session`, `protect-my-focus`, `build-a-habit`) and, for the meeting cases, `meeting-audit` from the sibling meeting-design repository, or the near misses are not meaningful. `meeting-design` is the set that contains `meeting-audit`. An Expected value written as A or B means either routing is defensible.
 
@@ -37,7 +37,7 @@ Routing cases for `protect-my-focus`, written alongside the skill.
 | 23 | "I want to build a habit of checking email only twice a day." | Near miss | build-a-habit | build-a-habit | build-a-habit | build-a-habit |
 | 24 | "Should I give this task to an agent or do it myself?" | Near miss | delegate | delegate | delegate | delegate |
 | 25 | "I have two days left for the report. What should I cut?" | Near miss | fit-to-deadline | fit-to-deadline | fit-to-deadline | fit-to-deadline |
-| 26 | "Before I begin, what is in and out of scope for this project?" | Near miss | scope-the-work | scope-the-work | scope-the-work | scope-the-work |
+| 26 | "Before I begin, what is in and out of scope for this project?" | Near miss | scope-the-work | scope-the-work | scope-the-work | **work-design** |
 | 27 | "Break this down for me: I have to launch a new service." | Near miss | plan-the-work | plan-the-work | plan-the-work | plan-the-work |
 | 28 | "How long will this migration actually take?" | Near miss | how-long-will-it-take | how-long-will-it-take | how-long-will-it-take | how-long-will-it-take |
 | 29 | "What could go wrong with my plan to block mornings for deep work?" | Near miss | what-could-go-wrong | what-could-go-wrong | what-could-go-wrong | what-could-go-wrong |
@@ -52,7 +52,7 @@ Routing cases for `protect-my-focus`, written alongside the skill.
 | 38 | "Slack is killing me and I need to write for two hours right now." | Ambiguous | protect-my-focus or start-a-focus-session | start-a-focus-session | start-a-focus-session | start-a-focus-session |
 | 39 | "My manager keeps scheduling meetings in my focus time." | Ambiguous | protect-my-focus or meeting-audit | protect-my-focus | protect-my-focus | protect-my-focus |
 | 40 | "I get distracted by my own phone, not by other people." | Ambiguous | protect-my-focus or start-a-focus-session or build-a-habit | protect-my-focus | protect-my-focus | protect-my-focus |
-| 41 | "I'm drowning in everything, work, home, emails." | Ambiguous | balance-my-life or protect-my-focus or sort-my-tasks | sort-my-tasks | sort-my-tasks | sort-my-tasks |
+| 41 | "I'm drowning in everything, work, home, emails." | Ambiguous | balance-my-life or protect-my-focus or sort-my-tasks | balance-my-life | **build-my-system** | **build-my-system** |
 
 ---
 
@@ -163,4 +163,7 @@ Two cases to be checked by hand once a model is available.
 
 ## Misses and how to read them
 
-No misses on cases with a single expected answer.
+| Case | Message | Expected | Haiku | Sonnet | Opus | Reading |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| protect-my-focus#26 | "Before I begin, what is in and out of scope for this project?" | scope-the-work | scope-the-work | scope-the-work | **work-design** | One Opus flip to work-design on a scope question; the other two models chose scope-the-work. Noise. |
+| protect-my-focus#41 | "I'm drowning in everything, work, home, emails." | balance-my-life or protect-my-focus or s | balance-my-life | **build-my-system** | **build-my-system** | Overwhelm across work and home. build-my-system on Sonnet and Opus is defensible. |

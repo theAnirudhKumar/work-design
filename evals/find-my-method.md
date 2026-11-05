@@ -2,7 +2,7 @@
 
 Routing cases for `find-my-method`, written alongside the skill.
 
-**Run on:** 5 Nov 2026, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 20. All three models matched on 18; Haiku 18, Sonnet 18, Opus 18. The protect-my-focus description was reworded after this run; see the targeted rerun in `evals/README.md`.
+**Run on:** 5 Nov 2026, second run with the 4.2.0 descriptions, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `731601fe12b6`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 20. All three models matched on 18; Haiku 19, Sonnet 19, Opus 19.
 
 **Method.** Follow the procedure in `evals/README.md`: show a model the verbatim descriptions of every skill in the repository, with no skill bodies, and ask for one skill name or `none`. Pin the description text used. Skills named below that are written concurrently (`explain-a-method`, `plan-my-day`, `plan-my-week`, `sort-my-tasks`, `start-a-focus-session`, `protect-my-focus`, `build-a-habit`, `balance-my-life`, `build-my-system`) must be present in the description set for the near misses to be meaningful.
 
@@ -28,10 +28,10 @@ Routing cases for `find-my-method`, written alongside the skill.
 | 14 | "I'm stuck on this one proposal and I don't know why." | Near miss | get-unstuck | get-unstuck | get-unstuck | get-unstuck |
 | 15 | "I have to write the Q3 report. Where do I start?" | Near miss | plan-the-work | plan-the-work | plan-the-work | plan-the-work |
 | 16 | "I need this done by Friday but I only have two days." | Near miss | fit-to-deadline | fit-to-deadline | fit-to-deadline | fit-to-deadline |
-| 17 | "Is this weekly status meeting worth having, or should it be an email?" | Near miss | meeting-or-message | **meeting-audit** | **meeting-audit** | **meeting-audit** |
+| 17 | "Is this weekly status meeting worth having, or should it be an email?" | Near miss | meeting-or-message | meeting-or-message | meeting-or-message | **meeting-audit** |
 | 18 | "Which of these tasks should I give to an AI?" | Near miss | delegate | delegate | delegate | delegate |
 | 19 | "I'm exhausted all the time and nothing helps. What system should I use?" | Ambiguous | find-my-method | find-my-method | find-my-method | find-my-method |
-| 20 | "I'm always distracted. What should I do?" | Ambiguous | find-my-method | **protect-my-focus** | **protect-my-focus** | **protect-my-focus** |
+| 20 | "I'm always distracted. What should I do?" | Ambiguous | find-my-method | **protect-my-focus** | **protect-my-focus** | find-my-method |
 
 ---
 
@@ -81,5 +81,5 @@ A second check without the library: every evidence label reads "general knowledg
 
 | Case | Message | Expected | Haiku | Sonnet | Opus | Reading |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| find-my-method#20 | "I'm always distracted. What should I do?" | find-my-method | **protect-my-focus** | **protect-my-focus** | **protect-my-focus** | Expectation arguably wrong: self-distraction is within protect-my-focus. Kept as a known overlap. |
-| find-my-method#17 | "Is this weekly status meeting worth having, or should it be an email?" | meeting-or-message | **meeting-audit** | **meeting-audit** | **meeting-audit** | meeting-audit claims "should we still have this weekly". Acceptable overlap; both lead to a verdict. |
+| find-my-method#20 | "I'm always distracted. What should I do?" | find-my-method | **protect-my-focus** | **protect-my-focus** | find-my-method | Expectation arguably wrong: self-distraction is within protect-my-focus. Kept as a known overlap. |
+| find-my-method#17 | "Is this weekly status meeting worth having, or should it be an email?" | meeting-or-message | meeting-or-message | meeting-or-message | **meeting-audit** | meeting-audit claims "should we still have this weekly". Acceptable overlap; both lead to a verdict. |

@@ -14,7 +14,7 @@ These twelve methods decide what to do first, what to do later, and what to drop
 5. Look at the "important only" box and put a first slot in the calendar this week.
 **7-day trial:** Re-sort the list each morning in five minutes. Track the number of items in "important only" that you actually began, and the count you deleted or delegated.
 **Pairs well with:** Big rocks; Not-to-do list; Impact/effort matrix.
-**Comes from:** Often attributed to Dwight D. Eisenhower and popularised by Stephen Covey; the attribution to Eisenhower is loose.
+**Comes from:** Often attributed to Dwight D. Eisenhower, who in a 1954 speech quoted an unnamed college president on urgent versus important problems; the four-box form was popularised later by Stephen Covey, so the attribution to Eisenhower is loose.
 **Evidence:** Practice only. No direct testing of the matrix itself; people do tend to favour urgent over important work, which is the problem it aims at.
 **Effort to set up:** Low.   **Works for:** Either
 
@@ -110,7 +110,7 @@ These twelve methods decide what to do first, what to do later, and what to drop
 5. Check that the Musts fit within the constraint; if not, move something down or change the constraint openly.
 **7-day trial:** Apply it to one live project this week. Track how many items ended up as Must versus the total, and whether stakeholders accepted each Won't without reopening it.
 **Pairs well with:** RICE scoring; Impact/effort matrix; Not-to-do list.
-**Comes from:** Associated with the DSDM agile project method and its early authors.
+**Comes from:** Devised by Dai Clegg at Oracle in 1994 for rapid application development, and later widely used in the DSDM agile project method.
 **Evidence:** Practice only. Widely used in project work, with little direct testing of whether it improves outcomes.
 **Effort to set up:** Low.   **Works for:** Team
 
@@ -126,7 +126,7 @@ These twelve methods decide what to do first, what to do later, and what to drop
 5. Investigate any case where they disagree before committing.
 **7-day trial:** Score one batch of options and begin the top one. Track how far the actual effort and reach turned out from your estimates, so you can calibrate next time.
 **Pairs well with:** MoSCoW; Impact/effort matrix; Pareto principle.
-**Comes from:** Popularised by the product team at Intercom, a software company.
+**Comes from:** Popularised by the product team at Intercom, a software company, in a 2018 blog post by Sean McBride.
 **Evidence:** Practice only. A structured way to compare options, but no direct testing; the quality of the scores depends on the estimates behind them.
 **Effort to set up:** Medium.   **Works for:** Team
 
@@ -158,7 +158,7 @@ These twelve methods decide what to do first, what to do later, and what to drop
 5. Defend the blocks: when something new arrives, ask what moves out to make room.
 **7-day trial:** Place the rocks on Sunday or Monday. Track the hours each rock actually received compared with the plan, and one thing you declined or moved to protect them.
 **Pairs well with:** Eisenhower matrix; Ideal week; 1-3-5 rule.
-**Comes from:** Popularised by Stephen Covey, as a demonstration with a jar, rocks and sand.
+**Comes from:** Popularised by Stephen Covey, who told it in First Things First as a demonstration with a jar, rocks and sand; he presented it as a story he had heard, not his own invention.
 **Evidence:** Practice only. The jar demonstration is an illustration, not a study; the underlying planning habit of committing time ahead is plausible but untested as a method.
 **Effort to set up:** Low.   **Works for:** Either
 

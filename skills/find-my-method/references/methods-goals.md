@@ -3,17 +3,17 @@
 These methods turn a vague wish into something you can act on this week. They differ in how far ahead they look (a day to a year), how much structure they add, and how likely they are to turn into admin. Goal-setting research mostly supports the plain idea that specific, challenging goals with feedback beat vague ones. It supports far less the elaborate frameworks built on top of that idea. Pick the lightest method that gives you a clear next action, and drop any method that has you updating a tracker more than doing the work.
 
 ## OKRs
-**One line:** Write one qualitative objective, then two to four measurable key results that show whether you got there, and review them on a fixed cycle.
+**One line:** Write one qualitative objective, then a few measurable key results that show whether you got there, and review them on a fixed cycle.
 **Best for:** Teams or solo people with several competing priorities who need to say what matters most this quarter and how they will know.
 **Skip it when:** The work is reactive or unpredictable, you would only be inventing numbers, or the key results turn into a scoreboard that people game or chase at the cost of the real aim. Also skip it for a goal you can finish in a week.
 **Start in 10 minutes:**
 1. Write one objective in plain words: a direction, not a number ("Make onboarding painless for new clients").
-2. Under it, write two to four key results that someone else could check as met or not met.
+2. Under it, write a few key results (two to four is a workable start) that someone else could check as met or not met.
 3. Cross out any key result that measures activity ("send 50 emails") rather than a result you actually want.
 4. Put a 10-minute check-in on your calendar once a week to rate each key result and name the next move.
 **7-day trial:** Write one objective and two key results on Day 1. Each day, note the one action that moved a key result. On Day 7, rate each key result and ask whether the numbers changed what you did. Track: actions tied to a key result, and any day you chased the number instead of the aim.
 **Pairs well with:** Weekly review; Milestone mapping; Goal ladder.
-**Comes from:** Folk practice, no single origin.
+**Comes from:** Developed by Andy Grove at Intel in the 1970s, building on earlier management-by-objectives ideas, and popularised by John Doerr, who took it to Google, in his 2018 book Measure What Matters.
 **Evidence:** Practice only. OKRs are a management practice widely used in companies with little rigorous testing of the framework itself, though the general idea of specific goals with feedback is better supported.
 **Effort to set up:** Medium.   **Works for:** Either.
 
@@ -28,7 +28,7 @@ These methods turn a vague wish into something you can act on this week. They di
 4. Write the first action and when you will do it.
 **7-day trial:** Rewrite one goal in SMART form on Day 1. Do the first action by Day 2. Each day, log whether you did the planned step. On Day 7, check whether the target still feels right or needs adjusting. Track: days you did the step, and whether the target needed to change.
 **Pairs well with:** WOOP; Milestone mapping; Weekly review.
-**Comes from:** Often attributed to a 1981 management article by George Doran; the attribution is disputed in its details and the acronym has many variants.
+**Comes from:** George T. Doran, in a November 1981 article in Management Review. His original letters were Specific, Measurable, Assignable, Realistic and Time-related; later versions vary (Achievable, Relevant).
 **Evidence:** Some. Research on goal setting (Locke and Latham) supports specific, challenging goals with feedback over vague "do your best" goals, but that does not show the SMART checklist itself is what helps.
 **Effort to set up:** Low.   **Works for:** Either.
 
@@ -43,8 +43,8 @@ These methods turn a vague wish into something you can act on this week. They di
 4. Plan: write "If [obstacle shows up], then I will [one specific action]." Keep it small enough to do on a bad day.
 **7-day trial:** Do the four steps on Day 1 and put the if-then somewhere you will see it. Each day, note whether the obstacle appeared and whether you used the plan. Track: times the obstacle appeared, and times you ran the plan. Adjust the plan on Day 4 if it never fires.
 **Pairs well with:** SMART goals; Anti-goals; Milestone mapping.
-**Comes from:** Gabriele Oettingen's research on mental contrasting and implementation intentions.
-**Evidence:** Some. Studies of mental contrasting with implementation intentions report benefits in several settings, though samples and settings vary, and positive visualising alone has mixed support.
+**Comes from:** Gabriele Oettingen, who developed mental contrasting and combined it with implementation intentions; WOOP is the everyday version, described in her 2014 book Rethinking Positive Thinking.
+**Evidence:** Some. Pooled reviews of mental contrasting with implementation intentions report small-to-medium average benefits for goal attainment, though studies vary, and positive visualising alone has mixed support.
 **Effort to set up:** Low.   **Works for:** Solo.
 
 ## Working backwards
@@ -88,7 +88,7 @@ These methods turn a vague wish into something you can act on this week. They di
 4. Set a weekly 15-minute slot to mark which planned actions you did.
 **7-day trial:** Run one mini-week. On Day 1, plan the week's actions for one goal. Each day, tick what you did. On Day 7, compute done over planned and ask whether the actions were the right ones. Track: actions planned vs done, and one action that proved pointless.
 **Pairs well with:** Weekly review; Milestone mapping; OKRs.
-**Comes from:** Brian Moran and Michael Lennington popularised the name in their book of the same name.
+**Comes from:** Brian Moran and Michael Lennington popularised the name in their 2013 book of the same name (Wiley).
 **Evidence:** Practice only. It is a commercial planning system built on plausible ideas (short horizons, weekly review), but I know of no controlled tests of the method itself.
 **Effort to set up:** Medium.   **Works for:** Either.
 
@@ -103,7 +103,7 @@ These methods turn a vague wish into something you can act on this week. They di
 4. Choose one area to nudge and write one action for the next seven days. Leave the others alone.
 **7-day trial:** Score the wheel on Day 1. Do the one chosen action on at least three days. On Day 7, rescore only that area and ask what changed. Track: days you did the action, and your before and after score for that area.
 **Pairs well with:** Annual review; Goal ladder; Monthly review.
-**Comes from:** Folk practice, no single origin. Similar circle exercises appear in coaching traditions.
+**Comes from:** Often credited to Paul J. Meyer of the Success Motivation Institute, probably in the 1960s; the exact origin is not well documented. Similar circle exercises appear in coaching traditions.
 **Evidence:** Practice only. It is a reflection tool used in coaching and I know of no good evidence on outcomes, though it can help you notice gaps.
 **Effort to set up:** Low.   **Works for:** Solo.
 

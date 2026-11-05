@@ -81,7 +81,7 @@ The run found "My calendar is full of meetings that eat my focus time" going to 
 | start-a-focus-session#28 | "Our weekly team meeting wastes everyone's time. Fix it." | meeting-design → meeting-audit | meeting-design | meeting-design |
 | protect-my-focus#41 | "I'm drowning in everything, work, home, emails." | sort-my-tasks → balance-my-life | sort-my-tasks | sort-my-tasks |
 
-The target case, plan-my-week#8, now goes to `protect-my-focus` on all three models. The other changes are mostly meeting-complaint cases moving between `meeting-design`, `meeting-audit` and `meeting-or-message`, all defensible; a few changed without any related wording change, which is the run-to-run noise to expect from a single sample. Everything else in the per-skill files was recorded under the first snapshot.
+The target case, plan-my-week#8, now goes to `protect-my-focus` on all three models. The other changes are mostly meeting-complaint cases moving between `meeting-design`, `meeting-audit` and `meeting-or-message`, all defensible; a few changed without any related wording change, which is the run-to-run noise to expect from a single sample. The per-skill files have since been refreshed with the second run.
 
 ### What this does not show
 
@@ -99,4 +99,4 @@ The `work-design` description was rewritten from a menu into a consultant that c
 - **No routing theft.** Of 1563 picks on the earlier cases, 1 moved to `work-design` (protect-my-focus#26 on opus), and the 16 near misses in `evals/work-design.md` all stayed with their specific skills on all three models.
 - **The consultant fires.** All 9 open-ended cases went to `work-design` on all three models.
 - **Run-to-run noise.** 101 of 1563 picks on the earlier cases differ from the first run (6.5%), most on ambiguous or overlapping cases. Treat a single flipped pick as noise, and a pattern across models as a finding.
-- The per-skill result tables in the other eval files are from the first run and were not rewritten.
+- The per-skill result tables in the eval files now show this second run. The first run's totals are in the section above.

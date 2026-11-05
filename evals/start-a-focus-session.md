@@ -2,7 +2,7 @@
 
 Routing cases for `start-a-focus-session`, written alongside the skill.
 
-**Run on:** 5 Nov 2026, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 41. All three models matched on 39; Haiku 39, Sonnet 40, Opus 40. The protect-my-focus description was reworded after this run; see the targeted rerun in `evals/README.md`.
+**Run on:** 5 Nov 2026, second run with the 4.2.0 descriptions, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `731601fe12b6`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 41. All three models matched on 39; Haiku 41, Sonnet 40, Opus 39.
 
 **Method.** Follow the procedure in `evals/README.md`: show a model the verbatim descriptions of every skill in the repository, with no skill bodies, and ask for one skill name or `none`. Pin the description text used, since results do not survive rewording. The set must include the skills built alongside this one (`find-my-method`, `explain-a-method`, `plan-my-day`, `plan-my-week`, `sort-my-tasks`, `balance-my-life`, `build-my-system`, `start-a-focus-session`, `protect-my-focus`, `build-a-habit`) and, for the meeting cases, `meeting-audit` from the sibling meeting-design repository, or the near misses are not meaningful. `meeting-design` is the set that contains `meeting-audit`. An Expected value written as A or B means either routing is defensible.
 
@@ -19,7 +19,7 @@ Routing cases for `start-a-focus-session`, written alongside the skill.
 | 5 | "Done. Got through the whole outline." | Should fire (debrief) | start-a-focus-session | start-a-focus-session | start-a-focus-session | start-a-focus-session |
 | 6 | "I got interrupted at about 40 minutes by a phone call from the bank." | Should fire (debrief) | start-a-focus-session | start-a-focus-session | start-a-focus-session | start-a-focus-session |
 | 7 | "I didn't finish. I only got half the slides done and kept checking Slack." | Should fire (debrief) | start-a-focus-session | start-a-focus-session | start-a-focus-session | start-a-focus-session |
-| 8 | "I can never start tasks even when I want to. Can we do a 15-minute block together on my tax return?" | Should fire | start-a-focus-session | start-a-focus-session | start-a-focus-session | start-a-focus-session |
+| 8 | "I can never start tasks even when I want to. Can we do a 15-minute block together on my tax return?" | Should fire | start-a-focus-session | start-a-focus-session | start-a-focus-session | **get-unstuck** |
 | 9 | "I'm working in an open office and need 90 minutes on the brand deck." | Should fire | start-a-focus-session | start-a-focus-session | start-a-focus-session | start-a-focus-session |
 | 10 | "I want to write song lyrics for a couple of hours, but timers kill my flow." | Should fire | start-a-focus-session | start-a-focus-session | start-a-focus-session | start-a-focus-session |
 | 11 | "I'm on a quiet shift and have 25 minutes before handover. Help me use it to finish my charting." | Should fire | start-a-focus-session | start-a-focus-session | start-a-focus-session | start-a-focus-session |
@@ -33,13 +33,13 @@ Routing cases for `start-a-focus-session`, written alongside the skill.
 | 19 | "Set up my whole productivity system: capture, planning, focus, review." | Near miss | build-my-system | build-my-system | build-my-system | build-my-system |
 | 20 | "I never see my family and work every evening. Help me find some balance." | Near miss | balance-my-life | balance-my-life | balance-my-life | balance-my-life |
 | 21 | "I want to start meditating every morning and make it stick." | Near miss | build-a-habit | build-a-habit | build-a-habit | build-a-habit |
-| 22 | "Which of these three tasks is worth my time, and which should I hand to an agent?" | Near miss | delegate | **sort-my-tasks** | delegate | delegate |
+| 22 | "Which of these three tasks is worth my time, and which should I hand to an agent?" | Near miss | delegate | delegate | delegate | delegate |
 | 23 | "I have two days to finish the report. What should I cut?" | Near miss | fit-to-deadline | fit-to-deadline | fit-to-deadline | fit-to-deadline |
 | 24 | "Before I start this project, what is in scope and what counts as done?" | Near miss | scope-the-work | scope-the-work | scope-the-work | scope-the-work |
 | 25 | "I have to write a market analysis. Where do I start?" | Near miss | plan-the-work | plan-the-work | plan-the-work | plan-the-work |
 | 26 | "How long will this chapter take me to write? I think about three hours." | Near miss | how-long-will-it-take | how-long-will-it-take | how-long-will-it-take | how-long-will-it-take |
 | 27 | "Should we have a call about this or can I just message them?" | Near miss | meeting-or-message | meeting-or-message | meeting-or-message | meeting-or-message |
-| 28 | "Our weekly team meeting wastes everyone's time. Fix it." | Near miss | meeting-audit (meeting-design set) | meeting-design | meeting-design | meeting-design |
+| 28 | "Our weekly team meeting wastes everyone's time. Fix it." | Near miss | meeting-audit (meeting-design set) | meeting-audit | meeting-design | meeting-design |
 | 29 | "Review this email draft before I send it." | Near miss | review-my-work | review-my-work | review-my-work | review-my-work |
 | 30 | "What could go wrong with my study plan?" | Near miss | what-could-go-wrong | what-could-go-wrong | what-could-go-wrong | what-could-go-wrong |
 | 31 | "That's done, what did I learn from it?" | Near miss | lessons-learned | lessons-learned | lessons-learned | lessons-learned |
@@ -52,7 +52,7 @@ Routing cases for `start-a-focus-session`, written alongside the skill.
 | 38 | "I need to concentrate this afternoon, and also I'm drowning in tasks." | Ambiguous | start-a-focus-session or sort-my-tasks | start-a-focus-session | start-a-focus-session | start-a-focus-session |
 | 39 | "Help me get started on this essay. Maybe a timer would help." | Ambiguous | start-a-focus-session or get-unstuck | start-a-focus-session | start-a-focus-session | start-a-focus-session |
 | 40 | "Meetings and Slack kill my focus time. I need a focus session this afternoon." | Ambiguous | start-a-focus-session or protect-my-focus | start-a-focus-session | start-a-focus-session | start-a-focus-session |
-| 41 | "Block off two hours on my calendar for deep work every morning." | Ambiguous | start-a-focus-session or plan-my-week | **protect-my-focus** | **none** | **none** |
+| 41 | "Block off two hours on my calendar for deep work every morning." | Ambiguous | start-a-focus-session or plan-my-week | start-a-focus-session | **none** | **none** |
 
 ---
 
@@ -165,5 +165,5 @@ Two cases to be checked by hand once a model is available.
 
 | Case | Message | Expected | Haiku | Sonnet | Opus | Reading |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| start-a-focus-session#41 | "Block off two hours on my calendar for deep work every morning." | start-a-focus-session or plan-my-week | **protect-my-focus** | **none** | **none** | Calendar blocking is not a skill here. Acceptable. |
-| start-a-focus-session#22 | "Which of these three tasks is worth my time, and which should I hand to an agent" | delegate | **sort-my-tasks** | delegate | delegate | Haiku chose sort-my-tasks; delegate is intended. Overlap. |
+| start-a-focus-session#8 | "I can never start tasks even when I want to. Can we do a 15-minute block togethe" | start-a-focus-session | start-a-focus-session | start-a-focus-session | **get-unstuck** | Opus chose get-unstuck for "I can never start tasks". Overlap; both are defensible. |
+| start-a-focus-session#41 | "Block off two hours on my calendar for deep work every morning." | start-a-focus-session or plan-my-week | start-a-focus-session | **none** | **none** | Calendar blocking is not a skill here. Acceptable. |

@@ -14,7 +14,7 @@ These methods help an action become part of ordinary life instead of a daily dec
 5. Practise the recipe once now.
 **7-day trial:** Do the tiny behaviour after the anchor each day and celebrate. Track: done or not each day, and how easy it felt (1 to 5). Only grow it if it feels automatic, and by a small amount.
 **Pairs well with:** Habit stacking, Minimum viable habit, Habit tracking
-**Comes from:** BJ Fogg, a behaviour scientist at Stanford, who developed and teaches the method.
+**Comes from:** BJ Fogg, a behaviour scientist at Stanford, who developed the method and described it in his 2019 book Tiny Habits.
 **Evidence:** Practice only. The ideas build on research on cues and small steps, but the method itself has had little independent testing.
 **Effort to set up:** Low.   **Works for:** Solo
 
@@ -30,8 +30,8 @@ These methods help an action become part of ordinary life instead of a daily dec
 5. Do the stack once now.
 **7-day trial:** Run one stack each day. Track: did the anchor happen, did the new habit follow. If the anchor was missed several times, switch to a steadier anchor.
 **Pairs well with:** Tiny Habits, Implementation intentions, Environment design
-**Comes from:** Folk practice, no single origin; popularised in recent habit books. It is a form of if-then planning.
-**Evidence:** Some. Direct tests of stacking are few, but it rests on research on if-then planning and cue-based habits.
+**Comes from:** Builds on BJ Fogg's anchoring idea and on if-then planning. The name was popularised by S. J. Scott's 2014 book Habit Stacking and then by James Clear's Atomic Habits (2018).
+**Evidence:** Practice only. Direct tests of stacking as a named method are scarce; it is an application of if-then planning (see Implementation intentions), which has stronger support.
 **Effort to set up:** Low.   **Works for:** Solo
 
 ## Two-day rule
@@ -47,7 +47,7 @@ These methods help an action become part of ordinary life instead of a daily dec
 **7-day trial:** Follow your habit as usual and apply the rule to any miss. Track: misses, and whether you came back the next day. A week with one miss and a return is a success.
 **Pairs well with:** Minimum viable habit, Don't break the chain, Habit tracking
 **Comes from:** Folk practice, no single origin; popularised by writers on habits.
-**Evidence:** Practice only. Sensible and widely used, but not tested directly. Research suggests a single miss does not ruin a habit, which is the logic behind it.
+**Evidence:** Practice only. Sensible and widely used, but not tested directly. One study of habit formation found that missing a single day did not materially disrupt it, while frequent misses did, which is the logic behind it.
 **Effort to set up:** Low.   **Works for:** Solo
 
 ## Environment design
@@ -111,7 +111,7 @@ These methods help an action become part of ordinary life instead of a daily dec
 **7-day trial:** Record every day. Track: the number of days done per habit and any pattern in the days missed (a day of the week, a trigger). Use the pattern to change the plan, not to judge yourself.
 **Pairs well with:** Don't break the chain, Two-day rule, Tiny Habits
 **Comes from:** Folk practice, no single origin.
-**Evidence:** Some. Research on self-monitoring finds that tracking progress helps many people reach goals, though effects are modest and vary.
+**Evidence:** Some. A large pooled review of randomised studies, mostly on health goals, found that monitoring progress helped people reach goals, more so when it was written down; effects are modest and vary.
 **Effort to set up:** Low.   **Works for:** Solo
 
 ## Morning routine

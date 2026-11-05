@@ -30,7 +30,7 @@ These twelve methods decide when work happens and how long a stretch of it lasts
 5. Start the next stretch the same way.
 **7-day trial:** Log every stretch (start, stop, minutes, task) on paper or in a note. At day 7, look at the average and longest stretch and at which hours gave the longest ones.
 **Pairs well with:** Prime-time scheduling; Time blocking; 90-minute focus blocks.
-**Comes from:** Folk practice, no single origin. It is usually described as a variation on Pomodoro, and the originator is unclear.
+**Comes from:** Often attributed to Zoe Read-Bivens as a flexible alternative to Pomodoro; the attribution rests mostly on secondary sources and the date is unclear.
 **Evidence:** Practice only. No direct testing found; it rests on the general idea that attention varies by person and task.
 **Effort to set up:** Low.   **Works for:** Solo
 
@@ -46,7 +46,7 @@ These twelve methods decide when work happens and how long a stretch of it lasts
 5. Return and decide before sitting down what the next block is for.
 **7-day trial:** Do three blocks a day on days you have the time. Track blocks completed and a 1 to 5 rating of how rested the 17-minute break left you; compare to your usual day.
 **Pairs well with:** Time blocking; Prime-time scheduling; Day theming.
-**Comes from:** Popularised through a time-tracking company's analysis of its own users; the origin and the exact numbers are not from controlled testing, so treat them as uncertain.
+**Comes from:** Popularised by an analysis from DeskTime, a time-tracking app, of its own most productive users; it was observational, not a controlled test, and a later DeskTime update reported different figures, so treat the numbers as uncertain.
 **Evidence:** Practice only. Break research is supportive in general, but nothing shows 52/17 beats other work-rest ratios; treat the numbers as a starting point.
 **Effort to set up:** Low.   **Works for:** Solo
 
@@ -94,7 +94,7 @@ These twelve methods decide when work happens and how long a stretch of it lasts
 5. Decide at the stop: ship it, extend once by a set amount, or reschedule the remainder.
 **7-day trial:** Box one sprawling task a day. Track whether you shipped something at the end of each box and how much of the extra time you would have used was genuinely needed.
 **Pairs well with:** Parkinson's-law deadlines; Pomodoro Technique; Time blocking.
-**Comes from:** Associated with agile software development, where a fixed-length iteration is a core idea; the broader use is folk practice.
+**Comes from:** The software "timebox" is described in James Martin's 1991 book Rapid Application Development and was later central to agile iterations; the broader personal use is folk practice.
 **Evidence:** Practice only. Related research on deadlines and goals suggests limits can focus effort, but timeboxing itself has been little tested.
 **Effort to set up:** Low.   **Works for:** Either
 
@@ -158,7 +158,7 @@ These twelve methods decide when work happens and how long a stretch of it lasts
 5. Afterward, note whether it was as bad as expected.
 **7-day trial:** Pick one frog each day and do it first. Track whether it started within 30 minutes of beginning work and whether you finished it or reached the set stopping point.
 **Pairs well with:** Pomodoro Technique; Most Important Tasks; Prime-time scheduling.
-**Comes from:** Popularised by Brian Tracy's book Eat That Frog!. The quote is often attributed to Mark Twain; the attribution is disputed.
+**Comes from:** Popularised by Brian Tracy's book Eat That Frog!. The quote is often attributed to Mark Twain, but Quote Investigator found no evidence that he said it.
 **Evidence:** Practice only. No direct testing; it assumes willpower and energy are highest early, which is not true for everyone.
 **Effort to set up:** Low.   **Works for:** Solo
 
