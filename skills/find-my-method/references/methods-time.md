@@ -30,7 +30,7 @@ These twelve methods decide when work happens and how long a stretch of it lasts
 5. Start the next stretch the same way.
 **7-day trial:** Log every stretch (start, stop, minutes, task) on paper or in a note. At day 7, look at the average and longest stretch and at which hours gave the longest ones.
 **Pairs well with:** Prime-time scheduling; Time blocking; 90-minute focus blocks.
-**Comes from:** Folk practice, no single origin. It is usually described as a reaction to Pomodoro, and the author is unclear.
+**Comes from:** Folk practice, no single origin. It is usually described as a variation on Pomodoro, and the originator is unclear.
 **Evidence:** Practice only. No direct testing found; it rests on the general idea that attention varies by person and task.
 **Effort to set up:** Low.   **Works for:** Solo
 

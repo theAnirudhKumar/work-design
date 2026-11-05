@@ -58,7 +58,7 @@ These are general wellbeing practices for managing your energy across a workday 
 4. Optionally, use the pause to drop your shoulders and take one slow breath.
 **7-day trial:** Run the timer during screen work on your work days. Each evening, rate how your eyes feel from 1 to 5. On Day 7, decide if it helps enough to keep, or switch to a longer interval. Track: days you used it, and the evening eye comfort rating.
 **Pairs well with:** Micro-breaks; Walking breaks; Digital sunset.
-**Comes from:** Often credited to an optometrist, Jeffrey Anshel; I am not certain of the details and the attribution is disputed.
+**Comes from:** Folk practice, no single origin.
 **Evidence:** Mixed. It is widely recommended and short breaks may ease reported discomfort, but the exact 20-20-20 timing has little direct testing.
 **Effort to set up:** Low.   **Works for:** Solo.
 
@@ -118,6 +118,6 @@ These are general wellbeing practices for managing your energy across a workday 
 4. End with a closing sentence you say or write, such as "done for today".
 **7-day trial:** Run the shutdown at your stop time each work day. Note each day whether you stopped within 15 minutes of the target. On Day 7, adjust the time or the workload that is pushing past it. Track: days you stopped on time, and what caused overruns.
 **Pairs well with:** Daily review; Digital sunset; Anti-goals.
-**Comes from:** Folk practice, no single origin; "shutdown ritual" was popularised in some productivity writing, though I am not certain of the source.
+**Comes from:** Folk practice, no single origin.
 **Evidence:** Some. Research on detaching from work after hours and on planning unfinished tasks suggests it may ease intrusive thoughts, but studies are small and mixed in design.
 **Effort to set up:** Low.   **Works for:** Either.

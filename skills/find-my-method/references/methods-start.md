@@ -138,7 +138,7 @@ These methods target the gap between knowing what to do and doing it. Most work 
 2. Define what counts as done, in a sentence.
 3. Put a wall or paper calendar (or an app) where you see it daily.
 4. Do the action today and mark it.
-5. Write a rule for a miss now: "If I miss one day, I do it the next day, no exceptions to the next-day restart."
+5. Write a rule for a miss now: "If I miss a day, I restart the next day, no catching up."
 **7-day trial:** Mark each day you do it. Track: the length of your chain and, if broken, how quickly you restarted. The restart matters more than the streak.
 **Pairs well with:** Habit tracking, Two-day rule, Minimum viable habit
 **Comes from:** Often attributed to the comedian Jerry Seinfeld, who is said to have used a wall calendar for writing jokes; the attribution is disputed.
