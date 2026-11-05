@@ -5,8 +5,8 @@
     "url": "https://github.com/theAnirudhKumar"
   },
   "metadata": {
-    "description": "Do better work, on purpose: skills for the start, middle and end of a piece of work",
-    "version": "4.0.0"
+    "description": "Do better work and get more done: skills for the quality of a piece of work, and for running your days, weeks and life with methods that fit you",
+    "version": "4.1.0"
   },
   "plugins": [
     {
@@ -32,12 +32,31 @@
         "./skills/what-could-go-wrong",
         "./skills/work-design"
       ],
-      "version": "4.0.0"
+      "version": "4.1.0"
+    },
+    {
+      "name": "get-more-done",
+      "description": "Ten skills that pick a productivity method that fits you and run it with you, backed by a library of 127 methods with honest evidence ratings. find-my-method, explain-a-method, plan-my-day, plan-my-week, sort-my-tasks, start-a-focus-session, protect-my-focus, build-a-habit, balance-my-life, build-my-system. Works from what you type; no setup.",
+      "version": "4.1.0",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/find-my-method",
+        "./skills/explain-a-method",
+        "./skills/plan-my-day",
+        "./skills/plan-my-week",
+        "./skills/sort-my-tasks",
+        "./skills/start-a-focus-session",
+        "./skills/protect-my-focus",
+        "./skills/build-a-habit",
+        "./skills/balance-my-life",
+        "./skills/build-my-system"
+      ]
     },
     {
       "name": "work-design-starter",
       "description": "The three skills for most weeks: plan-the-work (one page before you start), get-unstuck (a next action when nothing moves) and review-my-work (a skeptical read before it goes out). A subset of the work-design plugin: install one or the other.",
-      "version": "4.0.0",
+      "version": "4.1.0",
       "source": "./",
       "strict": false,
       "skills": [

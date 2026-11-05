@@ -67,7 +67,7 @@ It asks at most three questions, only when the answer would change the recommend
 
 **Better with:** your kind of work, how much control you have over your time, your constraints, and what you tried before.
 
-**Best with:** the method library in `references/`, which has about 135 method cards. Without it, the skill works from general knowledge and marks every evidence label "general knowledge".
+**Best with:** the method library in `references/`, which has 127 method cards. Without it, the skill works from general knowledge and marks every evidence label "general knowledge".
 
 It cannot keep time, remember across chats or see your calendar. You set the reminders and keep the scorecard.
 

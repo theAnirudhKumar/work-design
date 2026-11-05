@@ -2,6 +2,16 @@
 
 What changed, and when.
 
+## 4.1.0
+
+**Added a second half: get more done.** Ten skills that help a person pick a productivity method that fits, set it up and follow it: `find-my-method`, `explain-a-method`, `plan-my-day`, `plan-my-week`, `sort-my-tasks`, `start-a-focus-session`, `protect-my-focus`, `build-a-habit`, `balance-my-life` and `build-my-system`. They install separately as the `get-more-done` plugin, and `work-design` (the menu skill) now knows about them.
+
+**Added a library of 127 methods.** Pomodoro, time blocking, task batching, Eisenhower, Ivy Lee, Getting Things Done, Tiny Habits and 120 more, each with a 10-minute start, a 7-day trial, a "skip it when" line and an evidence label. Ratings are deliberately conservative: 4 Strong, 25 Some, 10 Mixed, 88 Practice only. The cards are in `skills/find-my-method/references/`, with an index, and `METHODS.md` lists them all.
+
+**Introduced the `my-system.md` profile.** `build-my-system` writes it and the other skills read it when it is pasted, so the methods a person chose carry across conversations. Claude does not remember between conversations; the user saves the file.
+
+**Caveats.** Attributions and evidence labels were written from memory and are the first thing to check; a few are marked as disputed on the card. The thresholds in the trial scorecard (keep at 5 of 7 days, drop under 3) and the slack and caps in the planning skills are rules of thumb, labelled as such. Eval files exist for every new skill; results are recorded where they have been run.
+
 ## 4.0.0
 
 **Refocused on the quality of the work itself.** The first nine skills covered tools, hand-offs and setup. The set now follows one piece of work from start to finish, because quality is decided at a few predictable moments: a vague start, an unbounded scope, an untested plan, getting stuck, a draft nobody really reads, and lessons nobody keeps. Six new skills cover them: `plan-the-work` (a one-page Work Card, the flagship), `fit-to-deadline`, `what-could-go-wrong`, `get-unstuck`, `review-my-work` and `lessons-learned`. A seventh, `work-design`, is a menu that names the right skill when someone cannot remember one.
