@@ -8,7 +8,31 @@ This skill writes that boundary before the work starts. It pushes past the topic
 
 The failure this exists to prevent: **work that keeps absorbing "one more thing" because nobody ever said what was outside it, so every addition looks reasonable in isolation.**
 
-Part of the **Deciding how work runs** group in [work-design](../../#readme).
+**Reach for it:** every project. Part of [work-design](https://github.com/theAnirudhKumar/work-design).
+
+---
+
+## Example
+
+*Illustrative. The exact output varies with what you give it.*
+
+You type: `Before I start redesigning our client onboarding emails, what am I actually committing to?`
+
+You get (shortened):
+
+```
+The ask: fewer clients going quiet in week 2, by fixing the three emails
+sent in days 1-10. ("Redesign onboarding" is a topic, so I scoped to this
+ask. Assumed: the drop-off happens in those emails. Correct me if not.)
+
+In:   rewrite the 3 emails sent in days 1-10 / one revised send schedule
+Out:  the welcome call script / the pricing page / the product tour /
+      any email after day 10
+Done: the three revised emails are live in the sending tool and the old
+      versions are retired.
+Who moves the line: the account lead. Anything on the Out list that turns
+out to be needed gets added by them, in writing.
+```
 
 ---
 
@@ -47,32 +71,20 @@ Missing context never blocks this skill. It produces the in/out lists and the do
 
 ## Install
 
-**The easy way: one paste**
-
-```
-I want to install the scope-the-work skill from
-https://github.com/theAnirudhKumar/work-design. Download or clone the
-repository, then copy the skills/scope-the-work folder into
-~/.claude/skills/ (or .claude/skills/ if this is for one project only),
-keeping its own folder name. Tell me the exact folder path it landed in
-when you are done.
-```
-
-**In the Claude app (no terminal needed)**
-
-1. Download this repository as a ZIP, or clone it
-2. Zip the `skills/scope-the-work` folder on its own
-3. In Claude, go to Customize, then Skills, then Create skill, then Upload skill
-4. Upload the ZIP
-
-**As a plugin, in Claude Code or Cowork**
+As a plugin in Claude Code or Cowork (installs this and the other eight skills):
 
 ```
 /plugin marketplace add theAnirudhKumar/work-design
 /plugin install work-design@work-design-marketplace
 ```
 
-**Want the whole set?** The [main README's install section](../../#readme) installs all 9 skills at once.
+Just this skill, pasted into Claude Code or Cowork:
+
+```
+Install the scope-the-work skill from https://github.com/theAnirudhKumar/work-design: copy its skills/scope-the-work folder into ~/.claude/skills/, keeping the folder name, and tell me the path it landed in.
+```
+
+In Claude.ai, zip the `skills/scope-the-work` folder and upload it under Customize, then Skills, then Create skill, then Upload a skill. The [main README](https://github.com/theAnirudhKumar/work-design#install) has the other routes.
 
 **Or just read it.** `SKILL.md` is the method, and `assets/boundary-note.md` is the one-page fill-in template - the ask, in, out, done condition, who moves the line.
 

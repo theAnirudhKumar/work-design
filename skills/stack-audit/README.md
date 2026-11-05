@@ -8,7 +8,27 @@ This skill interrupts it. It builds an inventory pulled from an actual statement
 
 The failure this exists to prevent: **paying every month for a decision made once, on a tool nobody has opened since, because nobody put a date on revisiting it.**
 
-Part of the **Tool lifecycle** group in [work-design](../../#readme).
+**Reach for it:** every quarter, or whenever the moment comes up. Part of [work-design](https://github.com/theAnirudhKumar/work-design).
+
+---
+
+## Example
+
+*Illustrative. The exact output varies with what you give it.*
+
+You paste a card statement. You get (shortened; figures invented):
+
+```
+Recoverable: $1,080 a year, from 4 of 5 rows. Recheck: 5 Feb 2027.
+
+| Tool             | Job           | Cost             | Last used | Verdict     | Reason                              |
+| :--------------- | :------------ | :--------------- | :-------- | :---------- | :---------------------------------- |
+| Project tracker  | tasks         | $10 x 8 seats/mo | Nov 2026  | Downgrade   | 3 seats active; drop to 3 ($600/yr) |
+| E-sign app       | contracts     | $20/mo           | Sep 2025  | Cancel      | Unused 14 months ($240/yr)          |
+| Whiteboard tool  | brainstorming | $12/mo           | not known | Cancel      | Same job as the docs tool ($144/yr) |
+| Second notes app | notes         | $8/mo            | Oct 2026  | Consolidate | Into the primary notes app ($96/yr) |
+| Design app       | mockups       | $15/mo           | Nov 2026  | Keep        | Only tool for this job              |
+```
 
 ---
 
@@ -47,32 +67,20 @@ Missing context never blocks this skill. Where only a list of names is given, it
 
 ## Install
 
-**The easy way: one paste**
-
-```
-I want to install the stack-audit skill from
-https://github.com/theAnirudhKumar/work-design. Download or clone the
-repository, then copy the skills/stack-audit folder into
-~/.claude/skills/ (or .claude/skills/ if this is for one project only),
-keeping its own folder name. Tell me the exact folder path it landed in
-when you are done.
-```
-
-**In the Claude app (no terminal needed)**
-
-1. Download this repository as a ZIP, or clone it
-2. Zip the `skills/stack-audit` folder on its own
-3. In Claude, go to Customize, then Skills, then Create skill, then Upload skill
-4. Upload the ZIP
-
-**As a plugin, in Claude Code or Cowork**
+As a plugin in Claude Code or Cowork (installs this and the other eight skills):
 
 ```
 /plugin marketplace add theAnirudhKumar/work-design
 /plugin install work-design@work-design-marketplace
 ```
 
-**Want the whole set?** The [main README's install section](../../#readme) installs all 9 skills at once.
+Just this skill, pasted into Claude Code or Cowork:
+
+```
+Install the stack-audit skill from https://github.com/theAnirudhKumar/work-design: copy its skills/stack-audit folder into ~/.claude/skills/, keeping the folder name, and tell me the path it landed in.
+```
+
+In Claude.ai, zip the `skills/stack-audit` folder and upload it under Customize, then Skills, then Create skill, then Upload a skill. The [main README](https://github.com/theAnirudhKumar/work-design#install) has the other routes.
 
 **Or just read it.** `SKILL.md` is the method, `references/evidence.md` is the sourced figures behind why this audit is worth running, and `assets/stack-inventory.md` is the inventory table itself.
 

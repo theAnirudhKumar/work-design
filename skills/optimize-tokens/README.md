@@ -8,7 +8,31 @@ This skill watches for that shape of request, named explicitly or not, and flags
 
 The failure this exists to prevent: **spending extra tokens for the same answer, without noticing, because the waste was too small on its own to flag.**
 
-Part of the **Working with agents** group in [work-design](../../#readme).
+**Reach for it:** every day. Part of [work-design](https://github.com/theAnirudhKumar/work-design).
+
+---
+
+## Example
+
+*Illustrative. The exact output varies with what you give it.*
+
+You type: `Here's my whole 80-page handbook [paste]. Give me feedback on all of it.`
+
+You get:
+
+```
+What you sent: the full handbook, for feedback on everything.
+
+Why it's heavy: 80 pages go in as input, and the reply has to cover all of them.
+
+Leaner version: "Here is section 4, the leave policy [paste]. What is
+unclear or missing for a new hire?" Then repeat per section you care about.
+
+What changes: you review the sections that matter, one at a time.
+
+Quality impact: Minimal. You lose cross-section consistency checks; ask for
+those separately on the headings only.
+```
 
 ---
 
@@ -42,32 +66,20 @@ Missing context never blocks this skill - there's no floor to clear. It reasons 
 
 ## Install
 
-**The easy way: one paste**
-
-```
-I want to install the optimize-tokens skill from
-https://github.com/theAnirudhKumar/work-design. Download or clone the
-repository, then copy the skills/optimize-tokens folder into
-~/.claude/skills/ (or .claude/skills/ if this is for one project only),
-keeping its own folder name. Tell me the exact folder path it landed in
-when you are done.
-```
-
-**In the Claude app (no terminal needed)**
-
-1. Download this repository as a ZIP, or clone it
-2. Zip the `skills/optimize-tokens` folder on its own
-3. In Claude, go to Customize, then Skills, then Create skill, then Upload skill
-4. Upload the ZIP
-
-**As a plugin, in Claude Code or Cowork**
+As a plugin in Claude Code or Cowork (installs this and the other eight skills):
 
 ```
 /plugin marketplace add theAnirudhKumar/work-design
 /plugin install work-design@work-design-marketplace
 ```
 
-**Want the whole set?** The [main README's install section](../../#readme) installs all 9 skills at once.
+Just this skill, pasted into Claude Code or Cowork:
+
+```
+Install the optimize-tokens skill from https://github.com/theAnirudhKumar/work-design: copy its skills/optimize-tokens folder into ~/.claude/skills/, keeping the folder name, and tell me the path it landed in.
+```
+
+In Claude.ai, zip the `skills/optimize-tokens` folder and upload it under Customize, then Skills, then Create skill, then Upload a skill. The [main README](https://github.com/theAnirudhKumar/work-design#install) has the other routes.
 
 **Or just read it.** `SKILL.md` is the whole method - it's plain markdown, no other files needed.
 

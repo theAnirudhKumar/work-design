@@ -8,7 +8,31 @@ This skill checks that cost first. It names what's actually stored - content, co
 
 The failure this exists to prevent: **finding out what you lose on the way out, after you have already committed to leaving.**
 
-Part of the **Tool lifecycle** group in [work-design](../../#readme).
+**Reach for it:** every quarter, or whenever the moment comes up. Part of [work-design](https://github.com/theAnirudhKumar/work-design).
+
+---
+
+## Example
+
+*Illustrative. The exact output varies with what you give it.*
+
+You type: `What breaks if I move our team wiki to a markdown notes app?`
+
+You get (shortened; figures invented):
+
+```
+Mode: guided. Total: about 9 to 14 hours.
+Call: SWITCHING COST WITH CONDITIONS
+
+Stored: 212 pages, 14 automations, 6 shared links, 9 teammates.
+Exports: pages as Markdown (usable). Automations do not export: rebuild
+by hand. Page history is lost.
+Lost outright: page history, comment threads, the 6 shared links.
+Hours: reshape pages 3 / rebuild automations 4 to 8 / re-point links 1 /
+re-onboard teammates 1 to 2.
+Conditions: export the automation rules before cancelling (not included in
+the Markdown export); confirm data deletion in writing.
+```
 
 ---
 
@@ -47,32 +71,20 @@ Missing context never blocks this skill. Without web access it runs in guided mo
 
 ## Install
 
-**The easy way: one paste**
-
-```
-I want to install the switch-cost skill from
-https://github.com/theAnirudhKumar/work-design. Download or clone the
-repository, then copy the skills/switch-cost folder into
-~/.claude/skills/ (or .claude/skills/ if this is for one project only),
-keeping its own folder name. Tell me the exact folder path it landed in
-when you are done.
-```
-
-**In the Claude app (no terminal needed)**
-
-1. Download this repository as a ZIP, or clone it
-2. Zip the `skills/switch-cost` folder on its own
-3. In Claude, go to Customize, then Skills, then Create skill, then Upload skill
-4. Upload the ZIP
-
-**As a plugin, in Claude Code or Cowork**
+As a plugin in Claude Code or Cowork (installs this and the other eight skills):
 
 ```
 /plugin marketplace add theAnirudhKumar/work-design
 /plugin install work-design@work-design-marketplace
 ```
 
-**Want the whole set?** The [main README's install section](../../#readme) installs all 9 skills at once.
+Just this skill, pasted into Claude Code or Cowork:
+
+```
+Install the switch-cost skill from https://github.com/theAnirudhKumar/work-design: copy its skills/switch-cost folder into ~/.claude/skills/, keeping the folder name, and tell me the path it landed in.
+```
+
+In Claude.ai, zip the `skills/switch-cost` folder and upload it under Customize, then Skills, then Create skill, then Upload a skill. The [main README](https://github.com/theAnirudhKumar/work-design#install) has the other routes.
 
 **Or just read it.** `SKILL.md` is the method, `references/evidence.md` explains why the skill argues from mechanism rather than a statistic, and `assets/exit-checklist.md` is the checklist it fills in and hands over.
 

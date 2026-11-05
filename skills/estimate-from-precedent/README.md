@@ -8,7 +8,31 @@ This skill writes down the gut number first, then asks for two or three ordinary
 
 The failure this exists to prevent: **an estimate built entirely from imagining this specific instance of the work, when a look at similar past instances would have caught the gap before it became a missed deadline.**
 
-Part of the **Deciding how work runs** group in [work-design](../../#readme).
+**Reach for it:** every project. Part of [work-design](https://github.com/theAnirudhKumar/work-design).
+
+---
+
+## Example
+
+*Illustrative. The exact output varies with what you give it.*
+
+You type: `I think the website migration is 2 days. Sanity check?`
+
+You get:
+
+```
+Inside view:  2 days
+Reference cases (you told me):
+  blog migration     4 days actual
+  docs migration     5 days actual
+  landing page move  3 days actual
+
+Gap: 2 days against 3 to 5. All three cases included a redirect pass and
+one review round; the 2-day picture has neither.
+
+Adjusted: 3 to 5 days, leaning 4. Three cases is thin: treat this as a
+range, not a promise.
+```
 
 ---
 
@@ -46,32 +70,20 @@ Missing context never blocks this skill outright, but it changes what it can hon
 
 ## Install
 
-**The easy way: one paste**
-
-```
-I want to install the estimate-from-precedent skill from
-https://github.com/theAnirudhKumar/work-design. Download or clone the
-repository, then copy the skills/estimate-from-precedent folder into
-~/.claude/skills/ (or .claude/skills/ if this is for one project only),
-keeping its own folder name. Tell me the exact folder path it landed in
-when you are done.
-```
-
-**In the Claude app (no terminal needed)**
-
-1. Download this repository as a ZIP, or clone it
-2. Zip the `skills/estimate-from-precedent` folder on its own
-3. In Claude, go to Customize, then Skills, then Create skill, then Upload skill
-4. Upload the ZIP
-
-**As a plugin, in Claude Code or Cowork**
+As a plugin in Claude Code or Cowork (installs this and the other eight skills):
 
 ```
 /plugin marketplace add theAnirudhKumar/work-design
 /plugin install work-design@work-design-marketplace
 ```
 
-**Want the whole set?** The [main README's install section](../../#readme) installs all 9 skills at once.
+Just this skill, pasted into Claude Code or Cowork:
+
+```
+Install the estimate-from-precedent skill from https://github.com/theAnirudhKumar/work-design: copy its skills/estimate-from-precedent folder into ~/.claude/skills/, keeping the folder name, and tell me the path it landed in.
+```
+
+In Claude.ai, zip the `skills/estimate-from-precedent` folder and upload it under Customize, then Skills, then Create skill, then Upload a skill. The [main README](https://github.com/theAnirudhKumar/work-design#install) has the other routes.
 
 **Or just read it.** `SKILL.md` is the method, `references/evidence.md` is the research citation behind it, and `assets/precedent-worksheet.md` is the one-page fill-in template - inside-view estimate, reference cases, the gap, the adjusted range.
 

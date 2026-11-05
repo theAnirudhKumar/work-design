@@ -8,7 +8,42 @@ This skill writes the record instead. Ending a chat produces a structured handof
 
 The failure this exists to prevent: **a chat that ends, gets summarized in someone's head, and starts over - re-deciding things already decided, and re-trying an approach the last session already ruled out for a reason nobody now remembers.**
 
-Part of the **Working with agents** group in [work-design](../../#readme).
+**Reach for it:** every day. Part of [work-design](https://github.com/theAnirudhKumar/work-design).
+
+---
+
+## Example
+
+*Illustrative. The exact output varies with what you give it.*
+
+You type: `This chat has got too long, I'm starting a new one.`
+
+You get a block to paste into the new chat (shortened):
+
+```markdown
+# Chat Context: pricing page rewrite
+
+**Project area:** Website
+**Date:** 05 Nov 2026
+**Status:** Active
+
+## Goal
+Rewrite the pricing page so a first-time visitor can pick a plan without a call.
+
+## Decisions Made
+- Annual plan first, monthly second. Reason: most signups ask about annual.
+
+## Rejected Approaches
+- Three-tier table. Dropped: customer calls showed people could not tell the top two tiers apart.
+
+## Approved Wording
+- Headline: "One price. Cancel any month."
+
+## Next Action
+Rewrite the FAQ under the table so "Can I cancel monthly?" comes first.
+```
+
+In the new chat you say `resume from this handoff`. It reads the block, says what it loaded and what the next action is, then waits for a go.
 
 ---
 
@@ -45,32 +80,20 @@ Missing context never blocks this skill - the handoff's structure is identical e
 
 ## Install
 
-**The easy way: one paste**
-
-```
-I want to install the chat-context skill from
-https://github.com/theAnirudhKumar/work-design. Download or clone the
-repository, then copy the skills/chat-context folder into
-~/.claude/skills/ (or .claude/skills/ if this is for one project only),
-keeping its own folder name. Tell me the exact folder path it landed in
-when you are done.
-```
-
-**In the Claude app (no terminal needed)**
-
-1. Download this repository as a ZIP, or clone it
-2. Zip the `skills/chat-context` folder on its own
-3. In Claude, go to Customize, then Skills, then Create skill, then Upload skill
-4. Upload the ZIP
-
-**As a plugin, in Claude Code or Cowork**
+As a plugin in Claude Code or Cowork (installs this and the other eight skills):
 
 ```
 /plugin marketplace add theAnirudhKumar/work-design
 /plugin install work-design@work-design-marketplace
 ```
 
-**Want the whole set?** The [main README's install section](../../#readme) installs all 9 skills at once.
+Just this skill, pasted into Claude Code or Cowork:
+
+```
+Install the chat-context skill from https://github.com/theAnirudhKumar/work-design: copy its skills/chat-context folder into ~/.claude/skills/, keeping the folder name, and tell me the path it landed in.
+```
+
+In Claude.ai, zip the `skills/chat-context` folder and upload it under Customize, then Skills, then Create skill, then Upload a skill. The [main README](https://github.com/theAnirudhKumar/work-design#install) has the other routes.
 
 **Or just read it.** `SKILL.md` is the whole method - it's plain markdown, no other files needed.
 

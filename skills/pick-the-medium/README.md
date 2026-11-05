@@ -4,11 +4,31 @@
 
 Most communication overhead isn't a bad meeting or a bad message - it's the wrong one. A decision needing five minutes of back-and-forth gets a thirty-minute meeting; a call needing everyone's live reaction gets a message three people don't open until the next day. Nobody chose badly on purpose - they reached for the habitual channel before asking what this decision actually needed.
 
-This skill asks that question first. It names what has to be true when the communication is over - a decision made, information passed one direction, live reactions gathered at once, or something durable to point back to - then checks reversibility, how many people genuinely need to be live versus just informed, and what waiting actually costs. It ends on one medium, names the runner-up, and says what the runner-up would have cost. When the answer is a meeting, it hands off to a meeting-design skill for the agenda and attendee list rather than duplicating that work.
+This skill asks that question first. It names what has to be true when the communication is over - a decision made, information passed one direction, live reactions gathered at once, or something durable to point back to - then checks reversibility, how many people genuinely need to be live versus just informed, and what waiting actually costs. It ends on one medium, names the runner-up, and says what the runner-up would have cost. When the answer is a meeting, it hands off to [`meeting-design`](https://github.com/theAnirudhKumar/meeting-design) for the agenda and attendee list rather than duplicating that work.
 
 The failure this exists to prevent: **choosing the medium out of habit - "let's hop on a call" or "I'll just send a quick message" - before asking what the decision actually needs.**
 
-Part of the **Deciding how work runs** group in [work-design](../../#readme).
+**Reach for it:** every day. Part of [work-design](https://github.com/theAnirudhKumar/work-design).
+
+---
+
+## Example
+
+*Illustrative. The exact output varies with what you give it.*
+
+You type: `Sarah and Tom need to agree on the vendor. Should I set up a meeting?`
+
+You get:
+
+```
+Medium: written proposal with a reply deadline (Thursday 5pm).
+Runner-up: a 25-minute call with the two of them.
+What the runner-up would have cost: finding a slot in both calendars for a
+decision that is cheap to reverse (30-day trial) and blocks nobody.
+
+Switch to the call if either of them objects in writing: at that point it
+needs live back-and-forth, between two people, which is a call, not a meeting.
+```
 
 ---
 
@@ -21,7 +41,7 @@ Part of the **Deciding how work runs** group in [work-design](../../#readme).
 | Check who needs to be live | The line between an audience (who can absorb this on their own time) and people who need to react to each other in real time |
 | Check what waiting costs | Whether async's usual cost advantage actually holds here, or whether the work is genuinely blocked until this resolves |
 | Make the call | One medium, one runner-up named, one sentence on what the runner-up would have cost |
-| Hand off if it's a meeting | A plain stop-here line pointing to a meeting-design skill for the agenda and attendee list, rather than building either itself |
+| Hand off if it's a meeting | A plain stop-here line naming `meeting-design` for the agenda and attendee list, with the install commands if it is missing, rather than building either itself |
 
 ---
 
@@ -47,32 +67,20 @@ Missing context never blocks this skill. It produces a medium and the reasoning 
 
 ## Install
 
-**The easy way: one paste**
-
-```
-I want to install the pick-the-medium skill from
-https://github.com/theAnirudhKumar/work-design. Download or clone the
-repository, then copy the skills/pick-the-medium folder into
-~/.claude/skills/ (or .claude/skills/ if this is for one project only),
-keeping its own folder name. Tell me the exact folder path it landed in
-when you are done.
-```
-
-**In the Claude app (no terminal needed)**
-
-1. Download this repository as a ZIP, or clone it
-2. Zip the `skills/pick-the-medium` folder on its own
-3. In Claude, go to Customize, then Skills, then Create skill, then Upload skill
-4. Upload the ZIP
-
-**As a plugin, in Claude Code or Cowork**
+As a plugin in Claude Code or Cowork (installs this and the other eight skills):
 
 ```
 /plugin marketplace add theAnirudhKumar/work-design
 /plugin install work-design@work-design-marketplace
 ```
 
-**Want the whole set?** The [main README's install section](../../#readme) installs all 9 skills at once.
+Just this skill, pasted into Claude Code or Cowork:
+
+```
+Install the pick-the-medium skill from https://github.com/theAnirudhKumar/work-design: copy its skills/pick-the-medium folder into ~/.claude/skills/, keeping the folder name, and tell me the path it landed in.
+```
+
+In Claude.ai, zip the `skills/pick-the-medium` folder and upload it under Customize, then Skills, then Create skill, then Upload a skill. The [main README](https://github.com/theAnirudhKumar/work-design#install) has the other routes.
 
 **Or just read it.** `SKILL.md` is the method, `references/evidence.md` is the research this skill's framing draws on, and `assets/medium-call.md` is the one-page fill-in template - what has to happen, reversibility, who needs to be live, what waiting costs, the call and the runner-up.
 
@@ -86,8 +94,19 @@ The reversibility-and-simultaneity framing draws on media richness theory - Daft
 
 ## What this does not do
 
-- **Not a meeting builder.** Once a meeting is the call, building the agenda, picking the decision rule, and deciding who's in the room is a meeting-design skill's job - this one hands off rather than duplicating it.
-- **Not a review of an existing standing meeting.** Whether a recurring meeting already on the calendar should keep happening is that same meeting-design skill's own first step, not this one's.
+- **Not a meeting builder.** Once a meeting is the call, building the agenda, picking the decision rule, and deciding who's in the room is `meeting-design`'s job. This one hands off rather than duplicating it.
+- **Not a review of an existing standing meeting.** Whether a recurring meeting already on the calendar should keep happening is `meeting-audit`'s question, not this one's.
+
+## Where the meeting goes next
+
+If the answer is a meeting, install [`meeting-design`](https://github.com/theAnirudhKumar/meeting-design):
+
+```
+/plugin marketplace add theAnirudhKumar/meeting-design
+/plugin install meeting-design@meeting-design-marketplace
+```
+
+That repository has `meeting-design` for before a meeting, `meeting-close` for after it, and `meeting-audit` for recurring meetings. `meeting-close` and `meeting-audit` arrive with its v2.0.0 release; if they are not in your install yet, `meeting-design` is.
 
 ---
 
