@@ -17,11 +17,11 @@ description: >
 
 # Delegate
 
-Most delegation advice sorts tasks by whether a model can do them. That is the wrong sort. A model can do plenty of things whose output nobody in the room is able to check, and those are the ones that come back to bite.
+Most delegation advice sorts tasks by whether a model can do them. That is the wrong sort. A model can do plenty of things whose output nobody in the room can check, and those are the ones that come back to bite.
 
 The failure this exists to prevent: **handing over the part you cannot verify, and finding out at delivery.**
 
-This skill takes one piece of work, splits it, and decides where each part goes. Every part that leaves the user's hands leaves with a check attached. It ends on a filled table.
+Split one piece of work, decide where each part goes, attach a check to everything that leaves the user's hands, and end on a filled table.
 
 ---
 
@@ -43,10 +43,10 @@ Runs when there is a specific piece of work on the table and the question is how
 
 **Does not run for:**
 
-- A recurring team ritual or a standing ceremony. That is a ritual inventory, and an automation-charter skill handles it.
-- Documenting a repeatable procedure. That is an SOP, and a process-documentation skill handles it.
+- A recurring team ritual or a standing ceremony. A ritual-inventory or automation-charter skill handles that.
+- Documenting a repeatable procedure. A process-documentation skill handles that.
 - Delegating to people as a management or development question. This skill allocates work, it does not develop anyone.
-- Writing the prompt. This skill stops at the allocation.
+- Writing the prompt, testing what a model can do, or choosing which model or tool to use. This skill stops at the allocation. `before-you-install` answers the tool question.
 
 ---
 
@@ -99,16 +99,16 @@ No row goes to a model or another person without three things filled in.
 
 **The rule that decides the marginal case: if the check costs more than doing the part, do not delegate the part.** Verification is work. A part that takes twenty minutes to do and forty minutes to check properly has not been delegated, it has been made more expensive.
 
-One caution to state in the output where it applies. Confidence in the tool tends to move in the opposite direction to scrutiny, and it is strongest where the user knows the domain least. The parts a user feels most comfortable handing over unchecked are often the ones they are least equipped to check. Where a part sits outside the user's own expertise, the check gets stricter, not looser.
+State this caution in the output where it applies: confidence in the tool is strongest where the user knows the domain least, so the parts they feel most comfortable handing over unchecked are often the ones they are least equipped to check. Where a part sits outside the user's own expertise, make the check stricter, not looser.
 
 ## Step 5: If it recurs, ask the second question
 
-Only where the user says this piece of work comes round again. Same four tests, plus two more.
+Only where the user says this piece of work comes round again. Run the same four tests, plus two more.
 
 - **How often, and is the input stable?** A monthly task whose inputs change shape every month is not a candidate for running unattended, whatever its judgement content.
-- **What does drift look like, and when is it noticed?** Anything that runs without a person notices its own failures late. Set a date to look at it again, and put that date in the table.
+- **What does drift look like, and when is it noticed?** Anything that runs without a person notices its own failures late. Put a review date in the table.
 
-Recurring work that passes all six becomes a candidate for running without the user. Recurring work that fails any of them is still worth allocating, just not worth automating.
+Recurring work that passes all six is a candidate for running without the user. Recurring work that fails any is still worth allocating, just not worth automating.
 
 ## Step 6: Fill the table and hand it over
 
@@ -134,24 +134,17 @@ If the user asked about a recurring piece of work, the table carries a review da
 
 **Splitting by chronology.** First, then, next. Every part needs the same judgement and nothing can be allocated separately. Split by the kind of thinking instead.
 
-**Delegating the checking along with the doing.** The most common way this goes wrong. A model that produced the work is not a check on the work, and a second model reading the first one's output is a weaker check than it looks. The check has to be something the user or another person can carry out.
+**Delegating the checking along with the doing.** A model that produced the work is not a check on the work, and a second model reading the first one's output is a weaker check than it looks. The check has to be something the user or another person can carry out.
 
-**Allocating the whole piece of work to one destination.** If every row says the same thing, the split in Step 2 did not happen. Go back to it.
+**Allocating everything to one destination.** If every row says the same thing, the split in Step 2 did not happen. Go back to it.
 
-**Treating "a model can do this" as "a model should do this".** Capability is test zero, and this skill never asks it. Every test in Step 3 is about whether the user can live with the output, not whether the output can be produced.
+**Treating "a model can do this" as "a model should do this".** Every test in Step 3 asks whether the user can live with the output, not whether the output can be produced.
 
-**Over-keeping.** The opposite failure, and real. This skill is not an argument for doing everything yourself. Where a part passes all four tests, allocate it and say so plainly. A process that never hands anything over is a process nobody runs twice.
+**Over-keeping.** This skill is not an argument for doing everything yourself. Where a part passes all four tests, allocate it and say so plainly. A process that never hands anything over is a process nobody runs twice.
 
 **Quoting a time saving.** No credible figure exists for how much time delegation to a model saves on knowledge work, and the widely circulated ones do not survive tracing. Do not put one in the output.
 
----
-
-## What this does not do
-
-- **Not a capability assessment.** It does not test what models can do, and it goes out of date if it tries.
-- **Not prompt engineering.** It says which parts go to a model. It does not write the instructions.
-- **Not a procurement or tool decision.** Which model or which tool is a separate question, and a tool-vetting skill answers it.
-- **Not a guarantee.** A filled table means the decision was made deliberately with the checks named. It does not mean the work will be right.
+A filled table means the decision was made deliberately with the checks named. It does not mean the work will be right.
 
 ---
 

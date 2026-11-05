@@ -28,6 +28,8 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 SKILLS_DIR = os.path.join(ROOT, 'skills')
 MANIFEST = os.path.join(ROOT, '.claude-plugin', 'marketplace.json')
 README = os.path.join(ROOT, 'README.md')
+PLUGIN = os.path.join(ROOT, '.claude-plugin', 'plugin.json')
+VERSIONS = os.path.join(ROOT, 'VERSIONS.md')
 
 LINE_LIMIT = 500
 DESC_LIMIT = 1024
@@ -125,6 +127,31 @@ def check_manifest(bad):
             bad.append('README.md: skills table missing ' + ', '.join(sorted(missing)))
 
 
+def check_versions(bad):
+    """The version drifted once: VERSIONS.md said 3.0.0 while both manifests said 2.0.0.
+    Every version string must match the newest heading in VERSIONS.md."""
+    if not os.path.exists(VERSIONS):
+        return
+    m = re.search(r'^## (\d+\.\d+\.\d+)\s*$', open(VERSIONS, encoding='utf-8').read(), re.M)
+    if not m:
+        bad.append('VERSIONS.md: no "## x.y.z" heading found')
+        return
+    latest = m.group(1)
+    found = {}
+    try:
+        found['plugin.json'] = json.load(open(PLUGIN, encoding='utf-8')).get('version')
+        market = json.load(open(MANIFEST, encoding='utf-8'))
+        found['marketplace.json metadata'] = market.get('metadata', {}).get('version')
+        for plugin in market.get('plugins', []):
+            found['marketplace.json plugin ' + plugin.get('name', '?')] = plugin.get('version')
+    except Exception as exc:
+        bad.append(f'version check: manifests unreadable, {exc}')
+        return
+    for where, v in found.items():
+        if v != latest:
+            bad.append(f'{where}: version {v}, but newest VERSIONS.md heading is {latest}')
+
+
 def main():
     bad = []
 
@@ -151,6 +178,7 @@ def main():
                 check_reference_depth(os.path.dirname(path), bad)
 
     check_manifest(bad)
+    check_versions(bad)
 
     if bad:
         print(f'{len(bad)} problem{"s" if len(bad) > 1 else ""}:\n')

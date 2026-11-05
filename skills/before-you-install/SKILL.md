@@ -10,7 +10,7 @@ Every tool page is written by the people selling it. The things that change your
 
 The failure this exists to prevent: **finding out what you agreed to after your data is already in it.** Not a hack, not a scandal. The ordinary case where someone reads the terms six months late and discovers the answer was public the whole time.
 
-This is not a takedown and not a warning label. It is the briefing a knowledgeable friend gives you before you commit, and it stays useful precisely because it will also tell you a tool is fine.
+This is not a takedown. It is the briefing a knowledgeable friend gives you before you commit, and it stays useful because it will also tell you a tool is fine.
 
 ---
 
@@ -28,7 +28,7 @@ This is not a takedown and not a warning label. It is the briefing a knowledgeab
 
 **Guided mode.** You have no web access. Do not guess, and do not reason from what the tool is probably like. Hand over the exact searches to run and the exact clauses to look for, take back what the reader finds, and read that.
 
-Guided mode is not the degraded version. Most people asking this question are in a chat window with nothing connected, and a skill that quietly invents a privacy policy is worse than no skill. **Name the mode in the first line of the output**, so the reader knows whether they are looking at findings or at homework.
+Guided mode is not the degraded version. Most people asking are in a chat window with nothing connected, and a skill that invents a privacy policy is worse than no skill. **Name the mode in the first line of the output**, so the reader knows whether they are looking at findings or at homework.
 
 Half and half is normal. Say so: found the pricing page, could not reach the forum, here is what to check yourself.
 

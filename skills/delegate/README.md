@@ -8,7 +8,38 @@ This skill splits one piece of work by the kind of thinking each part needs, not
 
 The failure this exists to prevent: **handing over the part you cannot verify, and finding out at delivery.**
 
-Part of the **Working with agents** group in [work-design](../../#readme).
+**Reach for it:** every day. Part of [work-design](https://github.com/theAnirudhKumar/work-design).
+
+---
+
+## Example
+
+*Illustrative. The exact output varies with what you give it.*
+
+You type:
+
+```
+I'm pitching a client tomorrow and need a competitor brief. What should I
+hand to Claude and what should I keep?
+```
+
+You get (shortened):
+
+```
+Bar: this goes in front of a client under your name. A wrong price or an
+invented claim about a competitor is public and hard to take back. Every
+figure gets checked to its source page.
+
+| Part                           | Goes to | The check                                     | Take it back if                       |
+| :----------------------------- | :------ | :-------------------------------------------- | :------------------------------------ |
+| Gather pricing and positioning | Claude  | Open each source; every figure is on its page | Any figure with no source             |
+| Pick the three that matter     | You     | n/a, needs what the client has told you       |                                       |
+| Draft the comparison table     | Claude  | Read against your three picks only            | A competitor you did not pick appears |
+| Final read before it goes out  | You     | n/a, nobody else can do this check            |                                       |
+
+Finding: gathering is the part you would most like to hand over unchecked,
+and the part most likely to contain an invented number.
+```
 
 ---
 
@@ -47,32 +78,20 @@ Missing context never blocks this skill. Where you give only the task, it runs a
 
 ## Install
 
-**The easy way: one paste**
-
-```
-I want to install the delegate skill from
-https://github.com/theAnirudhKumar/work-design. Download or clone the
-repository, then copy the skills/delegate folder into
-~/.claude/skills/ (or .claude/skills/ if this is for one project only),
-keeping its own folder name. Tell me the exact folder path it landed in
-when you are done.
-```
-
-**In the Claude app (no terminal needed)**
-
-1. Download this repository as a ZIP, or clone it
-2. Zip the `skills/delegate` folder on its own
-3. In Claude, go to Customize, then Skills, then Create skill, then Upload skill
-4. Upload the ZIP
-
-**As a plugin, in Claude Code or Cowork**
+As a plugin in Claude Code or Cowork (installs this and the other eight skills):
 
 ```
 /plugin marketplace add theAnirudhKumar/work-design
 /plugin install work-design@work-design-marketplace
 ```
 
-**Want the whole set?** The [main README's install section](../../#readme) installs all 9 skills at once.
+Just this skill, pasted into Claude Code or Cowork:
+
+```
+Install the delegate skill from https://github.com/theAnirudhKumar/work-design: copy its skills/delegate folder into ~/.claude/skills/, keeping the folder name, and tell me the path it landed in.
+```
+
+In Claude.ai, zip the `skills/delegate` folder and upload it under Customize, then Skills, then Create skill, then Upload a skill. The [main README](https://github.com/theAnirudhKumar/work-design#install) has the other routes.
 
 **Or just read it.** `SKILL.md` is the method, `references/` holds the failure-mode table by task type and a worked example run through all six steps, and `assets/allocation-table.md` is the template the skill fills in.
 

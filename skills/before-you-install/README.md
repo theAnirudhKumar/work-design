@@ -8,7 +8,28 @@ This skill gets those things before you sign up: what the policy and terms actua
 
 The failure this exists to prevent: **finding out what you agreed to only after your data is already inside the tool.**
 
-Part of the **Tool lifecycle** group in [work-design](../../#readme).
+**Reach for it:** every quarter, or whenever the moment comes up. Part of [work-design](https://github.com/theAnirudhKumar/work-design).
+
+---
+
+## Example
+
+*Illustrative. The exact output varies with what you give it.*
+
+You type: `Should I sign up for this note-taking app? [pastes the pricing page and privacy policy]`
+
+You get (shortened; the app here is invented):
+
+```
+Mode: researched. Checked: privacy policy, terms, pricing page, public
+forum threads. Not checked: any security audit (none published).
+
+Call: INSTALL WITH CONDITIONS
+- The terms permit training on uploaded content. Keep anything under a
+  client NDA out of it, or turn off "Improve the product" in Settings.
+- The free plan has no export. Export monthly once you are on the paid plan.
+Buried value: notes stay readable as plain files if you ever leave.
+```
 
 ---
 
@@ -48,32 +69,20 @@ Missing context never blocks this skill. Without web access it runs in guided mo
 
 ## Install
 
-**The easy way: one paste**
-
-```
-I want to install the before-you-install skill from
-https://github.com/theAnirudhKumar/work-design. Download or clone the
-repository, then copy the skills/before-you-install folder into
-~/.claude/skills/ (or .claude/skills/ if this is for one project only),
-keeping its own folder name. Tell me the exact folder path it landed in
-when you are done.
-```
-
-**In the Claude app (no terminal needed)**
-
-1. Download this repository as a ZIP, or clone it
-2. Zip the `skills/before-you-install` folder on its own
-3. In Claude, go to Customize, then Skills, then Create skill, then Upload skill
-4. Upload the ZIP
-
-**As a plugin, in Claude Code or Cowork**
+As a plugin in Claude Code or Cowork (installs this and the other eight skills):
 
 ```
 /plugin marketplace add theAnirudhKumar/work-design
 /plugin install work-design@work-design-marketplace
 ```
 
-**Want the whole set?** The [main README's install section](../../#readme) installs all 9 skills at once.
+Just this skill, pasted into Claude Code or Cowork:
+
+```
+Install the before-you-install skill from https://github.com/theAnirudhKumar/work-design: copy its skills/before-you-install folder into ~/.claude/skills/, keeping the folder name, and tell me the path it landed in.
+```
+
+In Claude.ai, zip the `skills/before-you-install` folder and upload it under Customize, then Skills, then Create skill, then Upload a skill. The [main README](https://github.com/theAnirudhKumar/work-design#install) has the other routes.
 
 **Or just read it.** `SKILL.md` is the method. `references/` holds the search prompts (`what-to-look-for.md`), a worked example of a tool that fails on design rather than reputation (`worked-example.md`), and notes on writing the verdict up for someone else (`writing-it-up.md`). `assets/` has the checklist you can run yourself (`intel-checklist.md`) and the verdict template (`verdict-template.md`) - both plain markdown you can use without Claude involved at all.
 
