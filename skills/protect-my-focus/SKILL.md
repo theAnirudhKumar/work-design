@@ -1,7 +1,7 @@
 ---
 name: protect-my-focus
 description: >
-  Trigger on "I'm constantly interrupted", "meetings eat my day", "Slack is killing me", "I can't get deep work done", "people keep dropping by my desk", "too many notifications", "how do I tell my manager I need focus time", "my inbox runs my day". Audits interruption sources (notifications, chat, email, drop-ins, meetings, self-interruptions), ranks them by cost, picks countermeasures, drafts the actual messages to send a manager or team, and sets a 2-week experiment with one measure. Designs for interruptible jobs such as support, nursing and caregiving instead of pretending interruption away. Not for one focus block right now (start-a-focus-session), cleaning up recurring meetings (meeting-audit), planning the week (plan-my-week) or a task that has stalled (get-unstuck).
+  Trigger on "I'm constantly interrupted", "meetings eat my day", "my calendar is full of meetings and I get no focus time", "Slack is killing me", "I can't get deep work done", "people keep dropping by my desk", "too many notifications", "how do I tell my manager I need focus time", "my inbox runs my day". Audits interruption sources (notifications, chat, email, drop-ins, meetings, self-interruptions), ranks them by cost, picks countermeasures, drafts the actual messages to send a manager or team, and sets a 2-week experiment with one measure. Designs for interruptible jobs such as support, nursing and caregiving instead of pretending interruption away. Not for one focus block right now (start-a-focus-session), deciding which recurring meetings to cancel or shrink (meeting-audit), planning the week (plan-my-week) or a task that has stalled (get-unstuck).
 ---
 
 # Protect My Focus
