@@ -1,12 +1,12 @@
 # work-design
 
-**Do better work, and get more done, on purpose.** Twenty-six Claude skills in two halves, plus a library of 127 productivity methods with honest evidence ratings.
+**Do better work, and get more done, on purpose.** Twenty-six Claude skills in two halves, plus a library of 137 productivity methods with honest evidence ratings.
 
 **Do better work.** Most bad work was bad at the start: nobody said what it was for, what done looks like, or what to leave alone. Most late work was never cut to fit its deadline. Most polished-looking work was never really read before it was sent. These skills sit at the moments where the quality of one piece of work is decided, in any field.
 
-**Get more done.** There are over a hundred productivity methods (Pomodoro, time blocking, task batching, Eisenhower, Getting Things Done and many more) and no way to know which fits you. These skills pick one that fits, set it up, run a 7-day trial with a scorecard, and then plan your days, weeks and life with it. Every method carries an evidence label, and most honestly say "popular practice, little direct testing". See all 127 in [METHODS.md](METHODS.md).
+**Get more done.** There are over a hundred productivity methods (Pomodoro, time blocking, task batching, Eisenhower, Getting Things Done and many more) and no way to know which fits you. These skills pick one that fits, set it up, run a 7-day trial with a scorecard, and then plan your days, weeks and life with it. Every method carries an evidence label, and most honestly say "popular practice, little direct testing". See all 137 in [METHODS.md](METHODS.md).
 
-The names are the sentences you would say anyway. If you cannot remember a name, say what you are about to do, or say **work-design** and it will point you to the right one. None of them needs a terminal, a workspace, connectors or an API key. They work from what you type.
+The names are the sentences you would say anyway. If you cannot remember a name, say what you are about to do. Or just say **work-design**: it looks at how you work, using only what your AI tool already knows and anything you agree to share, and suggests what to try, including how to run a team. None of them needs a terminal, a workspace, connectors or an API key. They work from what you type.
 
 ## See it work
 
@@ -120,11 +120,11 @@ Say the sentence on the left. The skill on the right picks it up.
 | "What are we paying for?" | [`audit-my-tools`](skills/audit-my-tools) | Every subscription with a verdict, and the total you would free up |
 | "Can I leave X?" | [`before-you-switch`](skills/before-you-switch) | What exports, what is lost, the hours, and a low, conditional or high verdict |
 
-### Lost?
+### Not sure? Just ask Work Design
 
 | You are thinking | Say | You get |
 | :--- | :--- | :--- |
-| "I have work and don't know which skill" | [`work-design`](skills/work-design) | The one or two skills that fit, and the phrase to say |
+| "I don't know what I need" or "how can I work better?" | [`work-design`](skills/work-design) | A consultant. It reads the context your AI tool already has (and your calendar or task list only if you say yes), notices patterns, and suggests one to three methods, working styles or management practices with an honest evidence label and the skill that runs each |
 
 ## Start here
 

@@ -1,8 +1,8 @@
-# 127 productivity methods, with honest evidence ratings
+# 137 productivity methods, with honest evidence ratings
 
 Every method below has a full card with how to start in 10 minutes and a 7-day trial. Ratings are conservative: when the support is a popular practice rather than tested, it says so.
 
-Evidence across the library: 4 Strong, 25 Some, 10 Mixed, 88 Practice only.
+Evidence across the library: 4 Strong, 25 Some, 10 Mixed, 98 Practice only.
 
 Not sure which to pick? Say "what productivity method should I use?" and `find-my-method` will choose one for you and set up a 7-day trial.
 
@@ -184,6 +184,21 @@ Not sure which to pick? Say "what productivity method should I use?" and `find-m
 | **Directly responsible individual** | Every task or project has exactly one named person who is answerable for it, even if many people help. | Practice only |
 | **Working agreements** | A short list of rules the team writes together about how it communicates, meets, and hands work over. | Practice only |
 | **Delegation levels** | Choose how much authority to hand over, from "do as I say" up to "decide and just tell me later", and name the level out loud. | Practice only |
+
+## Managing a team
+
+| Method | What it is | Evidence |
+| :--- | :--- | :--- |
+| **One-on-ones** | A regular private meeting between a lead and one person, where the agenda belongs mainly to that person. | Practice only |
+| **Weekly team planning** | A short fixed meeting at the start of the week where the team agrees its few priorities and who owns each. | Practice only |
+| **Team retrospective** | A regular meeting where the team looks back on how it worked, picks one or two changes, and tries them. | Practice only |
+| **WIP limits** | Cap how many items can be in progress at once, so people finish work before starting more. | Practice only |
+| **Team Kanban board** | A shared board of columns showing every piece of team work and where it stands, from waiting to done. | Practice only |
+| **Situational leadership** | Match how directive or supportive you are to the person's skill and confidence on this particular task, not to the person in general. | Practice only |
+| **Radical candor** | Give feedback that is both direct and caring, so people hear it and act on it. | Practice only |
+| **Skip-level meetings** | Occasional meetings between a leader and people who report to their direct reports, to hear how things look further down. | Practice only |
+| **Written weekly updates** | Each person or team sends a short written update once a week, covering progress, plans, and problems, and the lead reads them all. | Practice only |
+| **Team pre-mortem** | Before a project starts, the team imagines it has failed and writes down why, then acts on the likeliest causes. | Practice only |
 
 ## Personal life and admin
 

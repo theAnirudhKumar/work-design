@@ -2,6 +2,16 @@
 
 What changed, and when.
 
+## 4.2.0
+
+**Work Design is now a consultant.** The `work-design` skill used to be a menu that asked which stage you were at. It now reads the context your AI tool already holds (the conversation, loaded notes or memory, a pasted `my-system.md`), notices patterns, and suggests one to three methods, working styles or management practices, each with the reason, an honest evidence label and the skill that runs it. It asks before looking at a connected calendar or task list, reads one week read-only, says what it looked at, and never writes anything. It tells you what to leave alone, and defers at once when your message already names a specific skill's job.
+
+**Added a signals table and a guard for it.** `skills/work-design/references/signals-to-methods.md` maps 30 observable signals ("calendar is mostly meetings", "same task moved three times", "unclear who owns what") to methods. `validate-skills.py` now fails if any method name or evidence label in that table does not match its card in the library.
+
+**Added ten management methods.** One-on-ones, weekly team planning, team retrospective, WIP limits, team Kanban board, situational leadership, radical candor, skip-level meetings, written weekly updates and team pre-mortem. The library is now 137 methods. All ten are rated Practice only, and the cards say where a model is popular but weakly tested.
+
+**Caveats.** Making a skill broad risks stealing routing from the specific ones, so the full suite (551 cases) was rerun on Haiku, Sonnet and Opus against the new description. All 9 open-ended cases went to the consultant, all 16 near misses stayed with their specific skills, and 1 of 1,563 earlier picks moved to it. Matches on the 504 single-answer cases were 97.0%, 97.2% and 97.2%; about 6% of picks differ between two runs of the same case, so single flips are noise. Details are in `evals/README.md`. Evidence labels and attributions on the new cards were written from memory.
+
 ## 4.1.0
 
 **Added a second half: get more done.** Ten skills that help a person pick a productivity method that fits, set it up and follow it: `find-my-method`, `explain-a-method`, `plan-my-day`, `plan-my-week`, `sort-my-tasks`, `start-a-focus-session`, `protect-my-focus`, `build-a-habit`, `balance-my-life` and `build-my-system`. They install separately as the `get-more-done` plugin, and `work-design` (the menu skill) now knows about them.

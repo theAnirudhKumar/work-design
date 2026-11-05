@@ -86,3 +86,17 @@ The target case, plan-my-week#8, now goes to `protect-my-focus` on all three mod
 ### What this does not show
 
 It does not show how a skill performs once chosen. It does not include Claude Code's listing-budget truncation, which can shorten or drop descriptions in a real installation. All cases were written by the same author as the skills.
+
+
+### 5 Nov 2026, second run: Work Design as a consultant (4.2.0)
+
+The `work-design` description was rewritten from a menu into a consultant that claims open-ended asks ("how can I work better"). A broad description can pull messages away from the specific skills, so the whole suite was rerun: 551 cases (the earlier 521 plus 30 new `work-design` cases) on Haiku, Sonnet and Opus, snapshot `731601fe12b6`, one sample per case.
+
+| | Haiku | Sonnet | Opus |
+| :--- | :--- | :--- | :--- |
+| Matched the expected answer (504 cases with one expected answer) | 489 (97.0%) | 490 (97.2%) | 490 (97.2%) |
+
+- **No routing theft.** Of 1563 picks on the earlier cases, 1 moved to `work-design` (protect-my-focus#26 on opus), and the 16 near misses in `evals/work-design.md` all stayed with their specific skills on all three models.
+- **The consultant fires.** All 9 open-ended cases went to `work-design` on all three models.
+- **Run-to-run noise.** 101 of 1563 picks on the earlier cases differ from the first run (6.5%), most on ambiguous or overlapping cases. Treat a single flipped pick as noise, and a pattern across models as a finding.
+- The per-skill result tables in the other eval files are from the first run and were not rewritten.
