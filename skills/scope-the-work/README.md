@@ -94,7 +94,7 @@ In Claude.ai, zip the `skills/scope-the-work` folder and upload it under Customi
 
 - **Not who performs the work.** Once the work is scoped, that's `delegate`'s job, working from this skill's own in list.
 - **Not a statement of work, contract, or legal terms.** This is a working boundary for the person actually doing or overseeing the work, not a client-facing legal document.
-- **Not an estimate.** How long the work takes is a separate concern from what it covers - `estimate-from-precedent` answers that question.
+- **Not an estimate.** How long the work takes is a separate concern from what it covers - `how-long-will-it-take` answers that question.
 
 ---
 

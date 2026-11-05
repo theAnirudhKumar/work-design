@@ -10,7 +10,7 @@ These checks were built from reviewing tools for people who do not code. That is
 
 **1. A check is wrong, or it missed something.** Open an issue saying what you found and where the skill would have led you astray. Specific beats general. "The privacy check is thin" is hard to act on. "Under GDPR, the retention clause that matters is the one about backups, and the skill never asks for it" is a fix.
 
-**2. A skill is missing from the set.** This repository is for deciding about a tool: whether to adopt it, whether you already pay for something that does it, and what breaks when you leave. `switch-cost` is planned. If there is another, describe the job, how often it recurs, and what a good output looks like.
+**2. A skill is missing from the set.** This repository is for deciding about a tool: whether to adopt it, whether you already pay for something that does it, and what breaks when you leave. `before-you-switch` is planned. If there is another, describe the job, how often it recurs, and what a good output looks like.
 
 **3. You have written one.** Open a pull request. Read the rest of this first.
 
@@ -23,6 +23,10 @@ These checks were built from reviewing tools for people who do not code. That is
 **Every skill names the failure it exists to prevent.** One sentence, near the top. If it cannot say what goes wrong without it, it is a template rather than a skill.
 
 ---
+
+## Naming a skill
+
+A name is a memory aid. Someone with a task in hand should be able to guess it. Name the skill after the sentence the user would say, verb first, with no jargon: `get-unstuck`, `review-my-work`, `how-long-will-it-take`. If you need the README to explain what the name means, rename it.
 
 ## Writing a skill
 

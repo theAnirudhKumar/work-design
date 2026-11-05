@@ -11,7 +11,7 @@ description: >
   when a request has already grown once and the user wants to draw the line
   before it grows again. Writes the in list, the out list, the done
   condition, and names who can move the line, ending on a filled boundary
-  note. Use pick-the-medium for how to communicate something and delegate for
+  note. Use meeting-or-message for how to communicate something and delegate for
   who does work already scoped; this is what the work actually is, before
   either question comes up. Not a legal statement of work, a boundary the
   person doing the work can hold themselves to.
@@ -75,7 +75,7 @@ A filled boundary note: in, out, done, who decides changes. Not a project plan, 
 
 ## What this does not do
 
-Decide who performs the work once it is scoped; that is delegate's job, working from this skill's own in list. Does not produce a formal statement of work, a contract, pricing, or legal terms; this is a working boundary for the person actually doing or overseeing the work, not a client-facing document. Does not estimate how long the work will take; `estimate-from-precedent` does that.
+Decide who performs the work once it is scoped; that is delegate's job, working from this skill's own in list. Does not produce a formal statement of work, a contract, pricing, or legal terms; this is a working boundary for the person actually doing or overseeing the work, not a client-facing document. Does not estimate how long the work will take; `how-long-will-it-take` does that.
 
 ## Supporting files
 
