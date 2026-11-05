@@ -152,6 +152,41 @@ def check_versions(bad):
             bad.append(f'{where}: version {v}, but newest VERSIONS.md heading is {latest}')
 
 
+def check_signals(bad):
+    """The consultant skill suggests methods by name and evidence label. Every
+    'Name (Label)' in its signals table must match a card in the method library."""
+    sig = os.path.join(SKILLS_DIR, 'work-design', 'references', 'signals-to-methods.md')
+    lib = os.path.join(SKILLS_DIR, 'find-my-method', 'references')
+    if not (os.path.exists(sig) and os.path.isdir(lib)):
+        return
+    cards = {}
+    for fn in os.listdir(lib):
+        if not (fn.startswith('methods-') and fn.endswith('.md')):
+            continue
+        text = open(os.path.join(lib, fn), encoding='utf-8').read()
+        for part in re.split(r'(?m)^## ', text)[1:]:
+            name, body = part.split('\n', 1)
+            m = re.search(r'\*\*Evidence:\*\*\s*(Strong|Some|Mixed|Practice only)', body)
+            if m:
+                cards[name.strip()] = m.group(1)
+    for line in open(sig, encoding='utf-8'):
+        if not line.startswith('|') or line.startswith('| :') or line.startswith('| Signal'):
+            continue
+        cells = [c.strip() for c in line.strip().strip('|').split('|')]
+        if len(cells) < 3:
+            continue
+        for item in cells[2].split(';'):
+            m = re.fullmatch(r"\s*(.+?) \((Strong|Some|Mixed|Practice only)\)\s*", item)
+            if not m:
+                bad.append(f'signals-to-methods.md: cannot read "{item.strip()}"; use Name (Label)')
+                continue
+            name, label = m.group(1), m.group(2)
+            if name not in cards:
+                bad.append(f'signals-to-methods.md: "{name}" is not a method in the library')
+            elif cards[name] != label:
+                bad.append(f'signals-to-methods.md: "{name}" is labelled {label} but its card says {cards[name]}')
+
+
 def main():
     bad = []
 
@@ -179,6 +214,7 @@ def main():
 
     check_manifest(bad)
     check_versions(bad)
+    check_signals(bad)
 
     if bad:
         print(f'{len(bad)} problem{"s" if len(bad) > 1 else ""}:\n')
