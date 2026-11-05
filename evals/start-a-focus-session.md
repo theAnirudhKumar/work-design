@@ -1,6 +1,8 @@
 # Evaluation: start-a-focus-session
 
-Routing cases for `start-a-focus-session`, written alongside the skill. **No results are recorded.** The Haiku, Sonnet and Opus columns read "not yet run" because these cases have not been put to any model. Only the expected routing is filled in, and it is a prediction from reading the descriptions, not a finding.
+Routing cases for `start-a-focus-session`, written alongside the skill.
+
+**Run on:** 5 Nov 2026, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 41. All three models matched on 39; Haiku 39, Sonnet 40, Opus 40. The protect-my-focus description was reworded after this run; see the targeted rerun in `evals/README.md`.
 
 **Method.** Follow the procedure in `evals/README.md`: show a model the verbatim descriptions of every skill in the repository, with no skill bodies, and ask for one skill name or `none`. Pin the description text used, since results do not survive rewording. The set must include the skills built alongside this one (`find-my-method`, `explain-a-method`, `plan-my-day`, `plan-my-week`, `sort-my-tasks`, `balance-my-life`, `build-my-system`, `start-a-focus-session`, `protect-my-focus`, `build-a-habit`) and, for the meeting cases, `meeting-audit` from the sibling meeting-design repository, or the near misses are not meaningful. `meeting-design` is the set that contains `meeting-audit`. An Expected value written as A or B means either routing is defensible.
 
@@ -10,47 +12,47 @@ Routing cases for `start-a-focus-session`, written alongside the skill. **No res
 
 | # | Message | Kind | Expected | Haiku | Sonnet | Opus |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | "Help me focus for an hour, I have to finish the methods section of my dissertation." | Should fire | start-a-focus-session | not yet run | not yet run | not yet run |
-| 2 | "Start a Pomodoro for me, I need to clear my expense receipts." | Should fire | start-a-focus-session | not yet run | not yet run | not yet run |
-| 3 | "Pomodoro or a 90-minute block for writing a chapter? Set me up." | Should fire | start-a-focus-session | not yet run | not yet run | not yet run |
-| 4 | "I keep sitting down at my desk and not actually working. Can you structure the next two hours?" | Should fire | start-a-focus-session | not yet run | not yet run | not yet run |
-| 5 | "Done. Got through the whole outline." | Should fire (debrief) | start-a-focus-session | not yet run | not yet run | not yet run |
-| 6 | "I got interrupted at about 40 minutes by a phone call from the bank." | Should fire (debrief) | start-a-focus-session | not yet run | not yet run | not yet run |
-| 7 | "I didn't finish. I only got half the slides done and kept checking Slack." | Should fire (debrief) | start-a-focus-session | not yet run | not yet run | not yet run |
-| 8 | "I can never start tasks even when I want to. Can we do a 15-minute block together on my tax return?" | Should fire | start-a-focus-session | not yet run | not yet run | not yet run |
-| 9 | "I'm working in an open office and need 90 minutes on the brand deck." | Should fire | start-a-focus-session | not yet run | not yet run | not yet run |
-| 10 | "I want to write song lyrics for a couple of hours, but timers kill my flow." | Should fire | start-a-focus-session | not yet run | not yet run | not yet run |
-| 11 | "I'm on a quiet shift and have 25 minutes before handover. Help me use it to finish my charting." | Should fire | start-a-focus-session | not yet run | not yet run | not yet run |
-| 12 | "I'm constantly interrupted at work. Slack, people at my desk, meetings. Fix it." | Near miss | protect-my-focus | not yet run | not yet run | not yet run |
-| 13 | "Plan my day. I have a dentist at 2 and a pile of work." | Near miss | plan-my-day | not yet run | not yet run | not yet run |
-| 14 | "Plan my week, I have a launch on Thursday." | Near miss | plan-my-week | not yet run | not yet run | not yet run |
-| 15 | "I have 40 things on my list and no idea what to do first. Rank them." | Near miss | sort-my-tasks | not yet run | not yet run | not yet run |
-| 16 | "I can't get started on my proposal, I don't even know why." | Near miss | get-unstuck | not yet run | not yet run | not yet run |
-| 17 | "Which productivity method should I use? I've tried a few and none stuck." | Near miss | find-my-method | not yet run | not yet run | not yet run |
-| 18 | "How does the Pomodoro technique work and is it worth it?" | Near miss | explain-a-method | not yet run | not yet run | not yet run |
-| 19 | "Set up my whole productivity system: capture, planning, focus, review." | Near miss | build-my-system | not yet run | not yet run | not yet run |
-| 20 | "I never see my family and work every evening. Help me find some balance." | Near miss | balance-my-life | not yet run | not yet run | not yet run |
-| 21 | "I want to start meditating every morning and make it stick." | Near miss | build-a-habit | not yet run | not yet run | not yet run |
-| 22 | "Which of these three tasks is worth my time, and which should I hand to an agent?" | Near miss | delegate | not yet run | not yet run | not yet run |
-| 23 | "I have two days to finish the report. What should I cut?" | Near miss | fit-to-deadline | not yet run | not yet run | not yet run |
-| 24 | "Before I start this project, what is in scope and what counts as done?" | Near miss | scope-the-work | not yet run | not yet run | not yet run |
-| 25 | "I have to write a market analysis. Where do I start?" | Near miss | plan-the-work | not yet run | not yet run | not yet run |
-| 26 | "How long will this chapter take me to write? I think about three hours." | Near miss | how-long-will-it-take | not yet run | not yet run | not yet run |
-| 27 | "Should we have a call about this or can I just message them?" | Near miss | meeting-or-message | not yet run | not yet run | not yet run |
-| 28 | "Our weekly team meeting wastes everyone's time. Fix it." | Near miss | meeting-audit (meeting-design set) | not yet run | not yet run | not yet run |
-| 29 | "Review this email draft before I send it." | Near miss | review-my-work | not yet run | not yet run | not yet run |
-| 30 | "What could go wrong with my study plan?" | Near miss | what-could-go-wrong | not yet run | not yet run | not yet run |
-| 31 | "That's done, what did I learn from it?" | Near miss | lessons-learned | not yet run | not yet run | not yet run |
-| 32 | "Hand off this chat so I can continue in a new one." | Near miss | continue-in-new-chat | not yet run | not yet run | not yet run |
-| 33 | "Make my prompts use fewer tokens." | Near miss | cut-token-cost | not yet run | not yet run | not yet run |
-| 34 | "Audit our software subscriptions, which should I cancel?" | Near miss | audit-my-tools | not yet run | not yet run | not yet run |
-| 35 | "Should I install this focus app? Check their privacy policy." | Near miss | before-you-install | not yet run | not yet run | not yet run |
-| 36 | "What breaks if I switch from this timer app to another?" | Near miss | before-you-switch | not yet run | not yet run | not yet run |
-| 37 | "Which work-design skill should I use for my next task?" | Near miss | work-design | not yet run | not yet run | not yet run |
-| 38 | "I need to concentrate this afternoon, and also I'm drowning in tasks." | Ambiguous | start-a-focus-session or sort-my-tasks | not yet run | not yet run | not yet run |
-| 39 | "Help me get started on this essay. Maybe a timer would help." | Ambiguous | start-a-focus-session or get-unstuck | not yet run | not yet run | not yet run |
-| 40 | "Meetings and Slack kill my focus time. I need a focus session this afternoon." | Ambiguous | start-a-focus-session or protect-my-focus | not yet run | not yet run | not yet run |
-| 41 | "Block off two hours on my calendar for deep work every morning." | Ambiguous | start-a-focus-session or plan-my-week | not yet run | not yet run | not yet run |
+| 1 | "Help me focus for an hour, I have to finish the methods section of my dissertation." | Should fire | start-a-focus-session | start-a-focus-session | start-a-focus-session | start-a-focus-session |
+| 2 | "Start a Pomodoro for me, I need to clear my expense receipts." | Should fire | start-a-focus-session | start-a-focus-session | start-a-focus-session | start-a-focus-session |
+| 3 | "Pomodoro or a 90-minute block for writing a chapter? Set me up." | Should fire | start-a-focus-session | start-a-focus-session | start-a-focus-session | start-a-focus-session |
+| 4 | "I keep sitting down at my desk and not actually working. Can you structure the next two hours?" | Should fire | start-a-focus-session | start-a-focus-session | start-a-focus-session | start-a-focus-session |
+| 5 | "Done. Got through the whole outline." | Should fire (debrief) | start-a-focus-session | start-a-focus-session | start-a-focus-session | start-a-focus-session |
+| 6 | "I got interrupted at about 40 minutes by a phone call from the bank." | Should fire (debrief) | start-a-focus-session | start-a-focus-session | start-a-focus-session | start-a-focus-session |
+| 7 | "I didn't finish. I only got half the slides done and kept checking Slack." | Should fire (debrief) | start-a-focus-session | start-a-focus-session | start-a-focus-session | start-a-focus-session |
+| 8 | "I can never start tasks even when I want to. Can we do a 15-minute block together on my tax return?" | Should fire | start-a-focus-session | start-a-focus-session | start-a-focus-session | start-a-focus-session |
+| 9 | "I'm working in an open office and need 90 minutes on the brand deck." | Should fire | start-a-focus-session | start-a-focus-session | start-a-focus-session | start-a-focus-session |
+| 10 | "I want to write song lyrics for a couple of hours, but timers kill my flow." | Should fire | start-a-focus-session | start-a-focus-session | start-a-focus-session | start-a-focus-session |
+| 11 | "I'm on a quiet shift and have 25 minutes before handover. Help me use it to finish my charting." | Should fire | start-a-focus-session | start-a-focus-session | start-a-focus-session | start-a-focus-session |
+| 12 | "I'm constantly interrupted at work. Slack, people at my desk, meetings. Fix it." | Near miss | protect-my-focus | protect-my-focus | protect-my-focus | protect-my-focus |
+| 13 | "Plan my day. I have a dentist at 2 and a pile of work." | Near miss | plan-my-day | plan-my-day | plan-my-day | plan-my-day |
+| 14 | "Plan my week, I have a launch on Thursday." | Near miss | plan-my-week | plan-my-week | plan-my-week | plan-my-week |
+| 15 | "I have 40 things on my list and no idea what to do first. Rank them." | Near miss | sort-my-tasks | sort-my-tasks | sort-my-tasks | sort-my-tasks |
+| 16 | "I can't get started on my proposal, I don't even know why." | Near miss | get-unstuck | get-unstuck | get-unstuck | get-unstuck |
+| 17 | "Which productivity method should I use? I've tried a few and none stuck." | Near miss | find-my-method | find-my-method | find-my-method | find-my-method |
+| 18 | "How does the Pomodoro technique work and is it worth it?" | Near miss | explain-a-method | explain-a-method | explain-a-method | explain-a-method |
+| 19 | "Set up my whole productivity system: capture, planning, focus, review." | Near miss | build-my-system | build-my-system | build-my-system | build-my-system |
+| 20 | "I never see my family and work every evening. Help me find some balance." | Near miss | balance-my-life | balance-my-life | balance-my-life | balance-my-life |
+| 21 | "I want to start meditating every morning and make it stick." | Near miss | build-a-habit | build-a-habit | build-a-habit | build-a-habit |
+| 22 | "Which of these three tasks is worth my time, and which should I hand to an agent?" | Near miss | delegate | **sort-my-tasks** | delegate | delegate |
+| 23 | "I have two days to finish the report. What should I cut?" | Near miss | fit-to-deadline | fit-to-deadline | fit-to-deadline | fit-to-deadline |
+| 24 | "Before I start this project, what is in scope and what counts as done?" | Near miss | scope-the-work | scope-the-work | scope-the-work | scope-the-work |
+| 25 | "I have to write a market analysis. Where do I start?" | Near miss | plan-the-work | plan-the-work | plan-the-work | plan-the-work |
+| 26 | "How long will this chapter take me to write? I think about three hours." | Near miss | how-long-will-it-take | how-long-will-it-take | how-long-will-it-take | how-long-will-it-take |
+| 27 | "Should we have a call about this or can I just message them?" | Near miss | meeting-or-message | meeting-or-message | meeting-or-message | meeting-or-message |
+| 28 | "Our weekly team meeting wastes everyone's time. Fix it." | Near miss | meeting-audit (meeting-design set) | meeting-design | meeting-design | meeting-design |
+| 29 | "Review this email draft before I send it." | Near miss | review-my-work | review-my-work | review-my-work | review-my-work |
+| 30 | "What could go wrong with my study plan?" | Near miss | what-could-go-wrong | what-could-go-wrong | what-could-go-wrong | what-could-go-wrong |
+| 31 | "That's done, what did I learn from it?" | Near miss | lessons-learned | lessons-learned | lessons-learned | lessons-learned |
+| 32 | "Hand off this chat so I can continue in a new one." | Near miss | continue-in-new-chat | continue-in-new-chat | continue-in-new-chat | continue-in-new-chat |
+| 33 | "Make my prompts use fewer tokens." | Near miss | cut-token-cost | cut-token-cost | cut-token-cost | cut-token-cost |
+| 34 | "Audit our software subscriptions, which should I cancel?" | Near miss | audit-my-tools | audit-my-tools | audit-my-tools | audit-my-tools |
+| 35 | "Should I install this focus app? Check their privacy policy." | Near miss | before-you-install | before-you-install | before-you-install | before-you-install |
+| 36 | "What breaks if I switch from this timer app to another?" | Near miss | before-you-switch | before-you-switch | before-you-switch | before-you-switch |
+| 37 | "Which work-design skill should I use for my next task?" | Near miss | work-design | work-design | work-design | work-design |
+| 38 | "I need to concentrate this afternoon, and also I'm drowning in tasks." | Ambiguous | start-a-focus-session or sort-my-tasks | start-a-focus-session | start-a-focus-session | start-a-focus-session |
+| 39 | "Help me get started on this essay. Maybe a timer would help." | Ambiguous | start-a-focus-session or get-unstuck | start-a-focus-session | start-a-focus-session | start-a-focus-session |
+| 40 | "Meetings and Slack kill my focus time. I need a focus session this afternoon." | Ambiguous | start-a-focus-session or protect-my-focus | start-a-focus-session | start-a-focus-session | start-a-focus-session |
+| 41 | "Block off two hours on my calendar for deep work every morning." | Ambiguous | start-a-focus-session or plan-my-week | **protect-my-focus** | **none** | **none** |
 
 ---
 
@@ -158,3 +160,10 @@ Two cases to be checked by hand once a model is available.
 - **Any model behaviour.** Nothing in this file has been run.
 - **Whether the description survives the listing budget.** A new skill with no invocation history loses its description first when the listing is truncated.
 - **Real sessions.** Every case is constructed.
+
+## Misses and how to read them
+
+| Case | Message | Expected | Haiku | Sonnet | Opus | Reading |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| start-a-focus-session#41 | "Block off two hours on my calendar for deep work every morning." | start-a-focus-session or plan-my-week | **protect-my-focus** | **none** | **none** | Calendar blocking is not a skill here. Acceptable. |
+| start-a-focus-session#22 | "Which of these three tasks is worth my time, and which should I hand to an agent" | delegate | **sort-my-tasks** | delegate | delegate | Haiku chose sort-my-tasks; delegate is intended. Overlap. |

@@ -64,3 +64,21 @@ This resolves further than the issue's own framing expected. The issue treated t
 **Case 7 holds.** The rewrite from a comparative sentence to an explicit negative is the fix. Read this as a small addition to the house style: a sentence saying what a skill is *for* instead of what it *is not* is a softer guardrail than an explicit "never fires when", and the softer form failed once here.
 
 All acceptance criteria for this issue are met: the reasoning above is recorded, the description is 1,004 characters, case 16 fires cleanly rather than the prior unanimous miss, `evals/cut-token-cost.md` was rerun and shows the same result from its side, and case 7 still declines on all three.
+
+## Rerun on the 4.1.0 descriptions (5 Nov 2026)
+
+The results above were recorded under earlier descriptions and skill names. This rerun puts the same cases to Haiku, Sonnet and Opus with all 29 descriptions shown together (snapshot `c4b8a8cfab44`). **Bold** means the pick differs from the expected answer.
+
+| # | Message | Expected | Haiku | Sonnet | Opus |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 5 | "Wrap this chat, I am moving to a new one." | fire, handoff | continue-in-new-chat | continue-in-new-chat | continue-in-new-chat |
+| 5 | "Wrap this chat, I am moving to a new one." | fire, handoff | continue-in-new-chat | continue-in-new-chat | continue-in-new-chat |
+| 6 | "Pick up where we left off on the pricing page work." | fire, resume | continue-in-new-chat | continue-in-new-chat | continue-in-new-chat |
+| 6 | "Pick up where we left off on the pricing page work." | fire, resume | continue-in-new-chat | continue-in-new-chat | continue-in-new-chat |
+| 7 | "Can you summarise what we talked about today so I can read it back?" | none | none | none | none |
+| 7 | "Can you summarise what we talked about today so I can read it back?" | none | none | none | none |
+| 16 | "This chat has got huge and it is costing me a fortune. What do I do?" | conflict with `cut-token-cost` | continue-in-new-chat | continue-in-new-chat | continue-in-new-chat |
+| 16 | "This chat has got huge and it is costing me a fortune. What do I do?" | fire, see below | continue-in-new-chat | continue-in-new-chat | continue-in-new-chat |
+
+Run on 5 Nov 2026 with Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Single-answer cases: see counts below.
+Cases with one expected answer: 2. All three models matched on 2.

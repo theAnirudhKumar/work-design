@@ -1,8 +1,8 @@
 # Evaluation: review-my-work
 
-Routing cases for `review-my-work`, written alongside the skill and not yet run.
+Routing cases for `review-my-work`, written alongside the skill.
 
-**Status: the results columns are "not yet run".** No model has been put to these cases. Nothing below is a result. The "Expected" column is what the description is meant to do, written before any run, and it is a prediction, not an observation. Fill the model columns by following the procedure in `evals/README.md`, pinning the exact description text of every skill shown to the model.
+**Run on:** 5 Nov 2026, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 15. All three models matched on 14; Haiku 14, Sonnet 15, Opus 15. The protect-my-focus description was reworded after this run; see the targeted rerun in `evals/README.md`.
 
 **Method (to follow).** Show each model only the skill descriptions in the repository and ask for one skill name or `none`, with a confidence and a one-line reason. Repeat on Haiku, Sonnet and Opus. Record disagreements, not averages.
 
@@ -14,24 +14,24 @@ Routing cases for `review-my-work`, written alongside the skill and not yet run.
 
 | # | Kind | Message | Expected | Haiku | Sonnet | Opus |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Should fire | "Is this good enough to send? [pasted email to a client about a delay]" | review-my-work | not yet run | not yet run | not yet run |
-| 2 | Should fire | "Would you put your name on this? [pasted grant narrative]" | review-my-work | not yet run | not yet run | not yet run |
-| 3 | Should fire | "Be a harsh reader. This is my board update. [pasted update]" | review-my-work | not yet run | not yet run | not yet run |
-| 4 | Should fire | "Sanity check this market summary Claude wrote for me before I forward it. [pasted summary]" | review-my-work | not yet run | not yet run | not yet run |
-| 5 | Should fire | "Red team this draft. It's the abstract for our lab report. [pasted abstract]" | review-my-work | not yet run | not yet run | not yet run |
-| 6 | Should fire | "Check my work: here is my summary of the changes in this pull request, will the reviewers understand it? [pasted summary]" | review-my-work | not yet run | not yet run | not yet run |
-| 7 | Should not fire | "What could go wrong with this plan? We launch on 3 March." | what-could-go-wrong | not yet run | not yet run | not yet run |
-| 8 | Should not fire | "Should I hand this report to an agent or write it myself? How would I check it?" | delegate | not yet run | not yet run | not yet run |
-| 9 | Should not fire | "Fix the typos and tighten the grammar in this paragraph." | none | not yet run | not yet run | not yet run |
-| 10 | Should not fire | "Here's a new project. Help me write down what it is, who it's for and what done means." | plan-the-work | not yet run | not yet run | not yet run |
-| 11 | Should not fire | "I'm stuck on this analysis and can't see how to finish it." | get-unstuck | not yet run | not yet run | not yet run |
-| 12 | Should not fire | "The project is done. What went well and what should we change next time?" | lessons-learned | not yet run | not yet run | not yet run |
-| 13 | Should not fire | "Review this meeting invite and tighten the agenda." | meeting-design | not yet run | not yet run | not yet run |
-| 14 | Should not fire | "Write a cover letter for me from this job post." | none | not yet run | not yet run | not yet run |
-| 15 | Should not fire | "How long will this take? I think two weeks." | how-long-will-it-take | not yet run | not yet run | not yet run |
-| 16 | Ambiguous | "Review this." with a pasted spec for a feature not yet built | review-my-work or what-could-go-wrong, see below | not yet run | not yet run | not yet run |
-| 17 | Ambiguous | "Does this make sense? [pasted two-line message]" | review-my-work or none, see below | not yet run | not yet run | not yet run |
-| 18 | Ambiguous | "The agent finished the competitor brief. Can you check it before I send it on?" | review-my-work or delegate, see below | not yet run | not yet run | not yet run |
+| 1 | Should fire | "Is this good enough to send? [pasted email to a client about a delay]" | review-my-work | review-my-work | review-my-work | review-my-work |
+| 2 | Should fire | "Would you put your name on this? [pasted grant narrative]" | review-my-work | review-my-work | review-my-work | review-my-work |
+| 3 | Should fire | "Be a harsh reader. This is my board update. [pasted update]" | review-my-work | review-my-work | review-my-work | review-my-work |
+| 4 | Should fire | "Sanity check this market summary Claude wrote for me before I forward it. [pasted summary]" | review-my-work | review-my-work | review-my-work | review-my-work |
+| 5 | Should fire | "Red team this draft. It's the abstract for our lab report. [pasted abstract]" | review-my-work | review-my-work | review-my-work | review-my-work |
+| 6 | Should fire | "Check my work: here is my summary of the changes in this pull request, will the reviewers understand it? [pasted summary]" | review-my-work | review-my-work | review-my-work | review-my-work |
+| 7 | Should not fire | "What could go wrong with this plan? We launch on 3 March." | what-could-go-wrong | what-could-go-wrong | what-could-go-wrong | what-could-go-wrong |
+| 8 | Should not fire | "Should I hand this report to an agent or write it myself? How would I check it?" | delegate | delegate | delegate | delegate |
+| 9 | Should not fire | "Fix the typos and tighten the grammar in this paragraph." | none | none | none | none |
+| 10 | Should not fire | "Here's a new project. Help me write down what it is, who it's for and what done means." | plan-the-work | **scope-the-work** | plan-the-work | plan-the-work |
+| 11 | Should not fire | "I'm stuck on this analysis and can't see how to finish it." | get-unstuck | get-unstuck | get-unstuck | get-unstuck |
+| 12 | Should not fire | "The project is done. What went well and what should we change next time?" | lessons-learned | lessons-learned | lessons-learned | lessons-learned |
+| 13 | Should not fire | "Review this meeting invite and tighten the agenda." | meeting-design | meeting-design | meeting-design | meeting-design |
+| 14 | Should not fire | "Write a cover letter for me from this job post." | none | none | none | none |
+| 15 | Should not fire | "How long will this take? I think two weeks." | how-long-will-it-take | how-long-will-it-take | how-long-will-it-take | how-long-will-it-take |
+| 16 | Ambiguous | "Review this." with a pasted spec for a feature not yet built | review-my-work or what-could-go-wrong, see below | review-my-work | review-my-work | review-my-work |
+| 17 | Ambiguous | "Does this make sense? [pasted two-line message]" | review-my-work or none, see below | review-my-work | review-my-work | review-my-work |
+| 18 | Ambiguous | "The agent finished the competitor brief. Can you check it before I send it on?" | review-my-work or delegate, see below | review-my-work | review-my-work | review-my-work |
 
 ---
 
@@ -61,3 +61,9 @@ Routing cases for `review-my-work`, written alongside the skill and not yet run.
 - Whether the description survives the listing budget in a real installation, which this harness cannot see.
 - Output quality across models, beyond the one hand check above.
 - Real sessions. Every case is a constructed message written by the same person who wrote the skill.
+
+## Misses and how to read them
+
+| Case | Message | Expected | Haiku | Sonnet | Opus | Reading |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| review-my-work#10 | "Here's a new project. Help me write down what it is, who it's for and what done " | plan-the-work | **scope-the-work** | plan-the-work | plan-the-work | A real plan-the-work vs scope-the-work overlap on Haiku ("what it is, who it is for, what done means"). |

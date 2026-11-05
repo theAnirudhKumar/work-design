@@ -1,6 +1,8 @@
 # Evaluation: explain-a-method
 
-Routing cases for `explain-a-method`, written alongside the skill. **No results are recorded.** The Haiku, Sonnet and Opus columns read "not yet run" because these cases have not been put to any model. Only the expected routing is filled in, and it is a prediction from reading the descriptions, not a finding.
+Routing cases for `explain-a-method`, written alongside the skill.
+
+**Run on:** 5 Nov 2026, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 19. All three models matched on 19; Haiku 19, Sonnet 19, Opus 19. The protect-my-focus description was reworded after this run; see the targeted rerun in `evals/README.md`.
 
 **Method.** Follow the procedure in `evals/README.md`: show a model the verbatim descriptions of every skill in the repository, with no skill bodies, and ask for one skill name or `none`. Pin the description text used. Skills named below that are written concurrently (`find-my-method`, `plan-my-day`, `plan-my-week`, `sort-my-tasks`, `start-a-focus-session`, `protect-my-focus`, `build-a-habit`, `balance-my-life`, `build-my-system`) must be present in the description set for the near misses to be meaningful.
 
@@ -10,25 +12,25 @@ Routing cases for `explain-a-method`, written alongside the skill. **No results 
 
 | # | Message | Kind | Expected | Haiku | Sonnet | Opus |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | "How does the Eisenhower matrix work?" | Should fire | explain-a-method | not yet run | not yet run | not yet run |
-| 2 | "Is Pomodoro actually worth it?" | Should fire | explain-a-method | not yet run | not yet run | not yet run |
-| 3 | "Time blocking vs task batching: what's the difference?" | Should fire | explain-a-method | not yet run | not yet run | not yet run |
-| 4 | "Walk me through the Ivy Lee method." | Should fire | explain-a-method | not yet run | not yet run | not yet run |
-| 5 | "Explain the Flibbertigibbet 4-3-2 productivity method to me." | Should fire (method not real; should say so) | explain-a-method | not yet run | not yet run | not yet run |
-| 6 | "Which productivity method should I use? Nothing works for me." | Near miss | find-my-method | not yet run | not yet run | not yet run |
-| 7 | "Plan my day using time blocking. I have a 9am meeting and a deadline at 5." | Near miss | plan-my-day | not yet run | not yet run | not yet run |
-| 8 | "Review last week and plan the next one." | Near miss | plan-my-week | not yet run | not yet run | not yet run |
-| 9 | "Here is my list. Sort it with Eisenhower." | Near miss | sort-my-tasks | not yet run | not yet run | not yet run |
-| 10 | "Start a Pomodoro with me for this essay." | Near miss | start-a-focus-session | not yet run | not yet run | not yet run |
-| 11 | "My team's pings and meetings are wrecking my focus. What do I do?" | Near miss | protect-my-focus | not yet run | not yet run | not yet run |
-| 12 | "Help me build a daily writing habit I can actually keep." | Near miss | build-a-habit | not yet run | not yet run | not yet run |
-| 13 | "I work too much and see my kids too little. Help me balance things." | Near miss | balance-my-life | not yet run | not yet run | not yet run |
-| 14 | "Set up Getting Things Done for me in Notion." | Near miss | build-my-system | not yet run | not yet run | not yet run |
-| 15 | "I'm stuck on this chapter." | Near miss | get-unstuck | not yet run | not yet run | not yet run |
-| 16 | "Where do I start on the grant application?" | Near miss | plan-the-work | not yet run | not yet run | not yet run |
-| 17 | "Should I use time blocking, or would something else suit me better?" | Ambiguous | find-my-method | not yet run | not yet run | not yet run |
-| 18 | "Tell me about GTD, then tell me if I should use it. I'm a freelance designer." | Ambiguous | explain-a-method | not yet run | not yet run | not yet run |
-| 19 | "How do I use the Pomodoro technique?" | Ambiguous | explain-a-method | not yet run | not yet run | not yet run |
+| 1 | "How does the Eisenhower matrix work?" | Should fire | explain-a-method | explain-a-method | explain-a-method | explain-a-method |
+| 2 | "Is Pomodoro actually worth it?" | Should fire | explain-a-method | explain-a-method | explain-a-method | explain-a-method |
+| 3 | "Time blocking vs task batching: what's the difference?" | Should fire | explain-a-method | explain-a-method | explain-a-method | explain-a-method |
+| 4 | "Walk me through the Ivy Lee method." | Should fire | explain-a-method | explain-a-method | explain-a-method | explain-a-method |
+| 5 | "Explain the Flibbertigibbet 4-3-2 productivity method to me." | Should fire (method not real; should say so) | explain-a-method | explain-a-method | explain-a-method | explain-a-method |
+| 6 | "Which productivity method should I use? Nothing works for me." | Near miss | find-my-method | find-my-method | find-my-method | find-my-method |
+| 7 | "Plan my day using time blocking. I have a 9am meeting and a deadline at 5." | Near miss | plan-my-day | plan-my-day | plan-my-day | plan-my-day |
+| 8 | "Review last week and plan the next one." | Near miss | plan-my-week | plan-my-week | plan-my-week | plan-my-week |
+| 9 | "Here is my list. Sort it with Eisenhower." | Near miss | sort-my-tasks | sort-my-tasks | sort-my-tasks | sort-my-tasks |
+| 10 | "Start a Pomodoro with me for this essay." | Near miss | start-a-focus-session | start-a-focus-session | start-a-focus-session | start-a-focus-session |
+| 11 | "My team's pings and meetings are wrecking my focus. What do I do?" | Near miss | protect-my-focus | protect-my-focus | protect-my-focus | protect-my-focus |
+| 12 | "Help me build a daily writing habit I can actually keep." | Near miss | build-a-habit | build-a-habit | build-a-habit | build-a-habit |
+| 13 | "I work too much and see my kids too little. Help me balance things." | Near miss | balance-my-life | balance-my-life | balance-my-life | balance-my-life |
+| 14 | "Set up Getting Things Done for me in Notion." | Near miss | build-my-system | build-my-system | build-my-system | build-my-system |
+| 15 | "I'm stuck on this chapter." | Near miss | get-unstuck | get-unstuck | get-unstuck | get-unstuck |
+| 16 | "Where do I start on the grant application?" | Near miss | plan-the-work | plan-the-work | plan-the-work | plan-the-work |
+| 17 | "Should I use time blocking, or would something else suit me better?" | Ambiguous | find-my-method | find-my-method | find-my-method | find-my-method |
+| 18 | "Tell me about GTD, then tell me if I should use it. I'm a freelance designer." | Ambiguous | explain-a-method | explain-a-method | explain-a-method | explain-a-method |
+| 19 | "How do I use the Pomodoro technique?" | Ambiguous | explain-a-method | explain-a-method | explain-a-method | explain-a-method |
 
 ---
 
@@ -81,3 +83,7 @@ Case 3 check: a comparison table and a pick-by-situation line.
 - **Any model behaviour.** Nothing in this file has been run.
 - **Whether the description survives the listing budget.** A new skill with no invocation history loses its description first when the listing is truncated.
 - **Real sessions.** Every case is constructed.
+
+## Misses and how to read them
+
+No misses on cases with a single expected answer.

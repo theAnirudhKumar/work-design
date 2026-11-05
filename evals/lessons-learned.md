@@ -1,6 +1,8 @@
 # Evaluation: lessons-learned
 
-Routing cases for `lessons-learned`, written alongside the skill. **No results are recorded.** The Haiku, Sonnet and Opus columns read "not yet run" because these cases have not been put to any model. Only the expected routing is filled in, and it is a prediction from reading the descriptions, not a finding.
+Routing cases for `lessons-learned`, written alongside the skill.
+
+**Run on:** 5 Nov 2026, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 14. All three models matched on 14; Haiku 14, Sonnet 14, Opus 14. The protect-my-focus description was reworded after this run; see the targeted rerun in `evals/README.md`.
 
 **Method.** Follow the procedure in `evals/README.md`: show a model the verbatim descriptions of every skill in the repository, with no skill bodies, and ask for one skill name or `none`. Pin the description text used, since results do not survive rewording. Skills named below that are not yet in the repository (`review-my-work`, `what-could-go-wrong`, `get-unstuck`) must be present in the description set for the near misses to be meaningful. `meeting-close` lives in a separate repository and should be included as a description if the case is to mean anything.
 
@@ -10,20 +12,20 @@ Routing cases for `lessons-learned`, written alongside the skill. **No results a
 
 | # | Message | Kind | Expected | Haiku | Sonnet | Opus |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | "That's done, what did we learn?" | Should fire | lessons-learned | not yet run | not yet run | not yet run |
-| 2 | "Post-mortem on the website migration. We planned 4 weeks and it took 7." | Should fire | lessons-learned | not yet run | not yet run | not yet run |
-| 3 | "Log this: the Q3 audit prep ran two days over because the auditor was late with the sample list." | Should fire | lessons-learned | not yet run | not yet run | not yet run |
-| 4 | "We dropped the loyalty-card project halfway. Can we close it out properly?" | Should fire (abandoned) | lessons-learned | not yet run | not yet run | not yet run |
-| 5 | "How did that go compared to the plan? I budgeted 10 hours for the training deck." | Should fire | lessons-learned | not yet run | not yet run | not yet run |
-| 6 | "Is this draft good enough to send?" | Near miss | review-my-work | not yet run | not yet run | not yet run |
-| 7 | "This chat is long. Wrap this up so I can start a fresh one." | Near miss | continue-in-new-chat | not yet run | not yet run | not yet run |
-| 8 | "How long will the next migration take, given how this one went?" | Near miss | how-long-will-it-take | not yet run | not yet run | not yet run |
-| 9 | "Wrap up the meeting: decisions, owners, next steps." | Near miss | meeting-close (meeting-design) | not yet run | not yet run | not yet run |
-| 10 | "What could go wrong with the migration plan before we start?" | Near miss | what-could-go-wrong | not yet run | not yet run | not yet run |
-| 11 | "I can't finish this report and I don't know why." | Near miss | get-unstuck | not yet run | not yet run | not yet run |
-| 12 | "Wrap this up." | Ambiguous | lessons-learned or continue-in-new-chat | not yet run | not yet run | not yet run |
-| 13 | "Retro on the sprint we just finished." | Ambiguous | lessons-learned or meeting-close | not yet run | not yet run | not yet run |
-| 14 | "Log this" (after an estimate was discussed, no work finished) | Ambiguous | lessons-learned or none | not yet run | not yet run | not yet run |
+| 1 | "That's done, what did we learn?" | Should fire | lessons-learned | lessons-learned | lessons-learned | lessons-learned |
+| 2 | "Post-mortem on the website migration. We planned 4 weeks and it took 7." | Should fire | lessons-learned | lessons-learned | lessons-learned | lessons-learned |
+| 3 | "Log this: the Q3 audit prep ran two days over because the auditor was late with the sample list." | Should fire | lessons-learned | lessons-learned | lessons-learned | lessons-learned |
+| 4 | "We dropped the loyalty-card project halfway. Can we close it out properly?" | Should fire (abandoned) | lessons-learned | lessons-learned | lessons-learned | lessons-learned |
+| 5 | "How did that go compared to the plan? I budgeted 10 hours for the training deck." | Should fire | lessons-learned | lessons-learned | lessons-learned | lessons-learned |
+| 6 | "Is this draft good enough to send?" | Near miss | review-my-work | review-my-work | review-my-work | review-my-work |
+| 7 | "This chat is long. Wrap this up so I can start a fresh one." | Near miss | continue-in-new-chat | continue-in-new-chat | continue-in-new-chat | continue-in-new-chat |
+| 8 | "How long will the next migration take, given how this one went?" | Near miss | how-long-will-it-take | how-long-will-it-take | how-long-will-it-take | how-long-will-it-take |
+| 9 | "Wrap up the meeting: decisions, owners, next steps." | Near miss | meeting-close (meeting-design) | meeting-close | meeting-close | meeting-close |
+| 10 | "What could go wrong with the migration plan before we start?" | Near miss | what-could-go-wrong | what-could-go-wrong | what-could-go-wrong | what-could-go-wrong |
+| 11 | "I can't finish this report and I don't know why." | Near miss | get-unstuck | get-unstuck | get-unstuck | get-unstuck |
+| 12 | "Wrap this up." | Ambiguous | lessons-learned or continue-in-new-chat | lessons-learned | lessons-learned | lessons-learned |
+| 13 | "Retro on the sprint we just finished." | Ambiguous | lessons-learned or meeting-close | lessons-learned | lessons-learned | lessons-learned |
+| 14 | "Log this" (after an estimate was discussed, no work finished) | Ambiguous | lessons-learned or none | lessons-learned | none | none |
 
 ---
 
@@ -65,3 +67,7 @@ A second check: given a log file with four entries, the skill must say fewer tha
 - **Whether the description survives the listing budget.** A new skill with no invocation history loses its description first.
 - **Whether the log entry works as a reference case in practice.** The format is built to match the precedent worksheet in `how-long-will-it-take`. Nobody has yet used a real log to correct a real estimate.
 - **Real sessions.** Every case is constructed.
+
+## Misses and how to read them
+
+No misses on cases with a single expected answer.

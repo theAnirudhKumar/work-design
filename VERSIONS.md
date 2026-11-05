@@ -10,7 +10,7 @@ What changed, and when.
 
 **Introduced the `my-system.md` profile.** `build-my-system` writes it and the other skills read it when it is pasted, so the methods a person chose carry across conversations. Claude does not remember between conversations; the user saves the file.
 
-**Caveats.** Attributions and evidence labels were written from memory and are the first thing to check; a few are marked as disputed on the card. The thresholds in the trial scorecard (keep at 5 of 7 days, drop under 3) and the slack and caps in the planning skills are rules of thumb, labelled as such. Eval files exist for every new skill; results are recorded where they have been run.
+**Caveats.** Attributions and evidence labels were written from memory and are the first thing to check; a few are marked as disputed on the card. The thresholds in the trial scorecard (keep at 5 of 7 days, drop under 3) and the slack and caps in the planning skills are rules of thumb, labelled as such. Every skill has an eval file, and all of them were run once on 5 Nov 2026 against Haiku, Sonnet and Opus with all 29 descriptions shown together (one sample per case; the log is in `evals/README.md`). On the 474 cases with a single expected answer the models matched 96.2%, 97.3% and 97.7% of the time, and many misses are stale expectations or overlaps where either answer helps. The run found one real collision (`protect-my-focus` against `meeting-audit` on meeting-heavy calendars), which the 4.1.0 wording fixes.
 
 ## 4.0.0
 

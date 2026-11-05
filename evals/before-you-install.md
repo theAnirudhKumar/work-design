@@ -45,3 +45,18 @@ That is the right answer, and it is worth stating why rather than just recording
 ## Note, 29 Aug 2026, audit-my-tools added
 
 Rechecked with `audit-my-tools` added to the set, since a new skill's arrival is a listed rerun trigger and the two skills sit either side of the same line: adopted or not. Case 3 (post-install, "what did I actually agree to") and case 4 (six-figure procurement) both held on all three models. Full detail in `evals/audit-my-tools.md`, which treats these as its own regression check.
+
+## Rerun on the 4.1.0 descriptions (5 Nov 2026)
+
+The results above were recorded under earlier descriptions and skill names. This rerun puts the same cases to Haiku, Sonnet and Opus with all 29 descriptions shown together (snapshot `c4b8a8cfab44`). **Bold** means the pick differs from the expected answer.
+
+| # | Message | Expected | Haiku | Sonnet | Opus |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | "Is that meeting transcription app safe to use on client calls?" | fire | before-you-install | before-you-install | before-you-install |
+| 2 | "A mate recommended a free invoicing tool. What is the catch with it?" | fire | before-you-install | before-you-install | before-you-install |
+| 3 | "I installed a clipboard manager last month. What did I actually agree to?" | fire | before-you-install | before-you-install | before-you-install |
+| 4 | "We are evaluating a document platform for the whole company, six figures, and procurement " | none | none | none | none |
+| 15 | "Should I pay for a tool that would do this whole task for me automatically?" | conflict with `delegate` | before-you-install | before-you-install | before-you-install |
+
+Run on 5 Nov 2026 with Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Single-answer cases: see counts below.
+Cases with one expected answer: 1. All three models matched on 1.

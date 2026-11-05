@@ -54,3 +54,25 @@ Whether `cut-token-cost`, `continue-in-new-chat` or `before-you-switch` compete 
 ## Field test, 2026-08-31
 
 One real case, not constructed: closing two blank entries in a professional profile document that had been bundled under one open-ended active-project note alongside three unrelated follow-ups. Result: pass, both failure modes checked clean (out list had three named items, done condition was third-party checkable). Not a live `Skill` tool run, the skill is not installed in this account; the shipped `SKILL.md` was applied by hand against the real case instead. Case detail is internal and not reproduced here.
+
+## Rerun on the 4.1.0 descriptions (5 Nov 2026)
+
+The results above were recorded under earlier descriptions and skill names. This rerun puts the same cases to Haiku, Sonnet and Opus with all 29 descriptions shown together (snapshot `c4b8a8cfab44`). **Bold** means the pick differs from the expected answer.
+
+| # | Message | Expected | Haiku | Sonnet | Opus |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | "Before I start this redesign, what should I actually commit to and what should I leave out" | fire | scope-the-work | scope-the-work | scope-the-work |
+| 2 | "This client project keeps growing every week, I need to draw a line on what's actually in " | fire | scope-the-work | scope-the-work | scope-the-work |
+| 3 | "Should I hand this whole report off to Claude or keep the analysis part myself?" | delegate | delegate | delegate | delegate |
+| 4 | "Should I just message the team about this or do we need a call?" | meeting-or-message | meeting-or-message | meeting-or-message | meeting-or-message |
+| 5 | "Should I sign up for Notion for our team?" | before-you-install | before-you-install | before-you-install | before-you-install |
+| 6 | "What counts as done for this onboarding project? I don't want to be revising it forever." | fire | scope-the-work | scope-the-work | scope-the-work |
+| 7 | "How long will this project realistically take based on similar work we've done before?" | none | **how-long-will-it-take** | **how-long-will-it-take** | **how-long-will-it-take** |
+| 8 | "We are evaluating a document platform for the whole company, six figures, and procurement " | none | none | none | none |
+
+Run on 5 Nov 2026 with Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Single-answer cases: see counts below.
+Cases with one expected answer: 5. All three models matched on 4.
+
+Misses:
+
+- Case 7: Stale expectation. how-long-will-it-take is the right skill and is installed now.

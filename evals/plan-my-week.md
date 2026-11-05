@@ -1,6 +1,8 @@
 # Evaluation: plan-my-week
 
-Routing cases for `plan-my-week`, written alongside the skill. **No results are recorded.** The Haiku, Sonnet and Opus columns read "not yet run" because these cases have not been put to any model. Only the expected routing is filled in, and it is a prediction from reading the descriptions, not a finding.
+Routing cases for `plan-my-week`, written alongside the skill.
+
+**Run on:** 5 Nov 2026, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 33. All three models matched on 32; Haiku 33, Sonnet 32, Opus 32. The protect-my-focus description was reworded after this run; see the targeted rerun in `evals/README.md`.
 
 **Method.** Follow the procedure in `evals/README.md`: show a model the verbatim descriptions of every skill in the repository, with no skill bodies, and ask for one skill name or `none`. Pin the description text used, since results do not survive rewording. The near misses are only meaningful if the full description set is present, including `plan-my-day`, `plan-my-week`, `sort-my-tasks` and the other skills built alongside them: `find-my-method`, `explain-a-method`, `start-a-focus-session`, `protect-my-focus`, `build-a-habit`, `balance-my-life` and `build-my-system`.
 
@@ -10,39 +12,39 @@ Routing cases for `plan-my-week`, written alongside the skill. **No results are 
 
 | # | Message | Kind | Expected | Haiku | Sonnet | Opus |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | "Plan my week." | Should fire | plan-my-week | not yet run | not yet run | not yet run |
-| 2 | "Weekly review time. Last week I finished the deck but never got to the budget." | Should fire | plan-my-week | not yet run | not yet run | not yet run |
-| 3 | "It's Monday 8:55. What should this week look like? I've got three big meetings and a deadline Thursday." | Should fire | plan-my-week | not yet run | not yet run | not yet run |
-| 4 | "Set up an ideal week for me. I'm a nurse on three long shifts a week." | Should fire | plan-my-week | not yet run | not yet run | not yet run |
-| 5 | "Plan today. Meeting at 10, school pick-up at 3, and a list of 12 things." | Near miss | plan-my-day | not yet run | not yet run | not yet run |
-| 6 | "Here's everything I need to do this quarter, all 60 items. What first?" | Near miss | sort-my-tasks | not yet run | not yet run | not yet run |
-| 7 | "Help me stay focused for the next 90 minutes." | Near miss | start-a-focus-session | not yet run | not yet run | not yet run |
-| 8 | "My calendar is full of meetings that eat my focus time. What do I do?" | Near miss | protect-my-focus | not yet run | not yet run | not yet run |
-| 9 | "Which method suits me, weekly reviews or GTD?" | Near miss | find-my-method | not yet run | not yet run | not yet run |
-| 10 | "Explain how a weekly review works and whether it's worth it." | Near miss | explain-a-method | not yet run | not yet run | not yet run |
-| 11 | "I want to make a Sunday planning habit stick." | Near miss | build-a-habit | not yet run | not yet run | not yet run |
-| 12 | "I never see my family and I'm always working. Help me rebalance." | Near miss | balance-my-life | not yet run | not yet run | not yet run |
-| 13 | "Design my whole productivity system including daily, weekly and monthly reviews." | Near miss | build-my-system | not yet run | not yet run | not yet run |
-| 14 | "I've got to launch the new pricing page. Where do I start?" | Near miss | plan-the-work | not yet run | not yet run | not yet run |
-| 15 | "I only have two weeks to do four weeks of work. What do I cut?" | Near miss | fit-to-deadline | not yet run | not yet run | not yet run |
-| 16 | "I keep carrying the same task over every week and can't start it." | Near miss | get-unstuck | not yet run | not yet run | not yet run |
-| 17 | "Should I hand the weekly report to an agent?" | Near miss | delegate | not yet run | not yet run | not yet run |
-| 18 | "How long will the migration take, realistically?" | Near miss | how-long-will-it-take | not yet run | not yet run | not yet run |
-| 19 | "What's in scope for the redesign, and what isn't?" | Near miss | scope-the-work | not yet run | not yet run | not yet run |
-| 20 | "Pre-mortem my plan for next week's conference." | Near miss | what-could-go-wrong | not yet run | not yet run | not yet run |
-| 21 | "The campaign wrapped up. Run a retro on it." | Near miss | lessons-learned | not yet run | not yet run | not yet run |
-| 22 | "Poke holes in this proposal draft before I send it." | Near miss | review-my-work | not yet run | not yet run | not yet run |
-| 23 | "Should I run a weekly team meeting or use a written update?" | Near miss | meeting-or-message | not yet run | not yet run | not yet run |
-| 24 | "Summarise this chat so I can carry on in a new one." | Near miss | continue-in-new-chat | not yet run | not yet run | not yet run |
-| 25 | "What subscriptions am I paying for that I don't use?" | Near miss | audit-my-tools | not yet run | not yet run | not yet run |
-| 26 | "Is this planner app any good? Check the privacy policy." | Near miss | before-you-install | not yet run | not yet run | not yet run |
-| 27 | "What do I lose if I leave my current planner app?" | Near miss | before-you-switch | not yet run | not yet run | not yet run |
-| 28 | "How do I cut the token cost of my long planning prompt?" | Near miss | cut-token-cost | not yet run | not yet run | not yet run |
-| 29 | "What can work-design do for me?" | Near miss | work-design | not yet run | not yet run | not yet run |
-| 30 | "Here's last week's notes and what's due. I want three outcomes for the week and my focus blocks." | Ambiguous | plan-my-week (outcomes and blocks are its job) | not yet run | not yet run | not yet run |
-| 31 | "Plan my week and also rank my backlog of 50 things." | Ambiguous | plan-my-week or sort-my-tasks | not yet run | not yet run | not yet run |
-| 32 | "Do a weekly review and tell me if I'm balancing work and life." | Ambiguous | plan-my-week or balance-my-life | not yet run | not yet run | not yet run |
-| 33 | "I'm burned out and can't face the week. Can you plan it?" | Ambiguous, boundary | plan-my-week, with the one-time referral | not yet run | not yet run | not yet run |
+| 1 | "Plan my week." | Should fire | plan-my-week | plan-my-week | plan-my-week | plan-my-week |
+| 2 | "Weekly review time. Last week I finished the deck but never got to the budget." | Should fire | plan-my-week | plan-my-week | plan-my-week | plan-my-week |
+| 3 | "It's Monday 8:55. What should this week look like? I've got three big meetings and a deadline Thursday." | Should fire | plan-my-week | plan-my-week | plan-my-week | plan-my-week |
+| 4 | "Set up an ideal week for me. I'm a nurse on three long shifts a week." | Should fire | plan-my-week | plan-my-week | plan-my-week | plan-my-week |
+| 5 | "Plan today. Meeting at 10, school pick-up at 3, and a list of 12 things." | Near miss | plan-my-day | plan-my-day | plan-my-day | plan-my-day |
+| 6 | "Here's everything I need to do this quarter, all 60 items. What first?" | Near miss | sort-my-tasks | sort-my-tasks | sort-my-tasks | sort-my-tasks |
+| 7 | "Help me stay focused for the next 90 minutes." | Near miss | start-a-focus-session | start-a-focus-session | start-a-focus-session | start-a-focus-session |
+| 8 | "My calendar is full of meetings that eat my focus time. What do I do?" | Near miss | protect-my-focus | protect-my-focus | **meeting-audit** | **meeting-audit** |
+| 9 | "Which method suits me, weekly reviews or GTD?" | Near miss | find-my-method | find-my-method | find-my-method | find-my-method |
+| 10 | "Explain how a weekly review works and whether it's worth it." | Near miss | explain-a-method | explain-a-method | explain-a-method | explain-a-method |
+| 11 | "I want to make a Sunday planning habit stick." | Near miss | build-a-habit | build-a-habit | build-a-habit | build-a-habit |
+| 12 | "I never see my family and I'm always working. Help me rebalance." | Near miss | balance-my-life | balance-my-life | balance-my-life | balance-my-life |
+| 13 | "Design my whole productivity system including daily, weekly and monthly reviews." | Near miss | build-my-system | build-my-system | build-my-system | build-my-system |
+| 14 | "I've got to launch the new pricing page. Where do I start?" | Near miss | plan-the-work | plan-the-work | plan-the-work | plan-the-work |
+| 15 | "I only have two weeks to do four weeks of work. What do I cut?" | Near miss | fit-to-deadline | fit-to-deadline | fit-to-deadline | fit-to-deadline |
+| 16 | "I keep carrying the same task over every week and can't start it." | Near miss | get-unstuck | get-unstuck | get-unstuck | get-unstuck |
+| 17 | "Should I hand the weekly report to an agent?" | Near miss | delegate | delegate | delegate | delegate |
+| 18 | "How long will the migration take, realistically?" | Near miss | how-long-will-it-take | how-long-will-it-take | how-long-will-it-take | how-long-will-it-take |
+| 19 | "What's in scope for the redesign, and what isn't?" | Near miss | scope-the-work | scope-the-work | scope-the-work | scope-the-work |
+| 20 | "Pre-mortem my plan for next week's conference." | Near miss | what-could-go-wrong | what-could-go-wrong | what-could-go-wrong | what-could-go-wrong |
+| 21 | "The campaign wrapped up. Run a retro on it." | Near miss | lessons-learned | lessons-learned | lessons-learned | lessons-learned |
+| 22 | "Poke holes in this proposal draft before I send it." | Near miss | review-my-work | review-my-work | review-my-work | review-my-work |
+| 23 | "Should I run a weekly team meeting or use a written update?" | Near miss | meeting-or-message | meeting-or-message | meeting-or-message | meeting-or-message |
+| 24 | "Summarise this chat so I can carry on in a new one." | Near miss | continue-in-new-chat | continue-in-new-chat | continue-in-new-chat | continue-in-new-chat |
+| 25 | "What subscriptions am I paying for that I don't use?" | Near miss | audit-my-tools | audit-my-tools | audit-my-tools | audit-my-tools |
+| 26 | "Is this planner app any good? Check the privacy policy." | Near miss | before-you-install | before-you-install | before-you-install | before-you-install |
+| 27 | "What do I lose if I leave my current planner app?" | Near miss | before-you-switch | before-you-switch | before-you-switch | before-you-switch |
+| 28 | "How do I cut the token cost of my long planning prompt?" | Near miss | cut-token-cost | cut-token-cost | cut-token-cost | cut-token-cost |
+| 29 | "What can work-design do for me?" | Near miss | work-design | work-design | work-design | work-design |
+| 30 | "Here's last week's notes and what's due. I want three outcomes for the week and my focus blocks." | Ambiguous | plan-my-week (outcomes and blocks are its job) | plan-my-week | plan-my-week | plan-my-week |
+| 31 | "Plan my week and also rank my backlog of 50 things." | Ambiguous | plan-my-week or sort-my-tasks | plan-my-week | plan-my-week | plan-my-week |
+| 32 | "Do a weekly review and tell me if I'm balancing work and life." | Ambiguous | plan-my-week or balance-my-life | plan-my-week | plan-my-week | plan-my-week |
+| 33 | "I'm burned out and can't face the week. Can you plan it?" | Ambiguous, boundary | plan-my-week, with the one-time referral | plan-my-week | plan-my-week | plan-my-week |
 
 ---
 
@@ -122,3 +124,9 @@ Two cases to be checked by hand once a model is available.
 - **Any model behaviour.** Nothing in this file has been run.
 - **Whether the description survives the listing budget.** A new skill with no invocation history loses its description first when the listing is truncated.
 - **Real sessions.** Every case is constructed.
+
+## Misses and how to read them
+
+| Case | Message | Expected | Haiku | Sonnet | Opus | Reading |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| plan-my-week#8 | "My calendar is full of meetings that eat my focus time. What do I do?" | protect-my-focus | protect-my-focus | **meeting-audit** | **meeting-audit** | Real collision: meeting-audit claims "calendar full of meetings". protect-my-focus wording was changed after this run; see the targeted rerun in evals/README.md. |

@@ -2,7 +2,7 @@
 
 Routing cases for `plan-the-work`, written alongside the skill, per `CONTRIBUTING.md`.
 
-**Status: not yet run.** The results columns below are empty on purpose. No model has been put through these cases, and nothing in this file is a result. Only the expected routing is filled in, and it is a prediction from reading the descriptions, not an observation. Run the procedure in `evals/README.md` on Haiku, Sonnet and Opus and fill the columns in from the real output, including any disagreement.
+**Run on:** 5 Nov 2026, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 16. All three models matched on 16; Haiku 16, Sonnet 16, Opus 16. The protect-my-focus description was reworded after this run; see the targeted rerun in `evals/README.md`.
 
 **Siblings named below.** `fit-to-deadline` is written alongside this skill. `what-could-go-wrong`, `get-unstuck`, `review-my-work` and `lessons-learned` are planned siblings that may not exist yet when this is run. Where a sibling is not installed, the expected routing for that case is `none`, not the sibling's name. Pin the exact description text of every skill shown to the model when recording a run.
 
@@ -12,22 +12,22 @@ Routing cases for `plan-the-work`, written alongside the skill, per `CONTRIBUTIN
 
 | # | Message | Kind | Expected | Haiku | Sonnet | Opus |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | "I have to write the Q3 report for the board and I don't know where to start." | should fire | plan-the-work | not yet run | not yet run | not yet run |
-| 2 | "Help me get started on my thesis chapter on migration data." | should fire | plan-the-work | not yet run | not yet run | not yet run |
-| 3 | "I'm about to start planning our product launch. Can you turn this into a plan?" | should fire | plan-the-work | not yet run | not yet run | not yet run |
-| 4 | "What should I do first on this lab protocol validation? Break it down for me." | should fire | plan-the-work | not yet run | not yet run | not yet run |
-| 5 | "Make a work card for the new onboarding emails." | should fire | plan-the-work | not yet run | not yet run | not yet run |
-| 6 | "I have until Friday to finish this deck and there's way too much in it. What can I drop?" | near miss | fit-to-deadline | not yet run | not yet run | not yet run |
-| 7 | "My client keeps adding things to the website project. Help me write down what's in and what's out." | near miss | scope-the-work | not yet run | not yet run | not yet run |
-| 8 | "Should I give the competitor research to Claude or do it myself?" | near miss | delegate | not yet run | not yet run | not yet run |
-| 9 | "How long will this migration actually take? I've said three weeks." | near miss | how-long-will-it-take | not yet run | not yet run | not yet run |
-| 10 | "Should this be a meeting or can I just send a message?" | near miss | meeting-or-message | not yet run | not yet run | not yet run |
-| 11 | "Fix this meeting invite and tighten my agenda for the kickoff." | near miss | meeting-design | not yet run | not yet run | not yet run |
-| 12 | "I've been stuck on this section for two days and can't move." | near miss | none (or `get-unstuck` if installed) | not yet run | not yet run | not yet run |
-| 13 | "Here's my plan for the rollout. What could go wrong with it?" | near miss | none (or `what-could-go-wrong` if installed) | not yet run | not yet run | not yet run |
-| 14 | "Rename this file to match the others." | near miss | none (task under 30 minutes) | not yet run | not yet run | not yet run |
-| 15 | "I have to prepare the wedding seating plan, we have 12 days, and it's already too much." | conflict | plan-the-work or fit-to-deadline | not yet run | not yet run | not yet run |
-| 16 | "I've got a proposal due Thursday for a client. Plan this out and tell me what to cut if I run short." | conflict | plan-the-work or fit-to-deadline | not yet run | not yet run | not yet run |
+| 1 | "I have to write the Q3 report for the board and I don't know where to start." | should fire | plan-the-work | plan-the-work | plan-the-work | plan-the-work |
+| 2 | "Help me get started on my thesis chapter on migration data." | should fire | plan-the-work | plan-the-work | plan-the-work | plan-the-work |
+| 3 | "I'm about to start planning our product launch. Can you turn this into a plan?" | should fire | plan-the-work | plan-the-work | plan-the-work | plan-the-work |
+| 4 | "What should I do first on this lab protocol validation? Break it down for me." | should fire | plan-the-work | plan-the-work | plan-the-work | plan-the-work |
+| 5 | "Make a work card for the new onboarding emails." | should fire | plan-the-work | plan-the-work | plan-the-work | plan-the-work |
+| 6 | "I have until Friday to finish this deck and there's way too much in it. What can I drop?" | near miss | fit-to-deadline | fit-to-deadline | fit-to-deadline | fit-to-deadline |
+| 7 | "My client keeps adding things to the website project. Help me write down what's in and what's out." | near miss | scope-the-work | scope-the-work | scope-the-work | scope-the-work |
+| 8 | "Should I give the competitor research to Claude or do it myself?" | near miss | delegate | delegate | delegate | delegate |
+| 9 | "How long will this migration actually take? I've said three weeks." | near miss | how-long-will-it-take | how-long-will-it-take | how-long-will-it-take | how-long-will-it-take |
+| 10 | "Should this be a meeting or can I just send a message?" | near miss | meeting-or-message | meeting-or-message | meeting-or-message | meeting-or-message |
+| 11 | "Fix this meeting invite and tighten my agenda for the kickoff." | near miss | meeting-design | meeting-design | meeting-design | meeting-design |
+| 12 | "I've been stuck on this section for two days and can't move." | near miss | none (or `get-unstuck` if installed) | get-unstuck | get-unstuck | get-unstuck |
+| 13 | "Here's my plan for the rollout. What could go wrong with it?" | near miss | none (or `what-could-go-wrong` if installed) | what-could-go-wrong | what-could-go-wrong | what-could-go-wrong |
+| 14 | "Rename this file to match the others." | near miss | none (task under 30 minutes) | none | none | none |
+| 15 | "I have to prepare the wedding seating plan, we have 12 days, and it's already too much." | conflict | plan-the-work or fit-to-deadline | fit-to-deadline | fit-to-deadline | fit-to-deadline |
+| 16 | "I've got a proposal due Thursday for a client. Plan this out and tell me what to cut if I run short." | conflict | plan-the-work or fit-to-deadline | plan-the-work | fit-to-deadline | fit-to-deadline |
 
 ---
 
@@ -73,3 +73,7 @@ Routing cases cannot tell whether the skill then produces what it promises. On o
 - **Whether the description survives the listing budget** in a real installation. A new skill has no invocation history and is first to lose its description text when the listing overflows.
 - **Real sessions.** Every case is a constructed message written by the author of the skill.
 - **Wording stability.** A result holds for one rendering of the descriptions. Record the exact text next to any run.
+
+## Misses and how to read them
+
+No misses on cases with a single expected answer.

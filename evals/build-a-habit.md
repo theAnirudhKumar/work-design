@@ -1,6 +1,8 @@
 # Evaluation: build-a-habit
 
-Routing cases for `build-a-habit`, written alongside the skill. **No results are recorded.** The Haiku, Sonnet and Opus columns read "not yet run" because these cases have not been put to any model. Only the expected routing is filled in, and it is a prediction from reading the descriptions, not a finding.
+Routing cases for `build-a-habit`, written alongside the skill.
+
+**Run on:** 5 Nov 2026, Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Judged on the description alone. A cell is the skill that model picked; **bold** means it differs from the expected answer. Cases with a single expected answer: 41. All three models matched on 41; Haiku 41, Sonnet 41, Opus 41. The protect-my-focus description was reworded after this run; see the targeted rerun in `evals/README.md`.
 
 **Method.** Follow the procedure in `evals/README.md`: show a model the verbatim descriptions of every skill in the repository, with no skill bodies, and ask for one skill name or `none`. Pin the description text used, since results do not survive rewording. The set must include the skills built alongside this one (`find-my-method`, `explain-a-method`, `plan-my-day`, `plan-my-week`, `sort-my-tasks`, `balance-my-life`, `build-my-system`, `start-a-focus-session`, `protect-my-focus`, `build-a-habit`) and, for the meeting cases, `meeting-audit` from the sibling meeting-design repository, or the near misses are not meaningful. `meeting-design` is the set that contains `meeting-audit`. An Expected value written as A or B means either routing is defensible.
 
@@ -10,47 +12,47 @@ Routing cases for `build-a-habit`, written alongside the skill. **No results are
 
 | # | Message | Kind | Expected | Haiku | Sonnet | Opus |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | "I want to start exercising every day. I've failed at this about ten times." | Should fire | build-a-habit | not yet run | not yet run | not yet run |
-| 2 | "I can't stick to journaling. I do it for three days and then stop." | Should fire | build-a-habit | not yet run | not yet run | not yet run |
-| 3 | "Help me build a habit of reading before bed." | Should fire | build-a-habit | not yet run | not yet run | not yet run |
-| 4 | "From Monday I'm doing gym daily, no sugar, meditation, 5am wake-ups and journaling." | Should fire | build-a-habit | not yet run | not yet run | not yet run |
-| 5 | "How long does it take to form a habit? 21 days, right?" | Should fire | build-a-habit | not yet run | not yet run | not yet run |
-| 6 | "I want to start running but I have asthma and a heart murmur. Make me a plan." | Should fire | build-a-habit | not yet run | not yet run | not yet run |
-| 7 | "I want to fix my sleep. Give me a schedule, I have insomnia." | Should fire | build-a-habit | not yet run | not yet run | not yet run |
-| 8 | "I'm a night-shift nurse. How do I build a stretching habit when my schedule changes every week?" | Should fire | build-a-habit | not yet run | not yet run | not yet run |
-| 9 | "I want to cut down on scrolling my phone in the evening." | Should fire | build-a-habit | not yet run | not yet run | not yet run |
-| 10 | "I want to make a daily shutdown routine at the end of my workday and stick to it." | Should fire | build-a-habit | not yet run | not yet run | not yet run |
-| 11 | "Help me focus for an hour on my taxes." | Near miss | start-a-focus-session | not yet run | not yet run | not yet run |
-| 12 | "Start a Pomodoro for me." | Near miss | start-a-focus-session | not yet run | not yet run | not yet run |
-| 13 | "I'm interrupted all day and can't concentrate. What do I do?" | Near miss | protect-my-focus | not yet run | not yet run | not yet run |
-| 14 | "Slack and meetings are eating my focus. How do I ask my manager for time?" | Near miss | protect-my-focus | not yet run | not yet run | not yet run |
-| 15 | "Plan my day. Include the gym and a call at 3." | Near miss | plan-my-day | not yet run | not yet run | not yet run |
-| 16 | "Plan my week. I want to work out three times and finish the launch." | Near miss | plan-my-week | not yet run | not yet run | not yet run |
-| 17 | "I've got too many tasks. Sort them out." | Near miss | sort-my-tasks | not yet run | not yet run | not yet run |
-| 18 | "I can't start my thesis and I've been putting it off for weeks." | Near miss | get-unstuck | not yet run | not yet run | not yet run |
-| 19 | "I neglect my friends and my health because I work too much." | Near miss | balance-my-life | not yet run | not yet run | not yet run |
-| 20 | "What productivity method fits me? I've tried many." | Near miss | find-my-method | not yet run | not yet run | not yet run |
-| 21 | "Explain how habit stacking works and whether it's worth trying." | Near miss | explain-a-method | not yet run | not yet run | not yet run |
-| 22 | "Set up my whole system: tasks, calendar, notes, daily and weekly review." | Near miss | build-my-system | not yet run | not yet run | not yet run |
-| 23 | "Which tasks should I hand to an AI agent?" | Near miss | delegate | not yet run | not yet run | not yet run |
-| 24 | "The report is due Friday and I only have two days. Cut it down." | Near miss | fit-to-deadline | not yet run | not yet run | not yet run |
-| 25 | "What is in scope for this project and what is not?" | Near miss | scope-the-work | not yet run | not yet run | not yet run |
-| 26 | "I have to write a business plan. Where do I begin?" | Near miss | plan-the-work | not yet run | not yet run | not yet run |
-| 27 | "How long will it take to learn Spanish to a conversational level?" | Near miss | how-long-will-it-take | not yet run | not yet run | not yet run |
-| 28 | "Should we have a meeting or send an email about the habit tracker rollout?" | Near miss | meeting-or-message | not yet run | not yet run | not yet run |
-| 29 | "Our weekly all-hands is a waste of time. Fix it." | Near miss | meeting-audit (meeting-design set) | not yet run | not yet run | not yet run |
-| 30 | "What could go wrong with my plan to wake up at 5am?" | Near miss | what-could-go-wrong | not yet run | not yet run | not yet run |
-| 31 | "Review my habit plan and tell me if it's any good." | Near miss | review-my-work | not yet run | not yet run | not yet run |
-| 32 | "That experiment is over. What did I learn about my morning routine?" | Near miss | lessons-learned | not yet run | not yet run | not yet run |
-| 33 | "Save the context of this chat so I can pick it up later." | Near miss | continue-in-new-chat | not yet run | not yet run | not yet run |
-| 34 | "Cut my token spend on this chat." | Near miss | cut-token-cost | not yet run | not yet run | not yet run |
-| 35 | "Audit my subscriptions, I'm paying for three habit-tracking apps." | Near miss | audit-my-tools | not yet run | not yet run | not yet run |
-| 36 | "Is this habit app safe? Read the privacy policy." | Near miss | before-you-install | not yet run | not yet run | not yet run |
-| 37 | "What breaks if I move my habit data from one tracker to another?" | Near miss | before-you-switch | not yet run | not yet run | not yet run |
-| 38 | "What can work-design help me with?" | Near miss | work-design | not yet run | not yet run | not yet run |
-| 39 | "I want to get fit, lose weight, sleep more and read more this year." | Ambiguous | build-a-habit or balance-my-life | not yet run | not yet run | not yet run |
-| 40 | "I want to stop working late. Help me make it a routine." | Ambiguous | build-a-habit or balance-my-life | not yet run | not yet run | not yet run |
-| 41 | "I want to focus better, it's a habit I need to build." | Ambiguous | build-a-habit or start-a-focus-session or protect-my-focus | not yet run | not yet run | not yet run |
+| 1 | "I want to start exercising every day. I've failed at this about ten times." | Should fire | build-a-habit | build-a-habit | build-a-habit | build-a-habit |
+| 2 | "I can't stick to journaling. I do it for three days and then stop." | Should fire | build-a-habit | build-a-habit | build-a-habit | build-a-habit |
+| 3 | "Help me build a habit of reading before bed." | Should fire | build-a-habit | build-a-habit | build-a-habit | build-a-habit |
+| 4 | "From Monday I'm doing gym daily, no sugar, meditation, 5am wake-ups and journaling." | Should fire | build-a-habit | build-a-habit | build-a-habit | build-a-habit |
+| 5 | "How long does it take to form a habit? 21 days, right?" | Should fire | build-a-habit | build-a-habit | build-a-habit | build-a-habit |
+| 6 | "I want to start running but I have asthma and a heart murmur. Make me a plan." | Should fire | build-a-habit | build-a-habit | build-a-habit | build-a-habit |
+| 7 | "I want to fix my sleep. Give me a schedule, I have insomnia." | Should fire | build-a-habit | build-a-habit | build-a-habit | build-a-habit |
+| 8 | "I'm a night-shift nurse. How do I build a stretching habit when my schedule changes every week?" | Should fire | build-a-habit | build-a-habit | build-a-habit | build-a-habit |
+| 9 | "I want to cut down on scrolling my phone in the evening." | Should fire | build-a-habit | build-a-habit | build-a-habit | build-a-habit |
+| 10 | "I want to make a daily shutdown routine at the end of my workday and stick to it." | Should fire | build-a-habit | build-a-habit | build-a-habit | build-a-habit |
+| 11 | "Help me focus for an hour on my taxes." | Near miss | start-a-focus-session | start-a-focus-session | start-a-focus-session | start-a-focus-session |
+| 12 | "Start a Pomodoro for me." | Near miss | start-a-focus-session | start-a-focus-session | start-a-focus-session | start-a-focus-session |
+| 13 | "I'm interrupted all day and can't concentrate. What do I do?" | Near miss | protect-my-focus | protect-my-focus | protect-my-focus | protect-my-focus |
+| 14 | "Slack and meetings are eating my focus. How do I ask my manager for time?" | Near miss | protect-my-focus | protect-my-focus | protect-my-focus | protect-my-focus |
+| 15 | "Plan my day. Include the gym and a call at 3." | Near miss | plan-my-day | plan-my-day | plan-my-day | plan-my-day |
+| 16 | "Plan my week. I want to work out three times and finish the launch." | Near miss | plan-my-week | plan-my-week | plan-my-week | plan-my-week |
+| 17 | "I've got too many tasks. Sort them out." | Near miss | sort-my-tasks | sort-my-tasks | sort-my-tasks | sort-my-tasks |
+| 18 | "I can't start my thesis and I've been putting it off for weeks." | Near miss | get-unstuck | get-unstuck | get-unstuck | get-unstuck |
+| 19 | "I neglect my friends and my health because I work too much." | Near miss | balance-my-life | balance-my-life | balance-my-life | balance-my-life |
+| 20 | "What productivity method fits me? I've tried many." | Near miss | find-my-method | find-my-method | find-my-method | find-my-method |
+| 21 | "Explain how habit stacking works and whether it's worth trying." | Near miss | explain-a-method | explain-a-method | explain-a-method | explain-a-method |
+| 22 | "Set up my whole system: tasks, calendar, notes, daily and weekly review." | Near miss | build-my-system | build-my-system | build-my-system | build-my-system |
+| 23 | "Which tasks should I hand to an AI agent?" | Near miss | delegate | delegate | delegate | delegate |
+| 24 | "The report is due Friday and I only have two days. Cut it down." | Near miss | fit-to-deadline | fit-to-deadline | fit-to-deadline | fit-to-deadline |
+| 25 | "What is in scope for this project and what is not?" | Near miss | scope-the-work | scope-the-work | scope-the-work | scope-the-work |
+| 26 | "I have to write a business plan. Where do I begin?" | Near miss | plan-the-work | plan-the-work | plan-the-work | plan-the-work |
+| 27 | "How long will it take to learn Spanish to a conversational level?" | Near miss | how-long-will-it-take | how-long-will-it-take | how-long-will-it-take | how-long-will-it-take |
+| 28 | "Should we have a meeting or send an email about the habit tracker rollout?" | Near miss | meeting-or-message | meeting-or-message | meeting-or-message | meeting-or-message |
+| 29 | "Our weekly all-hands is a waste of time. Fix it." | Near miss | meeting-audit (meeting-design set) | meeting-audit | meeting-audit | meeting-audit |
+| 30 | "What could go wrong with my plan to wake up at 5am?" | Near miss | what-could-go-wrong | what-could-go-wrong | what-could-go-wrong | what-could-go-wrong |
+| 31 | "Review my habit plan and tell me if it's any good." | Near miss | review-my-work | review-my-work | review-my-work | review-my-work |
+| 32 | "That experiment is over. What did I learn about my morning routine?" | Near miss | lessons-learned | lessons-learned | lessons-learned | lessons-learned |
+| 33 | "Save the context of this chat so I can pick it up later." | Near miss | continue-in-new-chat | continue-in-new-chat | continue-in-new-chat | continue-in-new-chat |
+| 34 | "Cut my token spend on this chat." | Near miss | cut-token-cost | cut-token-cost | cut-token-cost | cut-token-cost |
+| 35 | "Audit my subscriptions, I'm paying for three habit-tracking apps." | Near miss | audit-my-tools | audit-my-tools | audit-my-tools | audit-my-tools |
+| 36 | "Is this habit app safe? Read the privacy policy." | Near miss | before-you-install | before-you-install | before-you-install | before-you-install |
+| 37 | "What breaks if I move my habit data from one tracker to another?" | Near miss | before-you-switch | before-you-switch | before-you-switch | before-you-switch |
+| 38 | "What can work-design help me with?" | Near miss | work-design | work-design | work-design | work-design |
+| 39 | "I want to get fit, lose weight, sleep more and read more this year." | Ambiguous | build-a-habit or balance-my-life | build-a-habit | build-a-habit | build-a-habit |
+| 40 | "I want to stop working late. Help me make it a routine." | Ambiguous | build-a-habit or balance-my-life | build-a-habit | build-a-habit | build-a-habit |
+| 41 | "I want to focus better, it's a habit I need to build." | Ambiguous | build-a-habit or start-a-focus-session or protect-my-focus | build-a-habit | build-a-habit | build-a-habit |
 
 ---
 
@@ -158,3 +160,7 @@ Three cases to be checked by hand once a model is available.
 - **Any model behaviour.** Nothing in this file has been run.
 - **Whether the description survives the listing budget.** A new skill with no invocation history loses its description first when the listing is truncated.
 - **Real sessions.** Every case is constructed.
+
+## Misses and how to read them
+
+No misses on cases with a single expected answer.
