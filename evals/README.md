@@ -50,3 +50,39 @@ A skill that never fires is indistinguishable from a skill that was never writte
 ## Adding a skill
 
 `CONTRIBUTING.md` requires an eval file before a new skill merges. Three cases is the floor. `delegate.md` is the reference implementation.
+
+
+## Run log
+
+### 5 Nov 2026, all 29 descriptions together
+
+Haiku, Sonnet and Opus were each shown only the verbatim descriptions of every skill in this repository (26) and in meeting-design (3), snapshot `c4b8a8cfab44`, and asked for one skill name or `none` for each of 521 constructed messages. Each model was run as a subagent with an instruction to use only the listed descriptions, one sample per case, so a single flipped pick can be noise (see the rerun below).
+
+| | Haiku | Sonnet | Opus |
+| :--- | :--- | :--- | :--- |
+| Matched the expected answer (474 cases with one expected answer) | 456 (96.2%) | 461 (97.3%) | 463 (97.7%) |
+
+All three models gave the same pick on 498 of 521 cases. All three matched the expected answer on 453 of 474, and all three missed on 8. Many misses are stale expectations written before the sibling skills were installed together, or overlaps where either answer helps; each file lists its misses with a reading. Cases with a conflict or a free-text expectation were recorded, not scored.
+
+The first pass had 31 cases that shared a number with another case in the same file (second tables restarting at 1). Their answers collided, so those 55 cases were rerun with unique ids and the rerun is what is recorded.
+
+### The protect-my-focus rewording
+
+The run found "My calendar is full of meetings that eat my focus time" going to `meeting-audit` on Sonnet and Opus. The `protect-my-focus` description was reworded to claim that phrase (snapshot `c87b3b32e884`) and the 43 cases that touch `protect-my-focus` or `meeting-audit` were rerun on all three models. Picks that changed:
+
+| Case | Message | Haiku | Sonnet | Opus |
+| :--- | :--- | :--- | :--- | :--- |
+| plan-my-week#8 | "My calendar is full of meetings that eat my focus time. What do I do?" | protect-my-focus | meeting-audit → protect-my-focus | meeting-audit → protect-my-focus |
+| build-a-habit#29 | "Our weekly all-hands is a waste of time. Fix it." | meeting-audit | meeting-audit → meeting-design | meeting-audit → meeting-design |
+| find-my-method#20 | "I'm always distracted. What should I do?" | protect-my-focus | protect-my-focus → find-my-method | protect-my-focus |
+| find-my-method#17 | "Is this weekly status meeting worth having, or should it be an email?" | meeting-audit → meeting-or-message | meeting-audit | meeting-audit |
+| protect-my-focus#12 | "Our weekly status meeting is useless and runs an hour. How do we fix i" | meeting-audit | meeting-design → meeting-audit | meeting-design |
+| start-a-focus-session#41 | "Block off two hours on my calendar for deep work every morning." | protect-my-focus → start-a-focus-session | none → protect-my-focus | none → protect-my-focus |
+| start-a-focus-session#28 | "Our weekly team meeting wastes everyone's time. Fix it." | meeting-design → meeting-audit | meeting-design | meeting-design |
+| protect-my-focus#41 | "I'm drowning in everything, work, home, emails." | sort-my-tasks → balance-my-life | sort-my-tasks | sort-my-tasks |
+
+The target case, plan-my-week#8, now goes to `protect-my-focus` on all three models. The other changes are mostly meeting-complaint cases moving between `meeting-design`, `meeting-audit` and `meeting-or-message`, all defensible; a few changed without any related wording change, which is the run-to-run noise to expect from a single sample. Everything else in the per-skill files was recorded under the first snapshot.
+
+### What this does not show
+
+It does not show how a skill performs once chosen. It does not include Claude Code's listing-budget truncation, which can shorten or drop descriptions in a real installation. All cases were written by the same author as the skills.

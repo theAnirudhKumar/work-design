@@ -57,3 +57,22 @@ Whether `continue-in-new-chat`, `cut-token-cost` or `meeting-or-message` compete
 ## Field test, 2026-08-31
 
 One real case, not constructed: estimating how long the next work-design skill would take, reference class built from this repo's own real `git log` commit timestamps rather than invented numbers. Result: pass, with a genuine finding. A naive inside-view guess (30 to 60 min) overshot the ordinary reference cases (5 to 6 min) by roughly an order of magnitude, and the correction mechanism worked as designed. Also surfaced that reference-class cases split into two real kinds, repeats of an established pattern versus first-in-category cases needing outside research, which Step 2 does not currently distinguish; logged as a refinement candidate, not acted on from one field test. Not a live `Skill` tool run, the skill is not installed in this account.
+
+## Rerun on the 4.1.0 descriptions (5 Nov 2026)
+
+The results above were recorded under earlier descriptions and skill names. This rerun puts the same cases to Haiku, Sonnet and Opus with all 29 descriptions shown together (snapshot `c4b8a8cfab44`). **Bold** means the pick differs from the expected answer.
+
+| # | Message | Expected | Haiku | Sonnet | Opus |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | "How long will this website redesign actually take? We always seem to run over on these." | fire | how-long-will-it-take | how-long-will-it-take | how-long-will-it-take |
+| 2 | "I'm budgeting two weeks for this migration, is that realistic based on past projects?" | fire | how-long-will-it-take | how-long-will-it-take | how-long-will-it-take |
+| 3 | "How much will this project cost us in total, including the contractor?" | none | none | none | none |
+| 4 | "I've scoped this project out, now I need to know if the timeline I have in mind is realist" | fire | how-long-will-it-take | how-long-will-it-take | how-long-will-it-take |
+| 5 | "Should I sign up for Figma for the design team?" | before-you-install | before-you-install | before-you-install | before-you-install |
+| 6 | "We've never done anything like this before, how long do you think it'll take?" | split, see below | how-long-will-it-take | how-long-will-it-take | how-long-will-it-take |
+| 7 | "What should I hand to Claude versus keep for myself on this migration?" | delegate | delegate | delegate | delegate |
+| 8 | "How locked in are we to this vendor if we wanted to leave?" | before-you-switch | before-you-switch | before-you-switch | before-you-switch |
+| 9 | "Sanity check my estimate: I think this will take about three days." | fire | how-long-will-it-take | how-long-will-it-take | how-long-will-it-take |
+
+Run on 5 Nov 2026 with Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Single-answer cases: see counts below.
+Cases with one expected answer: 4. All three models matched on 4.

@@ -9,8 +9,8 @@ description: >
   at, then names the one or two skills that fit, with the exact phrase to say.
   Never does the work of those skills itself. Defers immediately when the
   user's message already matches a sibling's own trigger phrases, such as "where
-  do I start", "I'm stuck", "how long will this take" or "review this", and
-  those skills handle the request directly.
+  do I start", "I'm stuck", "how long will this take", "plan my day" or
+  "review this", and those skills handle the request directly.
 ---
 
 # Work Design
@@ -52,6 +52,16 @@ Every piece of work passes the same moments, and quality is mostly decided at si
 | **Run** | The chat is long or costly | "Carry this into a new chat" / "This is getting expensive" | `continue-in-new-chat`, `cut-token-cost` |
 | **Review** | You have a draft | "Is this good enough to send?" | `review-my-work` |
 | **Learn** | It is finished or dropped | "What did we learn?" | `lessons-learned` |
+| **Day to day** | You need a plan for today | "Plan my day" | `plan-my-day` |
+| **Day to day** | You need a plan for the week | "Plan my week" / "weekly review" | `plan-my-week` |
+| **Day to day** | The list is too long | "I have too much to do" | `sort-my-tasks` |
+| **Day to day** | You want an hour of real focus | "Help me focus for an hour" | `start-a-focus-session` |
+| **Day to day** | You keep getting interrupted | "I'm constantly interrupted" | `protect-my-focus` |
+| **Systems** | You do not know which method fits you | "What productivity method should I use?" | `find-my-method` |
+| **Systems** | You want to understand one method | "How does time blocking work?" | `explain-a-method` |
+| **Systems** | You want the whole setup | "Set up my productivity system" | `build-my-system` |
+| **Life** | You want a habit to stick | "Help me build a habit" | `build-a-habit` |
+| **Life** | Work is crowding out the rest | "I'm working too much" | `balance-my-life` |
 | **Tools** | Before, during and after buying one | "Should I sign up for X?" / "What am I paying for?" / "Can I leave X?" | `before-you-install`, `audit-my-tools`, `before-you-switch` |
 
 If the work is a meeting, point to the separate `meeting-design` set: `meeting-design` before, `meeting-close` after, `meeting-audit` for recurring ones. It lives at github.com/theAnirudhKumar/meeting-design.

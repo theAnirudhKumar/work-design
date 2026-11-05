@@ -52,3 +52,21 @@ Whether `continue-in-new-chat` or `cut-token-cost` compete with `audit-my-tools`
 **Output behaviour.** Whether the skill actually groups by job rather than category, whether the total in Step 5 gets calculated correctly, and whether a card statement pasted in is read correctly. All output checks, not routing.
 
 **Real sessions.** Every case here is constructed, same limitation as every other file in this directory.
+
+## Rerun on the 4.1.0 descriptions (5 Nov 2026)
+
+The results above were recorded under earlier descriptions and skill names. This rerun puts the same cases to Haiku, Sonnet and Opus with all 29 descriptions shown together (snapshot `c4b8a8cfab44`). **Bold** means the pick differs from the expected answer.
+
+| # | Message | Expected | Haiku | Sonnet | Opus |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | "Can you audit our subscriptions and tell me what to cancel?" | fire | audit-my-tools | audit-my-tools | audit-my-tools |
+| 2 | "What are we actually paying for across all these tools? Something feels bloated." | fire | audit-my-tools | audit-my-tools | audit-my-tools |
+| 3 | "Should I sign up for Notion for the team?" | before-you-install | before-you-install | before-you-install | before-you-install |
+| 4 | "We have three note-taking apps and I don't know why. Can you sort this out?" | fire | audit-my-tools | audit-my-tools | audit-my-tools |
+| 5 | "Can you help me negotiate a better rate with our CRM vendor before renewal?" | none | none | none | none |
+| 6 | "I installed a clipboard manager last month. What did I actually agree to?" | before-you-install | before-you-install | before-you-install | before-you-install |
+| 7 | "Should I automate our quarterly subscription review?" | split, see below | delegate | delegate | delegate |
+| 8 | "We are evaluating a document platform for the whole company, six figures, and procurement " | none | none | none | none |
+
+Run on 5 Nov 2026 with Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Single-answer cases: see counts below.
+Cases with one expected answer: 4. All three models matched on 4.

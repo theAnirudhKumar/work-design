@@ -1,12 +1,12 @@
 # work-design
 
-**Do better work, on purpose. Skills for the moments when the quality of a piece of work is decided: the start, the middle and the check before it goes out.**
+**Do better work, and get more done, on purpose.** Twenty-six Claude skills in two halves, plus a library of 127 productivity methods with honest evidence ratings.
 
-Most bad work was bad at the start: nobody said what it was for, what done looks like, or what to leave alone. Most late work was never cut to fit its deadline. Most polished-looking work was never really read before it was sent. These sixteen Claude skills sit at those moments, in any field, and each hands back something you can use: a one-page plan, a ranked cut list, a verdict on a draft.
+**Do better work.** Most bad work was bad at the start: nobody said what it was for, what done looks like, or what to leave alone. Most late work was never cut to fit its deadline. Most polished-looking work was never really read before it was sent. These skills sit at the moments where the quality of one piece of work is decided, in any field.
 
-The names are the sentences you would say anyway. If you cannot remember a name, say what you are about to do, or say **work-design** and it will point you to the right one.
+**Get more done.** There are over a hundred productivity methods (Pomodoro, time blocking, task batching, Eisenhower, Getting Things Done and many more) and no way to know which fits you. These skills pick one that fits, set it up, run a 7-day trial with a scorecard, and then plan your days, weeks and life with it. Every method carries an evidence label, and most honestly say "popular practice, little direct testing". See all 127 in [METHODS.md](METHODS.md).
 
-None of them needs a terminal, a workspace, connectors or an API key. They work from what you type.
+The names are the sentences you would say anyway. If you cannot remember a name, say what you are about to do, or say **work-design** and it will point you to the right one. None of them needs a terminal, a workspace, connectors or an API key. They work from what you type.
 
 ## See it work
 
@@ -31,6 +31,27 @@ Biggest      Too few replies. If under 40 by Wednesday noon, send one reminder
 risk         and report the count with the result.
 First move   Write the three questions on paper before opening any survey tool.
 Assumed      The courier contract renews at month end. Correct me if not.
+```
+
+Or you type:
+
+```
+I never finish anything and I've tried Pomodoro, bullet journals and three apps. What should I use?
+```
+
+You get, from [`find-my-method`](skills/find-my-method) (shortened, illustrative):
+
+```
+Read: you start many systems and drop them within a week, and your calendar is
+mostly your own. Likely cause: too much setup, too many changes at once.
+
+Primary   Most Important Tasks (3 a day). Low setup, nothing to maintain.
+          Evidence: Practice only. Popular, little direct testing.
+Backup    Time blocking, if day 7 shows you know the 3 but don't start them.
+Avoid     Bullet journal for now. Highest setup cost, and it is the type you
+          have already dropped.
+7-day trial  Write 3 tasks each morning. Track: days you did them, and one
+             thing you finished that you'd have skipped. Keep at 5 of 7 days.
 ```
 
 That is the whole idea. Before the work starts, one page; while it runs, a skill for the moment it stalls; before it goes out, a skeptical reader; when it ends, a log. Everything else here serves one of those.
@@ -71,6 +92,26 @@ Say the sentence on the left. The skill on the right picks it up.
 | :--- | :--- | :--- |
 | "What did we learn?" | [`lessons-learned`](skills/lessons-learned) | Planned vs actual, one change for next time, and a log entry that feeds `how-long-will-it-take` |
 
+### Plan your days and weeks
+
+| You are thinking | Say or use | You get |
+| :--- | :--- | :--- |
+| "Plan my day" | [`plan-my-day`](skills/plan-my-day) | 1 to 3 must-dos, a time-blocked schedule with buffers, a not-today list |
+| "Plan my week" | [`plan-my-week`](skills/plan-my-week) | A short review of last week, 3 outcomes, protected focus blocks, one personal item |
+| "I have too much to do" | [`sort-my-tasks`](skills/sort-my-tasks) | A ranked list with first actions, a delete/defer/delegate list, and a not-doing list |
+| "Help me focus for an hour" | [`start-a-focus-session`](skills/start-a-focus-session) | A Focus Card (one task, what done looks like, distractions parked) and a debrief when you return |
+| "I'm constantly interrupted" | [`protect-my-focus`](skills/protect-my-focus) | An audit of what interrupts you, countermeasures, the messages to send, a 2-week experiment |
+
+### Find a method that fits
+
+| You are thinking | Say or use | You get |
+| :--- | :--- | :--- |
+| "What productivity method should I use?" | [`find-my-method`](skills/find-my-method) | One primary method, a backup, one to avoid, each with honest evidence, and a 7-day trial |
+| "How does time blocking work?" | [`explain-a-method`](skills/explain-a-method) | How to start in 10 minutes, when it backfires, the evidence, a try-it-today step |
+| "Set up my productivity system" | [`build-my-system`](skills/build-my-system) | The smallest complete system in the tools you have, a `my-system.md` profile, a day 1 to 7 checklist |
+| "I want to build a habit" | [`build-a-habit`](skills/build-a-habit) | A one-page Habit Plan: tiny version, anchor, environment, miss rule, day-14 review |
+| "I'm working too much" | [`balance-my-life`](skills/balance-my-life) | A life-areas check, one small shift with its trade-off, an ideal week, boundary scripts |
+
 ### Tools you buy
 
 | You are thinking | Say or use | You get |
@@ -87,7 +128,7 @@ Say the sentence on the left. The skill on the right picks it up.
 
 ## Start here
 
-Three skills cover most weeks. Install these first.
+Three skills cover the quality of your work. Install these first. For the productivity half, start with `find-my-method`, then `plan-my-day`.
 
 | Skill | Why |
 | :--- | :--- |
@@ -97,7 +138,7 @@ Three skills cover most weeks. Install these first.
 
 ## They work without any setup
 
-Every skill states its floor in a **What this needs** section and runs from there. Most need only a sentence describing the work or the draft pasted in. Missing context never blocks a skill. It changes what the skill can honestly claim, and each one says which checks it could not run instead of guessing around the gap.
+The productivity skills also read a `my-system.md` profile if you paste one in, so your chosen methods carry across conversations; Claude does not remember between chats, so you save the file. Every skill states its floor in a **What this needs** section and runs from there. Most need only a sentence describing the work or the draft pasted in. Missing context never blocks a skill. It changes what the skill can honestly claim, and each one says which checks it could not run instead of guessing around the gap.
 
 ## Install
 
@@ -108,7 +149,13 @@ Every skill states its floor in a **What this needs** section and runs from ther
 /plugin install work-design@work-design-marketplace
 ```
 
-That installs all sixteen. For just the three in [Start here](#start-here), install `work-design-starter@work-design-marketplace` instead.
+That installs the sixteen quality-of-work skills. For the productivity half and the method library:
+
+```
+/plugin install get-more-done@work-design-marketplace
+```
+
+For just the three in [Start here](#start-here), install `work-design-starter@work-design-marketplace` instead.
 
 ### One skill
 

@@ -52,3 +52,25 @@ Whether `continue-in-new-chat` or `cut-token-cost` compete with `before-you-swit
 **Output behaviour.** Whether the skill actually checks export format before assuming data portability, whether the hours estimate in Step 4 stays in hours rather than drifting into a dollar figure, and whether the verdict in Step 6 names what makes it so rather than just stating a label. All output checks, not routing.
 
 **Real sessions.** Every case here is constructed, same limitation as every other file in this directory.
+
+## Rerun on the 4.1.0 descriptions (5 Nov 2026)
+
+The results above were recorded under earlier descriptions and skill names. This rerun puts the same cases to Haiku, Sonnet and Opus with all 29 descriptions shown together (snapshot `c4b8a8cfab44`). **Bold** means the pick differs from the expected answer.
+
+| # | Message | Expected | Haiku | Sonnet | Opus |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | "What happens if I cancel this and switch to something else? Can I even get my data out?" | fire | before-you-switch | before-you-switch | before-you-switch |
+| 2 | "Should I sign up for Linear for our team?" | before-you-install | before-you-install | before-you-install | before-you-install |
+| 3 | "We're paying for four project tools nobody's opened in months, help me figure out what to " | audit-my-tools | audit-my-tools | audit-my-tools | audit-my-tools |
+| 4 | "I want to leave Notion for Obsidian. What am I going to lose in the move?" | fire | before-you-switch | before-you-switch | before-you-switch |
+| 5 | "How many hours will it realistically take to migrate our CRM data before I decide whether " | fire | before-you-switch | before-you-switch | before-you-switch |
+| 6 | "Can you help me negotiate a better contract with our CRM vendor before renewal?" | none | none | none | none |
+| 7 | "audit-my-tools says I should cancel this subscription. Before I actually pull the trigger," | fire | before-you-switch | before-you-switch | before-you-switch |
+| 8 | "Should I automate checking whether we're locked into any of our vendors?" | delegate | **before-you-switch** | delegate | delegate |
+
+Run on 5 Nov 2026 with Haiku, Sonnet and Opus (run as model subagents), each shown only the verbatim descriptions of all 29 skills (26 in this repository plus the 3 in meeting-design), description snapshot `c4b8a8cfab44`. Single-answer cases: see counts below.
+Cases with one expected answer: 4. All three models matched on 3.
+
+Misses:
+
+- Case 8: Acceptable. Being locked into vendors is also a before-you-switch question; the expectation was a stretch.
