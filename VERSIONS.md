@@ -2,6 +2,16 @@
 
 What changed, and when.
 
+## 4.2.1
+
+**Fact-checked the method library.** All 137 cards were checked against web sources for attribution, dates and how strongly the evidence line is worded. About 56 edits resulted: attributions corrected or made more precise (the 20-20-20 rule, Wheel of Life, OKRs, SMART, Eat the frog, Feynman technique, SQ3R, Cornell notes and others), evidence sentences softened or grounded where they overreached (habit tracking, micro-breaks, Personal retrospective, Wins log, Deliberate practice), and one definition corrected: the radical candor card said candor without care is "just criticism", which contradicts the framework (its author calls that obnoxious aggression). One label changed: Habit stacking went from Some to Practice only, because its own sentence admitted there is little direct testing. The library now reads 4 Strong, 24 Some, 10 Mixed, 99 Practice only.
+
+**Added a plugin icon and one-step install lines** (`/plugin install work-design --marketplace theAnirudhKumar/work-design`, Claude Code 2.1.275 or later). Anthropic's plugin validator warns without an icon, and the listing icon is set only the first time a plugin is saved or submitted.
+
+**Refreshed the per-skill eval tables** with the second routing run, so every file shows the same description snapshot.
+
+**Caveats.** The check used web search; many primary sources (publishers, author sites, Wikipedia) were not reachable from the sandbox, so some corrections rest on secondary sources. Still weakest: Flowtime's attribution to Zoe Read-Bivens, the 1941 versus 1946 date for SQ3R, the 1950s date for Cornell notes, Grove's 1983 date for one-on-ones, the exact Bezos letter for two-way doors, and the 2014 date for 52/17. Evidence labels were not re-derived from the studies, only checked for overstatement.
+
 ## 4.2.0
 
 **Work Design is now a consultant.** The `work-design` skill used to be a menu that asked which stage you were at. It now reads the context your AI tool already holds (the conversation, loaded notes or memory, a pasted `my-system.md`), notices patterns, and suggests one to three methods, working styles or management practices, each with the reason, an honest evidence label and the skill that runs it. It asks before looking at a connected calendar or task list, reads one week read-only, says what it looked at, and never writes anything. It tells you what to leave alone, and defers at once when your message already names a specific skill's job.

@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Do better work and get more done: skills for the quality of a piece of work, and for running your days, weeks and life with methods that fit you",
-    "version": "4.2.0"
+    "version": "4.2.1"
   },
   "plugins": [
     {
@@ -32,12 +32,12 @@
         "./skills/what-could-go-wrong",
         "./skills/work-design"
       ],
-      "version": "4.2.0"
+      "version": "4.2.1"
     },
     {
       "name": "get-more-done",
       "description": "Ten skills that pick a productivity method that fits you and run it with you, backed by a library of 137 methods with honest evidence ratings. find-my-method, explain-a-method, plan-my-day, plan-my-week, sort-my-tasks, start-a-focus-session, protect-my-focus, build-a-habit, balance-my-life, build-my-system. Works from what you type; no setup.",
-      "version": "4.2.0",
+      "version": "4.2.1",
       "source": "./",
       "strict": false,
       "skills": [
@@ -56,7 +56,7 @@
     {
       "name": "work-design-starter",
       "description": "The three skills for most weeks: plan-the-work (one page before you start), get-unstuck (a next action when nothing moves) and review-my-work (a skeptical read before it goes out). A subset of the work-design plugin: install one or the other.",
-      "version": "4.2.0",
+      "version": "4.2.1",
       "source": "./",
       "strict": false,
       "skills": [

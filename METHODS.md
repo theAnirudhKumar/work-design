@@ -2,7 +2,7 @@
 
 Every method below has a full card with how to start in 10 minutes and a 7-day trial. Ratings are conservative: when the support is a popular practice rather than tested, it says so.
 
-Evidence across the library: 4 Strong, 25 Some, 10 Mixed, 98 Practice only.
+Evidence across the library: 4 Strong, 24 Some, 10 Mixed, 99 Practice only.
 
 Not sure which to pick? Say "what productivity method should I use?" and `find-my-method` will choose one for you and set up a 7-day trial.
 
@@ -94,7 +94,7 @@ Not sure which to pick? Say "what productivity method should I use?" and `find-m
 | Method | What it is | Evidence |
 | :--- | :--- | :--- |
 | **Tiny Habits** | Pick a behaviour so small it takes under a minute, tie it to an existing moment, and celebrate it right after. | Practice only |
-| **Habit stacking** | Attach a new habit to a specific habit you already do, in the form "After I [current habit], I will [new habit]." | Some |
+| **Habit stacking** | Attach a new habit to a specific habit you already do, in the form "After I [current habit], I will [new habit]." | Practice only |
 | **Two-day rule** | Never skip a habit two days in a row; one miss is allowed, a second consecutive one is not. | Practice only |
 | **Environment design** | Change your surroundings so the habit is easy to do and the competing behaviour is harder. | Some |
 | **Keystone habits** | Focus on one habit that tends to pull other good habits along with it, such as regular exercise, a weekly review or a fixed bedtime. | Practice only |
@@ -108,7 +108,7 @@ Not sure which to pick? Say "what productivity method should I use?" and `find-m
 
 | Method | What it is | Evidence |
 | :--- | :--- | :--- |
-| **OKRs** | Write one qualitative objective, then two to four measurable key results that show whether you got there, and review them on a fixed cycle. | Practice only |
+| **OKRs** | Write one qualitative objective, then a few measurable key results that show whether you got there, and review them on a fixed cycle. | Practice only |
 | **SMART goals** | Rewrite a goal so it is specific, measurable, achievable, relevant and has a deadline. | Some |
 | **WOOP** | Name a wish, picture the best outcome, name the main inner obstacle, then write an if-then plan for meeting it. | Some |
 | **Working backwards** | Start from the finished result, then step back through what had to be true just before it, until you reach what to do today. | Practice only |
@@ -183,7 +183,7 @@ Not sure which to pick? Say "what productivity method should I use?" and `find-m
 | **Decision log** | Keep a simple running list of decisions made, with the date, owner, reason, and what was ruled out. | Practice only |
 | **Directly responsible individual** | Every task or project has exactly one named person who is answerable for it, even if many people help. | Practice only |
 | **Working agreements** | A short list of rules the team writes together about how it communicates, meets, and hands work over. | Practice only |
-| **Delegation levels** | Choose how much authority to hand over, from "do as I say" up to "decide and just tell me later", and name the level out loud. | Practice only |
+| **Delegation levels** | Choose how much authority to hand over, from "do as I say" up to full delegation, and name the level out loud. | Practice only |
 
 ## Managing a team
 
